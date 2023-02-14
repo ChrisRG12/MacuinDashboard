@@ -2,7 +2,7 @@
 
 @section('contenido')
 
-<div class="container">
+<div class="container mb-3 col-md-6">
 
     <div class="card text-center">
 
@@ -11,6 +11,7 @@
         </div>
 
         <div class="card-body">
+            
             <div class="mb-3">
                 <label class="form-label"> Usuario </label>
                 <input type="text" class="form-control" name="txtusuario">
@@ -18,7 +19,7 @@
 
             <div class="mb-3">
                 <label class="form-label"> Contraseña </label>
-                <input type="text" class="form-control" name="txtusuario">
+                <input type="text" class="form-control" name="txtcontra">
             </div>
 
         </div>
@@ -26,6 +27,8 @@
         <div class="card-footer">
             <a href="#" class="btn btn-primary">Ingresar</a>
         </div>
+
+        
       </div>
 
 
