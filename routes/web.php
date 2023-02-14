@@ -17,6 +17,5 @@ Route::get('Welcome', function () {
     return view('welcome');
 });
 
-Route::get('/', function () {
-    return view('plantilla');
-});
+Route::view('plan', 'plantilla')-> name('pla');
+Route::view('/', 'login')-> name('log');
