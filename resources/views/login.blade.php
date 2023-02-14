@@ -2,7 +2,7 @@
 
 @section('contenido')
 
-<div class="container mb-3 col-md-6">
+<div class="container mb-3 mt-4 col-md-6">
 
     <div class="card text-center">
 
@@ -28,7 +28,7 @@
             <a href="#" class="btn btn-primary">Ingresar</a>
         </div>
 
-        
+
       </div>
 
 
