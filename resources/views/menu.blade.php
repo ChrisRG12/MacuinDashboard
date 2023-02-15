@@ -4,8 +4,9 @@
 
 <h1 class="mt-4 text-center" style="color:black"> Macuin Dashboard </h1>
 
-
-<div id="carouselExampleInterval" class="carousel slide mt-4 col-md-9" data-bs-ride="carousel" style="margin-left: 14%">
+<div class="container mt-4 col-md-9">
+  
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="margin-left: 14%">
 
     <div class="carousel-inner">
 
@@ -34,7 +35,7 @@
     </button>
   </div>
 
-
+</div>
 
 
 @stop

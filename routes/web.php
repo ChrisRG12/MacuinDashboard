@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+//impartamos el controlador resource
+
+use App\Http\Controllers\ControladorUsuarios;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
