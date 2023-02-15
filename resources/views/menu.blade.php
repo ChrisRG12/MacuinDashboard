@@ -12,7 +12,7 @@
       </div>
 
       <div class="carousel-item" data-bs-interval="2000">
-        <img src="..." class="d-block w-100" alt="...">
+        <img src="\ima\...jpg" class="d-block w-100" alt="...">
       </div>
 
       <div class="carousel-item">
