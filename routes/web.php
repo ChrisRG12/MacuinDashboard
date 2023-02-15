@@ -20,3 +20,6 @@ Route::get('Welcome', function () {
 Route::view('plan', 'plantilla')-> name('pla');
 Route::view('/', 'login')-> name('log');
 Route::view('menu', 'menu')-> name('men');
+
+
+Route::view('Usua', 'usuarios')-> name('usu');
