@@ -1,0 +1,18 @@
+/*TEMPLATE LOGIN*/
+
+#tituloLo h1{
+    text-align: center;
+}
+
+.form-control{
+    min-height: 3.125rem;
+    line-height: initial;
+}
+
+#btnColor button{
+    color: black;
+}
+
+#imagen{
+    text-align: center;
+}
