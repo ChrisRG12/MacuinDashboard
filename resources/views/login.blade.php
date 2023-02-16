@@ -2,7 +2,9 @@
 
 @section('contenido')
 
-<div class="container mb-3 mt-4 col-md-6">
+<div class="container mb-3 mt-4 col-md-6 text-center">
+
+    <h1><i class="bi bi-door-open-fill"></i></h1>
 
     <div class="card text-center">
 
@@ -22,12 +24,12 @@
                 <input type="text" class="form-control" name="txtcontra">
             </div>
 
-            <a href="#" class="btn btn-success btn-lg">Ingresar</a>
+            <a href="#" class="btn btn-success btn-lg"><i class="bi bi-box-arrow-in-right"></i> Ingresar</a>
 
         </div>
 
         <div class="card-footer">
-            <a href="#" class="text-right">Agregar Usuario</a>
+            <a href="#" class="btn btn-secondary"> <i class="bi bi-person-add"></i>  Agregar Usuario</a>
            
         </div>
 

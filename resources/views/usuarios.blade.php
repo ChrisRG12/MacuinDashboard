@@ -2,7 +2,7 @@
 
 @section('contenido')
 
-<h1 class="text-center mt-4" style="color: floralwhite"> Agregate Men</h1>
+<h1 class="text-center mt-4" style="color: floralwhite"> Agregate Men <i class="bi bi-person-add"></i></h1>
 
 <div class="container mb-3 mt-4 col-md-8">
 
@@ -15,7 +15,7 @@
     <div class="card text-center">
 
         <div class="card-header">
-          Agregar Usuario
+          Agregar Usuario 
         </div>
 
         <form action="#" method="post">
