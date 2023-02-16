@@ -5,7 +5,7 @@
 <h1 class="text-center mt-4" style="color: floralwhite"> Agregate Men</h1>
 
 <div class="container mb-3 mt-4 col-md-8">
-    
+
     @if ($errors->any())
     @foreach ($errors->all() as $error) 
     @endforeach  
@@ -18,7 +18,10 @@
           Agregar Usuario
         </div>
 
+        <form action="#" method="post">
+
         <div class="card-body">
+           
             
             <div class="mb-3">
                 <label class="form-label"> Nombre </label>
@@ -54,8 +57,10 @@
 
             <a href="#" class="btn btn-secondary btn-lg"> Agregar </a>
 
-        </div>
+        </form>
 
+        </div>
+    
 
       </div>
 

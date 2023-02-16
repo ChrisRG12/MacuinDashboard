@@ -22,10 +22,13 @@
                 <input type="text" class="form-control" name="txtcontra">
             </div>
 
+            <a href="#" class="btn btn-success btn-lg">Ingresar</a>
+
         </div>
 
         <div class="card-footer">
-            <a href="#" class="btn btn-primary">Ingresar</a>
+            <a href="#" class="text-right">Agregar Usuario</a>
+           
         </div>
 
 
