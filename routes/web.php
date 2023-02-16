@@ -24,7 +24,25 @@ Route::get('Welcome', function () {
 Route::view('plan', 'plantilla')-> name('pla');
 Route::view('/', 'login')-> name('log');
 Route::view('menu', 'menu')-> name('men');
+Route::view('Usua', 'usuarios')-> name('usu');
 
+<<<<<<< HEAD
+//------------------USUARIOS----------------------------
+//Create
+Route::get('Autor/create', [ControladorUsuarios::class, 'create'])->name('Autor.create');
+//store
+Route::post('Autor', [ControladorUsuarios::class, 'store'])->name('Autor.store');
+//index
+Route::get('VistaAutor', [ControladorUsuarios::class, 'index'])->name('Autor.index');
+//edit
+Route::get('Autor/{id}/edit', [ControladorUsuarios::class, 'edit'])->name('Autor.edit');
+//update
+Route::put('Autor/{id}', [ControladorUsuarios::class, 'update'])->name('Autor.update');
+//show
+Route::get('Eliminar/{id}/show', [ControladorUsuarios::class, 'show']) -> name('Eliminar.show');
+//destroy
+Route::delete('Autor/{id}', [ControladorUsuarios::class, 'destroy']) -> name('Autor.destroy');
+=======
 
 Route::view('Usua', 'usuarios')-> name('usu');
 
@@ -48,3 +66,4 @@ Route::put('contacto/{id}',[controladorBD::class,'update'])->name('contacto.upda
 Route::get('contacto/{id}/show',[controladorBD::class,'show'])->name('contacto.show');
 
 Route::delete('contacto/{id}',[controladorBD::class,'destroy'])->name('contacto.destroy');
+>>>>>>> 04216e4f30c0501a93c9f916ec902ecc4205fe8b
