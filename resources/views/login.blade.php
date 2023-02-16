@@ -10,7 +10,7 @@
         <img src="\ima\conv.jpg" width="800" height="700" alt="">
       </div>
   
-      <div class="col bg-white p-5 rounded-end">
+      <div class="col bg-white p-5 rounded-end" style="color: rgb(57, 36, 58)">
         <div class="px-lg-5 pt-lg-4 pb-lg-3 w-100 border-0" id="imagen" style="display: flex; aling-items: center; justify-content: center;">
             <img src="\ima\conv.jpg" width="150" height="100" alt="">
           </div>
