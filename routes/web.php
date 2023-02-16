@@ -43,3 +43,19 @@ Route::get('Eliminar/{id}/show', [ControladorUsuarios::class, 'show']) -> name('
 Route::delete('Usuario/{id}', [ControladorUsuarios::class, 'destroy']) -> name('Usuario.destroy');
 
 Route::view('Usua', 'usuarios')-> name('usu');
+
+//------------------Departamentos----------------------------
+//Create
+Route::get('Departamento/create', [ControladorUsuarios::class, 'create'])->name('depa.create');
+//store
+Route::post('Departamento', [ControladorUsuarios::class, 'store'])->name('depa.store');
+//index
+Route::get('vistaDepartamento', [ControladorUsuarios::class, 'index'])->name('depa.index');
+//edit
+Route::get('Departamento/{id}/edit', [ControladorUsuarios::class, 'edit'])->name('depa.edit');
+//update
+Route::put('Departamento/{id}', [ControladorUsuarios::class, 'update'])->name('depa.update');
+//show
+Route::get('Eliminar/{id}/show', [ControladorUsuarios::class, 'show']) -> name('depa.show');
+//destroy
+Route::delete('Departamento/{id}', [ControladorUsuarios::class, 'destroy']) -> name('depa.destroy');
