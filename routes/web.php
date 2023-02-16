@@ -22,5 +22,6 @@ Route::view('/', 'login')-> name('log');
 Route::view('menu', 'menu')-> name('men');
 Route::view('home', 'jefehome')-> name('jeadusu');
 Route::view('adusu', 'jefeadusu')-> name('jeho');
+Route::view('rede', 'jeferede')-> name('jeagde');
 
 Route::view('Usua', 'usuarios')-> name('usu');

@@ -2,14 +2,14 @@
 
 @section('contenido')
 
-<h1 class="text-center mt-4" style="color: floralwhite"> Agregate Men</h1>
-<div class="container mb-3 mt-4 col-md-8">
+<h1 class="text-center mt-4" style="color: floralwhite"> Agregar Departamento</h1>
+<div class="container mb-3 mt-4 col-md-6">
 
 
     <div class="card text-center">
 
         <div class="card-header">
-          Agregar Usuario
+          Departamentos
         </div>
 
         <div class="card-body">
@@ -20,24 +20,14 @@
             </div>
 
             <div class="mb-3">
-                <label class="form-label"> Usuario </label>
+                <label class="form-label"> Descripción </label>
                 <input type="text" class="form-control" name="txtusu">
-            </div>
-
-            <div class="mb-3">
-                <label class="form-label"> Contraseña </label>
-                <input type="text" class="form-control" name="txtcon">
-            </div>
-
-            <div class="mb-3">
-                <label class="form-label"> Tipo </label>
-                <input type="text" class="form-control" name="txttip">
             </div>
 
         </div>
 
         <div class="card-footer">
-            <a href="#" class="btn btn-primary"> Agregar </a>
+            <a href="#" class="btn btn-success"> Agregar </a>          <a href="#" class="btn btn-danger"> Cancelar </a>
         </div>
 
 
