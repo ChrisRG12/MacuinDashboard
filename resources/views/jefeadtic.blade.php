@@ -2,7 +2,8 @@
 
 @section('contenido')
 
-<h1 class="text-center mt-4" style="color: floralwhite"> Administración de Usuarios</h1>
+<h1 class="text-center mt-4" style="color: floralwhite"> Administración de Tickets
+</h1>
 
         <div class="position-absolute top-0 end-0 p-3">
           <button type="button" class="btn btn-primary">Generar PDF</button>
