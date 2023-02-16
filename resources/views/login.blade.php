@@ -15,6 +15,7 @@
         <div class="card-body">
             
             <div class="mb-3">
+                
                 <label class="form-label"> Usuario </label>
                 <input type="text" class="form-control" name="txtusuario">
             </div>
