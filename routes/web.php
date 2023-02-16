@@ -20,8 +20,9 @@ Route::get('Welcome', function () {
 Route::view('plan', 'plantilla')-> name('pla');
 Route::view('/', 'login')-> name('log');
 Route::view('menu', 'menu')-> name('men');
-Route::view('home', 'jefehome')-> name('jeadusu');
-Route::view('adusu', 'jefeadusu')-> name('jeho');
+Route::view('home', 'jefehome')-> name('jeho');
+Route::view('adusu', 'jefeadusu')-> name('jeadusu');
 Route::view('rede', 'jeferede')-> name('jeagde');
+Route::view('adtic', 'jefeadtic')-> name('jeadti');
 
 Route::view('Usua', 'usuarios')-> name('usu');
