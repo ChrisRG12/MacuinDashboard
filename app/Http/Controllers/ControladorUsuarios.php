@@ -4,6 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+//Importamos el request
+use App\Http\Requests\ValidadorUsuario;
+//Hacemos las siguiente importaciones
+use DB;
+use Carbon\Carbon;
+
 class ControladorUsuarios extends Controller
 {
     /**

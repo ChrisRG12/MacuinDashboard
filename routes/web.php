@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+//impartamos el controlador resource
+
+use App\Http\Controllers\ControladorUsuarios;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,9 +24,29 @@ Route::get('Welcome', function () {
 Route::view('plan', 'plantilla')-> name('pla');
 Route::view('/', 'login')-> name('log');
 Route::view('menu', 'menu')-> name('men');
+
 Route::view('home', 'jefehome')-> name('jeho');
 Route::view('adusu', 'jefeadusu')-> name('jeadusu');
 Route::view('rede', 'jeferede')-> name('jeagde');
 Route::view('adtic', 'jefeadtic')-> name('jeadti');
+
+Route::view('Usua', 'usuarios')-> name('usu');
+
+//------------------USUARIOS----------------------------
+//Create
+Route::get('Usuario/create', [ControladorUsuarios::class, 'create'])->name('Usuario.create');
+//store
+Route::post('Usuario', [ControladorUsuarios::class, 'store'])->name('Usuario.store');
+//index
+Route::get('Vistausuario', [ControladorUsuarios::class, 'index'])->name('Usuario.index');
+//edit
+Route::get('Usuario/{id}/edit', [ControladorUsuarios::class, 'edit'])->name('Usuario.edit');
+//update
+Route::put('Usuario/{id}', [ControladorUsuarios::class, 'update'])->name('Usuario.update');
+//show
+Route::get('Eliminar/{id}/show', [ControladorUsuarios::class, 'show']) -> name('Eliminar.show');
+//destroy
+Route::delete('Usuario/{id}', [ControladorUsuarios::class, 'destroy']) -> name('Usuario.destroy');
+
 
 Route::view('Usua', 'usuarios')-> name('usu');
