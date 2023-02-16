@@ -19,7 +19,8 @@ class ControladorUsuarios extends Controller
      */
     public function index()
     {
-        //
+        $ConsultaUsuario= DB::table('tb_usuarios')->get();
+        return view ('VistaUsu', compact('ConsultaUsuario'));
     }
 
     /**
@@ -29,7 +30,7 @@ class ControladorUsuarios extends Controller
      */
     public function create()
     {
-        //
+        return view('RegistroU');
     }
 
     /**
@@ -38,9 +39,19 @@ class ControladorUsuarios extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ValidadorUsuario $request)
     {
-        //
+        DB::table('tb_usuarios')->insert([
+            "Nombre"=> $request->input('txtnom'),
+            "Usuario"=> $request->input('txtusu'),
+            "Contra"=> $request->input('txtcon'),
+            "TipoUsu"=> $request->input('txttip'),
+            "created_at"=> Carbon::now(),
+            "updated_at"=> Carbon::now(),
+
+        ]);
+        return redirect('Vistausuario')->with('confirmacion', 'Autor Guardado');
+   
     }
 
     /**
