@@ -6,6 +6,9 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ControladorUsuarios;
 
+use App\Http\Controllers\controladorVistas;
+use App\Http\Controllers\controladorDepartamentos;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -46,4 +49,22 @@ Route::put('Usuario/{id}', [ControladorUsuarios::class, 'update'])->name('Usuari
 //destroy
 Route::delete('Usuario/{id}', [ControladorUsuarios::class, 'destroy']) -> name('Usuario.destroy');
 
+
+Route::view('Usua', 'usuarios')-> name('usu');
+
+//------------------Departamentos----------------------------
+//Create
+Route::get('Departamento/create', [controladorDepartamentos::class, 'create'])->name('depa.create');
+//store
+Route::post('Departamento', [controladorDepartamentos::class, 'store'])->name('depa.store');
+//index
+Route::get('vistaDepas', [controladorDepartamentos::class, 'index'])->name('depa.index');
+//edit
+Route::get('Departamento/{id}/edit', [controladorDepartamentos::class, 'edit'])->name('depa.edit');
+//update
+Route::put('Departamento/{id}', [controladorDepartamentos::class, 'update'])->name('depa.update');
+//show
+Route::get('Departamento/{id}/show', [controladorDepartamentos::class, 'show']) -> name('depa.show');
+//destroy
+Route::delete('Departamento/{id}', [controladorDepartamentos::class, 'destroy']) -> name('depa.destroy');
 
