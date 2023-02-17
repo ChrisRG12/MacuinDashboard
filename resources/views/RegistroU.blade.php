@@ -18,7 +18,8 @@
           Agregar Usuario 
         </div>
 
-        <form action="#" method="post">
+        <form action="{{route('Usuario.store')}}"  method="post">
+            @csrf
 
         <div class="card-body">
            
@@ -54,9 +55,7 @@
         </div>
 
         <div class="card-footer">
-
-            <a href="#" class="btn btn-secondary btn-lg"> Agregar <i class="bi bi-plus-circle-fill"></i></a> 
-
+            <button type="submit"  class="btn btn-secondary btn-lg"> Agregar <i class="bi bi-plus-circle-fill"> </i></button>
         </form>
 
         </div>

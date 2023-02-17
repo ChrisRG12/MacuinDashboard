@@ -25,12 +25,11 @@ Route::view('plan', 'plantilla')-> name('pla');
 Route::view('/', 'login')-> name('log');
 Route::view('menu', 'menu')-> name('men');
 
-Route::view('home', 'jefehome')-> name('jeho');
+Route::view('home', 'jefehome')-> name ('jeho');
 Route::view('adusu', 'jefeadusu')-> name('jeadusu');
 Route::view('rede', 'jeferede')-> name('jeagde');
 Route::view('adtic', 'jefeadtic')-> name('jeadti');
 
-Route::view('Usua', 'usuarios')-> name('usu');
 
 //------------------USUARIOS----------------------------
 //Create
@@ -49,20 +48,22 @@ Route::get('Eliminar/{id}/show', [ControladorUsuarios::class, 'show']) -> name('
 Route::delete('Usuario/{id}', [ControladorUsuarios::class, 'destroy']) -> name('Usuario.destroy');
 
 
+
 Route::view('Usua', 'usuarios')-> name('usu');
 
 //------------------Departamentos----------------------------
 //Create
-Route::get('Departamento/create', [ControladorUsuarios::class, 'create'])->name('depa.create');
+Route::get('Departamento/create', [controladorDepartamentos::class, 'create'])->name('depa.create');
 //store
-Route::post('Departamento', [ControladorUsuarios::class, 'store'])->name('depa.store');
+Route::post('Departamento', [controladorDepartamentos::class, 'store'])->name('depa.store');
 //index
-Route::get('vistaDepartamento', [ControladorUsuarios::class, 'index'])->name('depa.index');
+Route::get('vistaDepas', [controladorDepartamentos::class, 'index'])->name('depa.index');
 //edit
-Route::get('Departamento/{id}/edit', [ControladorUsuarios::class, 'edit'])->name('depa.edit');
+Route::get('Departamento/{id}/edit', [controladorDepartamentos::class, 'edit'])->name('depa.edit');
 //update
-Route::put('Departamento/{id}', [ControladorUsuarios::class, 'update'])->name('depa.update');
+Route::put('Departamento/{id}', [controladorDepartamentos::class, 'update'])->name('depa.update');
 //show
-Route::get('Eliminar/{id}/show', [ControladorUsuarios::class, 'show']) -> name('depa.show');
+Route::get('Departamento/{id}/show', [controladorDepartamentos::class, 'show']) -> name('depa.show');
 //destroy
-Route::delete('Departamento/{id}', [ControladorUsuarios::class, 'destroy']) -> name('depa.destroy');
+Route::delete('Departamento/{id}', [controladorDepartamentos::class, 'destroy']) -> name('depa.destroy');
+
