@@ -6,6 +6,9 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ControladorUsuarios;
 
+use App\Http\Controllers\controladorVistas;
+use App\Http\Controllers\controladorDepartamentos;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,12 +28,11 @@ Route::view('plan', 'plantilla')-> name('pla');
 Route::view('/', 'login')-> name('log');
 Route::view('menu', 'menu')-> name('men');
 
-Route::view('home', 'jefehome')-> name('jeho');
+Route::view('home', 'jefehome')-> name ('jeho');
 Route::view('adusu', 'jefeadusu')-> name('jeadusu');
 Route::view('rede', 'jeferede')-> name('jeagde');
 Route::view('adtic', 'jefeadtic')-> name('jeadti');
 
-Route::view('Usua', 'usuarios')-> name('usu');
 
 //------------------USUARIOS----------------------------
 //Create
@@ -43,10 +45,26 @@ Route::get('Vistausuario', [ControladorUsuarios::class, 'index'])->name('Usuario
 Route::get('Usuario/{id}/edit', [ControladorUsuarios::class, 'edit'])->name('Usuario.edit');
 //update
 Route::put('Usuario/{id}', [ControladorUsuarios::class, 'update'])->name('Usuario.update');
-//show
-Route::get('Eliminar/{id}/show', [ControladorUsuarios::class, 'show']) -> name('Eliminar.show');
+
 //destroy
 Route::delete('Usuario/{id}', [ControladorUsuarios::class, 'destroy']) -> name('Usuario.destroy');
 
 
 Route::view('Usua', 'usuarios')-> name('usu');
+
+//------------------Departamentos----------------------------
+//Create
+Route::get('Departamento/create', [controladorDepartamentos::class, 'create'])->name('depa.create');
+//store
+Route::post('Departamento', [controladorDepartamentos::class, 'store'])->name('depa.store');
+//index
+Route::get('vistaDepas', [controladorDepartamentos::class, 'index'])->name('depa.index');
+//edit
+Route::get('Departamento/{id}/edit', [controladorDepartamentos::class, 'edit'])->name('depa.edit');
+//update
+Route::put('Departamento/{id}', [controladorDepartamentos::class, 'update'])->name('depa.update');
+//show
+Route::get('Departamento/{id}/show', [controladorDepartamentos::class, 'show']) -> name('depa.show');
+//destroy
+Route::delete('Departamento/{id}', [controladorDepartamentos::class, 'destroy']) -> name('depa.destroy');
+

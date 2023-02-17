@@ -6,11 +6,11 @@
     <div class="row align-items-stretch">
       <!--md mediano, lg largo, xl extralargo-->
       
-      <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 ">
-        <img src="\ima\conv.jpg" width="800" height="700" alt="">
+      <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 " style="display: flex; aling-items: center; justify-content: center;">
+        <img src="\ima\blac.png" width="690" height="700" alt="">
       </div>
   
-      <div class="col bg-white p-5 rounded-end">
+      <div class="col bg-white p-5 rounded-end" style="color: rgb(57, 36, 58)">
         <div class="px-lg-5 pt-lg-4 pb-lg-3 w-100 border-0" id="imagen" style="display: flex; aling-items: center; justify-content: center;">
             <img src="\ima\conv.jpg" width="150" height="100" alt="">
           </div>
@@ -35,7 +35,7 @@
               </div>
 
               <div class="my-3">
-                <span>¿No tienes cuenta?<a href="#" class="nav-link"> <p style="color: blue">Registrate </p></a></span>
+                <span>¿No tienes cuenta?<a href="{{route('Usuario.create')}}" class="nav-link"> <p style="color: blue">Registrate </p></a></span>
               </div>
   
           </form>
