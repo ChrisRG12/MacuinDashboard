@@ -30,7 +30,7 @@ class ControladorUsuarios extends Controller
      */
     public function create()
     {
-        return view('RegistroU');
+        return view('RegistroD');
     }
 
     /**

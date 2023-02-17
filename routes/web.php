@@ -6,6 +6,9 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ControladorUsuarios;
 
+use App\Http\Controllers\controladorVistas;
+use App\Http\Controllers\controladorDepartamentos;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -46,7 +49,6 @@ Route::put('Usuario/{id}', [ControladorUsuarios::class, 'update'])->name('Usuari
 Route::get('Eliminar/{id}/show', [ControladorUsuarios::class, 'show']) -> name('Eliminar.show');
 //destroy
 Route::delete('Usuario/{id}', [ControladorUsuarios::class, 'destroy']) -> name('Usuario.destroy');
-
 
 
 Route::view('Usua', 'usuarios')-> name('usu');

@@ -25,9 +25,9 @@
             
             <div class="mb-3">
                 <label class="form-label"> Nombre Departamento </label> <i class="bi bi-person-lines-fill"></i>
-                <input type="text" class="form-control" name="txtnomdepa">
+                <input type="text" class="form-control" name="txtnombre">
                 <p class="text-primary fst-Italic">
-                    {{ $errors->first('txtnomdepa') }} </p>
+                    {{ $errors->first('txtnombre') }} </p>
             </div>
 
             <div class="mb-3">
