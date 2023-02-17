@@ -72,6 +72,9 @@ class ControladorUsuarios extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::table('tb_usuarios')->where('idusuario', $id)->delete();
+
+        return redirect('Vistausuario')->with('Eliminado', 'Recuerdo Eliminado');
+
     }
 }

@@ -12,6 +12,17 @@
 ) </script> "!!}
 @endif
 
+@if(session()->has('Eliminado'))
+{!! 
+" <script> 
+      Swal.fire(
+      'Eliminado',
+      'Usuario Eliminado',
+      'success'  
+) </script> "!!}
+@endif
+
+
 @if(session()->has('Actualizar'))
 {!! 
 " <script> 
@@ -47,9 +58,12 @@
             <td>{{ $consulta->Usuario }}</td>
             <td>{{ $consulta->TipoUsu }}</td>
             <td>
-                <a href="{{route('Usuario.edit' , $consulta->idusuario)}}" class="btn btn-outline-success"> Editar </a>
-                <a href="#" class="btn btn-outline-danger">Eliminar</a>
+                <a href="{{route('Usuario.edit' , $consulta->idusuario)}}" class="btn btn-outline-success"> Editar  <i class="bi bi-people"></i></a>
+                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#ModalEliminarUsu{{$consulta->idusuario}}">
+                  Eliminar <i class="bi bi-trash-fill"></i>
+               </button>
             </td>
+            @include('ModalEliminarUsu')
 
           </tr>
           @endforeach
