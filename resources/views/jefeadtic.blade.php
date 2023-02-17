@@ -1,8 +1,10 @@
 @extends('plantilla')
 
 @section('contenido')
+<header>
+  <div class="page-header min-vh-100" style="background-image: url(&#39;https://images.unsplash.com/photo-1520769945061-0a448c463865?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80&#39;);" loading="lazy">
 
-<h1 class="text-center mt-4" style="color: floralwhite"> Administración de Tickets
+<h1 class="text-center mt-4" style="color: rgb(31, 28, 23)"> Administración de Tickets
 </h1>
 
         <div class="position-absolute top-0 end-0 p-3">
@@ -15,6 +17,11 @@
                     <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
                     <button class="btn btn-success" type="submit">Buscar</button>
                   </form>
+                </div>
+                <div class="d-grid gap-2 d-flex justify-content-center ">
+                  <button class="btn btn-warning" type="button"> <i class="bi bi-plus"></i> Asignar</button>
+                  <button class="btn btn-info" type="button"> <i class="bi bi-pencil-square"></i> Comentarios</button>
+                  <button class="btn btn-light" type="button"> <i class="bi bi-eye"></i> Observaciones</button>
                 </div>
                 <div class="container mb-3 mt-4 col-md-8">
             <table class="table table-dark table-sm">
@@ -64,16 +71,11 @@
                   </tr>
                 </tbody>
               </table>
-              <div class="d-grid gap-2 d-flex justify-content-center ">
-                <button class="btn btn-warning" type="button"> <i class="bi bi-plus"></i> Asignar</button>
-                <button class="btn btn-info" type="button"> <i class="bi bi-pencil-square"></i> Comentarios</button>
-                <button class="btn btn-light" type="button"> <i class="bi bi-eye"></i> Observaciones</button>
-              </div>
-
         </div>
 
       </div>
 
 </div>
+</header>
 
 @stop
