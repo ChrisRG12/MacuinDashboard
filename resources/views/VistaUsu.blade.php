@@ -10,8 +10,18 @@
       'Usuario Guardado',
       'success'  
 ) </script> "!!}
-
 @endif
+
+@if(session()->has('Actualizar'))
+{!! 
+" <script> 
+      Swal.fire(
+      'Muy Bien Very Good!',
+      'Usuario Editado',
+      'success'  
+) </script> "!!}
+@endif
+
 
 <div class="container w-75 mt-5 rounded shadow">
 
@@ -37,8 +47,8 @@
             <td>{{ $consulta->Usuario }}</td>
             <td>{{ $consulta->TipoUsu }}</td>
             <td>
-                <a href="#" class="btn btn-outline-danger"> Eliminar</a>
-                <a href="#" class="btn btn-outline-success">Editar</a>
+                <a href="{{route('Usuario.edit' , $consulta->idusuario)}}" class="btn btn-outline-success"> Editar </a>
+                <a href="#" class="btn btn-outline-danger">Eliminar</a>
             </td>
 
           </tr>

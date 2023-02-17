@@ -35,7 +35,7 @@
               </div>
 
               <div class="my-3">
-                <span>¿No tienes cuenta?<a href="#" class="nav-link"> <p style="color: blue">Registrate </p></a></span>
+                <span>¿No tienes cuenta?<a href="{{route('Usuario.create')}}" class="nav-link"> <p style="color: blue">Registrate </p></a></span>
               </div>
   
           </form>
