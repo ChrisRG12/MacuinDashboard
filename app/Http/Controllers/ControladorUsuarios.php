@@ -20,7 +20,7 @@ class ControladorUsuarios extends Controller
 
     public function create()
     {
-        return view('RegistroD');
+        return view('RegistroU');
     }
 
 
