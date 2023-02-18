@@ -57,13 +57,12 @@
             <td>{{ $consulta->Descripcion }}</td>
             <td>
             <a href="{{route('depa.edit' , $consulta->idDepa)}}" class="btn btn-outline-success"> Editar  <i class="bi bi-people"></i></a>
-                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#ModalEliminarDepa{{$consulta->idDepa}}">
+            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#ModalEliminarDepa{{$consulta->idDepa}}">
                   Eliminar <i class="bi bi-trash-fill"></i>
                </button>
-            </td>
-
-
           </tr>
+          @include('ModalEliminarDepa')
+
           @endforeach
         </tbody>
 

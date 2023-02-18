@@ -54,7 +54,7 @@ class controladorDepartamentos extends Controller
     }
 
 
-    public function update(Request $request, $id)
+    public function update(validadorDepartamento $request, $id)
     {
         DB::table('tb__departamentos')->where('idDepa',$id)->update([
             "Nombre"=> $request->input('txtnombre'),
