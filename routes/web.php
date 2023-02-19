@@ -20,19 +20,23 @@ use App\Http\Controllers\controladorDepartamentos;
 |
 */
 
-Route::get('Welcome', function () {
-    return view('welcome');
-});
+//      Route::view('plan', 'plantilla')-> name('pla');
+//Route::view('/', 'login')-> name('log');
+//Route::view('menu', 'menu')-> name('men');
+//------------------Menus----------------------------
 
-Route::view('plan', 'plantilla')-> name('pla');
-Route::view('/', 'login')-> name('log');
-Route::view('menu', 'menu')-> name('men');
 
-Route::view('home', 'jefehome')-> name ('jeho');
-Route::view('adusu', 'jefeadusu')-> name('jeadusu');
-Route::view('rede', 'jeferede')-> name('jeagde');
-Route::view('adtic', 'jefeadtic')-> name('jeadti');
+Route::view('adusu', 'vistaUsuu')-> name('jeadusu');
+//Route::view('adtic', 'jefeadtic')-> name('jeadti');
 
+//------------------Login----------------------------
+Route::get('/', [controladorVistas::class, 'showLoginForm'])->name('login');
+Route::post('/login', [controladorVistas::class, 'login']);
+
+
+Route::get('JefeSoporte', [controladorVistas::class, 'showMenuJefe'])->name('homejefe');
+Route::get('Auxiliar', [controladorVistas::class, 'showAuxiliar'])->name('homeaux');
+Route::get('Cliente', [controladorVistas::class, 'showCliente'])->name('homecliente');
 
 //------------------USUARIOS----------------------------
 //Create
