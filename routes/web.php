@@ -8,6 +8,7 @@ use App\Http\Controllers\ControladorUsuarios;
 
 use App\Http\Controllers\controladorVistas;
 use App\Http\Controllers\controladorDepartamentos;
+use App\Http\Controllers\LoginCont;
 
 /*
 |--------------------------------------------------------------------------

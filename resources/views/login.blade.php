@@ -12,7 +12,7 @@
   
       <div class="col bg-white p-5 rounded-end" style="color: rgb(57, 36, 58)">
         <div class="px-lg-5 pt-lg-4 pb-lg-3 w-100 border-0" id="imagen" style="display: flex; aling-items: center; justify-content: center;">
-            <img src="\ima\conv.jpg" width="150" height="100" alt="">
+            <img src="\ima\Mac.png" width="150" height="120" alt="">
           </div>
           <h2 class="fw-bold text-center pt-3 mb-5 ">Iniciar Sesion</h2>
 
