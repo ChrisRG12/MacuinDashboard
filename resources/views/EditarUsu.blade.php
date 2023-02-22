@@ -21,18 +21,18 @@
      
                  <div class="mb-1">
                    <label class="form-label"> Nombre </label>
-                  <input type="text" class="form-control" name="txtnom" value="{{ $consultaId->Nombre }}">
+                  <input type="text" class="form-control" name="txtnom" value="{{ $consultaId->name }}">
                  </div>
      
      
                  <div class="mb-1">
                   <label class="form-label"> Usuario </label>
-                  <input type="text" class="form-control" name="txtusu" value="{{ $consultaId->Usuario }}">
+                  <input type="text" class="form-control" name="txtusu" value="{{ $consultaId->email }}">
                  </div>
   
                  <div class="mb-1">
                   <label class="form-label"> Contraseña  </label>
-                  <input type="text" class="form-control" name="txtcon" value="{{ $consultaId->Contra }}">
+                  <input type="text" class="form-control" name="txtcon" value="{{ $consultaId->password }}">
                  </div>
 
                  <div class="mb-1">

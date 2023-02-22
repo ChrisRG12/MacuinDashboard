@@ -41,7 +41,7 @@
                     <option selected></option>
                     
                     @foreach ($moreinfou as $tb_usuarios)
-                        <option value="{{$tb_usuarios['idusuario']}}">{{$tb_usuarios['Nombre']}}</option>
+                        <option value="{{$tb_usuarios['idusuario']}}">{{$tb_usuarios['name']}}</option>
                     @endforeach
 
                   </select>
