@@ -8,6 +8,7 @@ use App\Http\Controllers\ControladorUsuarios;
 
 use App\Http\Controllers\controladorVistas;
 use App\Http\Controllers\controladorDepartamentos;
+use App\Http\Controllers\controladorTickets;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,7 +35,7 @@ Route::get('/', [controladorVistas::class, 'showLoginForm'])->name('login');
 Route::post('/login', [controladorVistas::class, 'login']);
 
 
-Route::get('JefeSoporte', [controladorVistas::class, 'showMenuJefe'])->name('homejefe');
+Route::get('JefeSoporte', [controladorVistas::class, 'showJefe'])->name('homejefe');
 Route::get('Auxiliar', [controladorVistas::class, 'showAuxiliar'])->name('homeaux');
 Route::get('Cliente', [controladorVistas::class, 'showCliente'])->name('homecliente');
 
@@ -71,4 +72,20 @@ Route::put('Departamento/{id}', [controladorDepartamentos::class, 'update'])->na
 Route::get('Departamento/{id}/show', [controladorDepartamentos::class, 'show']) -> name('depa.show');
 //destroy
 Route::delete('Departamento/{id}', [controladorDepartamentos::class, 'destroy']) -> name('depa.destroy');
+
+//------------------Ticket----------------------------
+//Create
+Route::get('Ticket/create', [controladorTickets::class, 'create'])->name('ticket.create');
+//store
+Route::post('Ticket', [controladorTickets::class, 'store'])->name('ticket.store');
+//index
+Route::get('vistaTickets', [controladorTickets::class, 'index'])->name('ticket.index');
+//edit
+Route::get('Ticket/{id}/edit', [controladorTickets::class, 'edit'])->name('ticket.edit');
+//update
+Route::put('Ticket/{id}', [controladorTickets::class, 'update'])->name('ticket.update');
+//show
+Route::get('Ticket/{id}/show', [controladorTickets::class, 'show']) -> name('ticket.show');
+//destroy
+Route::delete('Ticket/{id}', [controladorTickets::class, 'destroy']) -> name('ticket.destroy');
 

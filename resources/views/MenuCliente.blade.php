@@ -19,7 +19,7 @@
             </div>
 
             <div class="mb-3">
-            <a type="button"  href="{{route('depa.create')}}" class="btn btn-primary">Generar ticket</a>
+            <a type="button"  href="{{route('ticket.create')}}" class="btn btn-primary">Generar ticket</a>
 
             </div>
 
