@@ -46,8 +46,14 @@
             </div>
 
             <div class="mb-3">
-                <label class="form-label"> Tipo </label> <i class="bi bi-person-bounding-box"></i>
-                <input type="text" class="form-control" name="txttip">
+                <label class="form-label"> Tipo Usuario</label> <i class="bi bi-person-bounding-box"></i>
+                    <select class="form-select" aria-label="Default select example" name="txttip">
+                    <option selected placeholder=""></option>
+                    <option >Jefe Soporte</option>
+                    <option >Auxiliar Jefe</option>
+                    <option >Cliente</option>
+                </select>
+
                 <p class="text-primary fst-Italic">
                     {{ $errors->first('txttip') }} </p>
             </div>
