@@ -33,7 +33,7 @@
 
             <div class="mb-3">
                 <label class="form-label"> Usuario </label> <i class="bi bi-person-badge-fill"></i>
-                <input type="text" class="form-control" name="txtusu">
+                <input type="email" class="form-control" name="txtusu">
                 <p class="text-primary fst-Italic">
                     {{ $errors->first('txtusu') }} </p>
             </div>

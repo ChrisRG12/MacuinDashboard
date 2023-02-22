@@ -8,7 +8,11 @@ use App\Http\Controllers\ControladorUsuarios;
 
 use App\Http\Controllers\controladorVistas;
 use App\Http\Controllers\controladorDepartamentos;
+
 use App\Http\Controllers\controladorTickets;
+
+use App\Http\Controllers\LoginCont;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +34,7 @@ use App\Http\Controllers\controladorTickets;
 Route::view('adusu', 'vistaUsuu')-> name('jeadusu');
 //Route::view('adtic', 'jefeadtic')-> name('jeadti');
 
+
 //------------------Login----------------------------
 Route::get('/', [controladorVistas::class, 'showLoginForm'])->name('login');
 Route::post('/login', [controladorVistas::class, 'login']);
@@ -38,6 +43,12 @@ Route::post('/login', [controladorVistas::class, 'login']);
 Route::get('JefeSoporte', [controladorVistas::class, 'showJefe'])->name('homejefe');
 Route::get('Auxiliar', [controladorVistas::class, 'showAuxiliar'])->name('homeaux');
 Route::get('Cliente', [controladorVistas::class, 'showCliente'])->name('homecliente');
+
+//------------------LOGIN----------------------------
+
+Route::post('Incia/Sesion', [LoginCont::class, 'login'])->name('Iniciar.Sesion');
+Route::get('Cierra/Sesion', [LoginCont::class, 'logout'])->name('Cierra.Sesion');
+
 
 //------------------USUARIOS----------------------------
 //Create
@@ -78,6 +89,10 @@ Route::delete('Departamento/{id}', [controladorDepartamentos::class, 'destroy'])
 Route::get('Ticket/create', [controladorTickets::class, 'create'])->name('ticket.create');
 //store
 Route::post('Ticket', [controladorTickets::class, 'store'])->name('ticket.store');
+
+
+
+
 //index
 Route::get('vistaTickets', [controladorTickets::class, 'index'])->name('ticket.index');
 //edit

@@ -27,9 +27,9 @@ class ControladorUsuarios extends Controller
     public function store(ValidadorUsuario $request)
     {
         DB::table('tb_usuarios')->insert([
-            "Nombre"=> $request->input('txtnom'),
-            "Usuario"=> $request->input('txtusu'),
-            "Contra"=> $request->input('txtcon'),
+            "name"=> $request->input('txtnom'),
+            "email"=> $request->input('txtusu'),
+            "password"=> $request->input('txtcon'),
             "TipoUsu"=> $request->input('txttip'),
             "created_at"=> Carbon::now(),
             "updated_at"=> Carbon::now(),
@@ -53,9 +53,9 @@ class ControladorUsuarios extends Controller
     public function update(ValidadorUsuario $request, $id)
     {
         DB::table('tb_usuarios')->where('idusuario', $id)->update([
-            "Nombre"=> $request->input('txtnom'),
-            "Usuario"=> $request->input('txtusu'),
-            "Contra"=> $request->input('txtcon'),
+            "name"=> $request->input('txtnom'),
+            "email"=> $request->input('txtusu'),
+            "password"=> $request->input('txtcon'),
             "TipoUsu"=> $request->input('txttip'),
             "updated_at"=> Carbon::now(),
 
