@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('tb_usuarios', function (Blueprint $table) {
             $table->engine="InnoDB";
             $table->bigIncrements('idusuario');
-            $table->string('Nombre');
-            $table->String('Usuario');
-            $table->String('Contra');
+            $table->string('name');
+            $table->String('email');
+            $table->String('password');
             $table->String('TipoUsu');
             $table->timestamps();
 

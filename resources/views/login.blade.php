@@ -18,7 +18,8 @@
 
           <!--Form-->
   
-          <form class="form-signin" action="#" method="post">
+          <form class="form-signin" action="{{route('Iniciar.Sesion')}}" method="post">
+            @csrf
 
               <div class="mb-4">
                 <label for="text" class="form-label">Usuario</label>

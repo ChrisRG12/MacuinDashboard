@@ -34,6 +34,10 @@ Route::view('adusu', 'jefeadusu')-> name('jeadusu');
 Route::view('rede', 'jeferede')-> name('jeagde');
 Route::view('adtic', 'jefeadtic')-> name('jeadti');
 
+//------------------LOGIN----------------------------
+
+Route::post('Incia/Sesion', [LoginCont::class, 'login'])->name('Iniciar.Sesion');
+Route::get('Cierra/Sesion', [LoginCont::class, 'logout'])->name('Cierra.Sesion');
 
 //------------------USUARIOS----------------------------
 //Create

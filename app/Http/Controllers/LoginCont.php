@@ -3,15 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use App\Http\Requests\ValidadorLogin;
 
 class LoginCont extends Controller
 {
-    public function login(Request $request){
+    public function login(ValidadorLogin $request){
         //Validacion de Datos
         $Credenciales =[
-            "Usuario" => $request->txtuser,
-            "Contra" => $request->txtcontra,
+            "email" => $request->txtuser,
+            "password" => $request->txtcontra,
             
         ];
 
@@ -22,19 +24,19 @@ class LoginCont extends Controller
             return redirect()->intended(route('menu'));
 
         }else{
-            return redirect('login');
+            return redirect('/');
         }
 
 
     }
 
-    public function logout(ValidadorLogin $request){
+    public function logout(Request $request){
        Auth::logout();
 
        $request-> session()->invalidate();
        $request-> session()->regenerateToken();
 
-       return redirect(route('login'));
+       return redirect(route('/'));
         
 
     }
