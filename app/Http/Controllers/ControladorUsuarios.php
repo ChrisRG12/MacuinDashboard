@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests\ValidadorUsuario;
+use Illuminate\Support\Facades\Hash;
 use DB;
 use Carbon\Carbon;
 
@@ -29,7 +30,7 @@ class ControladorUsuarios extends Controller
         DB::table('users')->insert([
             "name"=> $request->input('txtnom'),
             "email"=> $request->input('txtusu'),
-            "password"=> $request->input('txtcon'),
+            "password"=> Hash::make($request->input('txtcon')),
             "TipoUsu"=> $request->input('txttip'),
             "created_at"=> Carbon::now(),
             "updated_at"=> Carbon::now(),
@@ -55,7 +56,7 @@ class ControladorUsuarios extends Controller
         DB::table('users')->where('id', $id)->update([
             "name"=> $request->input('txtnom'),
             "email"=> $request->input('txtusu'),
-            "password"=> $request->input('txtcon'),
+            "password"=> Hash::make($request->input('txtcon')),
             "TipoUsu"=> $request->input('txttip'),
             "updated_at"=> Carbon::now(),
 

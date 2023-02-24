@@ -18,7 +18,7 @@
 
           <!--Form-->
   
-          <form class="form-signin" action="{{route('Iniciar.Sesion')}}" method="post">
+          <form method="post" action="{{route('Iniciar.Sesion')}}" >
             @csrf
 
               <div class="mb-4">
@@ -36,7 +36,7 @@
               </div>
 
               <div class="my-3">
-                <span>¿No tienes cuenta?<a href="{{route('Usuario.create')}}" class="nav-link"> <p style="color: blue">Registrate </p></a></span>
+                {{-- <span>¿No tienes cuenta?<a href="{{route('Usuario.create')}}" class="nav-link"> <p style="color: blue">Registrate </p></a></span> --}}
               </div>
   
           </form>
