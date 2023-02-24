@@ -1,6 +1,7 @@
 @extends('plantilla')
 
 @section('contenido')
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,7 +24,8 @@
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav ms-auto">
 					<li class="nav-item">
-						<button class="btn btn-danger">Cerrar sesión</button>
+						<a href="{{route('Cierra.Sesion')}}">
+						<button class="btn btn-danger">Cerrar sesión</button></a>
 					</li>
 				</ul>
 			</div>
@@ -115,4 +117,3 @@
   </body>
   </html>
   
-

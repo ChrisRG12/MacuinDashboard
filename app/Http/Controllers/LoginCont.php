@@ -14,36 +14,29 @@ class LoginCont extends Controller
 
     public function log(ValidadorLogin $request){
 
-        //Validacion de Datos
-        $credenciales = $request->only('email','password');
-        if(Auth::attempt($credenciales)){
-            $request->session()->regenerate();
+        if(Auth::attempt(['email'=>$request->txtuser, 'password'=>$request->txtcontra])){
 
-            if((Auth::user()->TipoUsu)==Jefe-Soporte){
-              return 'jefe encontrado';
+                
+             if((Auth::user()->TipoUsu)=='Jefe-Soporte'){
+               return view('MenuJefe');}
 
-              }if((Auth::user()->TipoUsu)==Auxiliar-Jefe){
-                return 'aux encontrado';
+                          if((Auth::user()->TipoUsu)=='Auxiliar-Jefe'){
+                             return view('MenuAuxiliar');}
+                            
+                                    if((Auth::user()->TipoUsu)=='Cliente'){
+                                        return view('pueba');}
 
-                }if((Auth::user()->TipoUsu)==Cliente){
-                  return 'Bienvenido';
-                }
-          
-           
+
         }else{
-        return view('login');
+            return 'artur';
         }
-
-
     }
-    public function logout(Request $request){
-    //    Auth::logout();
-       
-    //    $request-> session()->invalidate();
-    //    $request-> session()->regenerateToken();
+           
 
-    //    return redirect(route('/'));
-        
+public function logout(){
+    Auth::logout();
+    return redirect('/');
+}
 
-    }
+
 }
