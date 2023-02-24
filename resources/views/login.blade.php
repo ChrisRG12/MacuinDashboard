@@ -22,13 +22,13 @@
             @csrf
 
               <div class="mb-4">
-                <label for="text" class="form-label">Usuario</label>
-                <input type="text" class="form-control" name="txtuser" required>
+                <label for="text" class="form-label">Nombre de Usuario</label>
+                <input type="text" class="form-control" name="txtuser">
               </div>
 
               <div class="mb-4">
                 <label for="password" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" name="txtcontra" required>
+                <input type="password" class="form-control" name="txtcontra">
               </div>
 
               <div class="d-grid">

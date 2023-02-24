@@ -20,9 +20,9 @@ class LoginCont extends Controller
         $Credenciales = $request-> only ('name', 'password');
         if(Auth::attempt($Credenciales)){
             $request->session()->regenerate();
-            if((Auth::user()->tipoUsu)==Jefe){
+            if((Auth::user()->tipoUsu)==Jefe-Soporte){
                 return view('jefehome');
-                }   if((Auth::user()->tipoUsu)==Auxiliar){
+                }   if((Auth::user()->tipoUsu)==Auxiliar-Jefe){
                     return view('menu');
                  }  if((Auth::user()->tipoUsu)==Cliente){
                     return view('Vistausuario');

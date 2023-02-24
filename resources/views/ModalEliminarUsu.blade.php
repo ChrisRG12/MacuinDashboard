@@ -1,6 +1,6 @@
 
 <!-- Modal -->
-<div class="modal fade" id="ModalEliminarUsu{{$consulta->idusuario}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="ModalEliminarUsu" aria-hidden="true">
+<div class="modal fade" id="ModalEliminarUsu{{$consulta->id}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="ModalEliminarUsu" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
 
@@ -8,7 +8,7 @@
           <h5 class="modal-title" id="staticBackdropLabel">Eliminar Usuario <i class="bi bi-person-x"></i></h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <form method="post" action="{{route('Usuario.destroy',$consulta->idusuario)}} ">
+        <form method="post" action="{{route('Usuario.destroy',$consulta->id)}} ">
           @csrf
           {!!method_field('DELETE')!!};
 

@@ -13,7 +13,7 @@ class ControladorUsuarios extends Controller
 
     public function index()
     {
-        $ConsultaUsuario= DB::table('tb_usuarios')->get();
+        $ConsultaUsuario= DB::table('users')->get();
         return view ('VistaUsu', compact('ConsultaUsuario'));
     }
 
@@ -26,7 +26,7 @@ class ControladorUsuarios extends Controller
 
     public function store(ValidadorUsuario $request)
     {
-        DB::table('tb_usuarios')->insert([
+        DB::table('users')->insert([
             "name"=> $request->input('txtnom'),
             "email"=> $request->input('txtusu'),
             "password"=> $request->input('txtcon'),
@@ -46,13 +46,13 @@ class ControladorUsuarios extends Controller
 
     public function edit($id)
     {
-        $consultaId = DB::table('tb_usuarios')->where('idusuario', $id)->first();
+        $consultaId = DB::table('users')->where('id', $id)->first();
         return view('EditarUsu', compact('consultaId'));
     }
 
     public function update(ValidadorUsuario $request, $id)
     {
-        DB::table('tb_usuarios')->where('idusuario', $id)->update([
+        DB::table('users')->where('id', $id)->update([
             "name"=> $request->input('txtnom'),
             "email"=> $request->input('txtusu'),
             "password"=> $request->input('txtcon'),
@@ -72,7 +72,7 @@ class ControladorUsuarios extends Controller
      */
     public function destroy($id)
     {
-        DB::table('tb_usuarios')->where('idusuario', $id)->delete();
+        DB::table('users')->where('id', $id)->delete();
 
         return redirect('Vistausuario')->with('Eliminado', 'Recuerdo Eliminado');
 
