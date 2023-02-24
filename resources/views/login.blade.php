@@ -18,7 +18,7 @@
 
           <!--Form-->
   
-          <form method="post" action="{{route('Iniciar.Sesion')}}" >
+          <form method="post" action="Incia/Sesion" >
             @csrf
 
               <div class="mb-4">

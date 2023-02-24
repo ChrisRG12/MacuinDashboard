@@ -46,7 +46,7 @@ Route::get('Cliente', [controladorVistas::class, 'showCliente'])->name('homeclie
 
 //------------------LOGIN----------------------------
 Route::get('/', [LoginCont::class, 'login'])->name('login');
-Route::post('Incia/Sesion', [LoginCont::class, 'loginver'])->name('Iniciar.Sesion');
+Route::post('Incia/Sesion', [LoginCont::class, 'log'])->name('Iniciar.Sesion');
 Route::get('Cierra/Sesion', [LoginCont::class, 'logout'])->name('Cierra.Sesion');
 
 
