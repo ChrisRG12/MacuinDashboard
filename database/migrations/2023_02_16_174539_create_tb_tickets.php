@@ -22,7 +22,7 @@ return new class extends Migration
             $table->unsignedBigInteger('autorj_id');
             $table->unsignedBigInteger('Depa_id');
             $table->timestamps();
-            $table->foreign('autorj_id')->references('idusuario')->on('tb_usuarios')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('autorj_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('Depa_id')->references('idDepa')->on('tb__departamentos')->onDelete('cascade')->onUpdate('cascade');
 
         });

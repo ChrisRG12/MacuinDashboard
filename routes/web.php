@@ -26,7 +26,7 @@ Route::get('Welcome', function () {
 });
 
 Route::view('plan', 'plantilla')-> name('pla');
-Route::view('/', 'login')-> name('log');
+
 Route::view('menu', 'menu')-> name('men');
 
 Route::view('home', 'jefehome')-> name ('jeho');
@@ -35,8 +35,8 @@ Route::view('rede', 'jeferede')-> name('jeagde');
 Route::view('adtic', 'jefeadtic')-> name('jeadti');
 
 //------------------LOGIN----------------------------
-
-Route::post('Incia/Sesion', [LoginCont::class, 'login'])->name('Iniciar.Sesion');
+Route::get('/', [LoginCont::class, 'login'])->name('login');
+Route::post('Incia/Sesion', [LoginCont::class, 'loginver'])->name('Iniciar.Sesion');
 Route::get('Cierra/Sesion', [LoginCont::class, 'logout'])->name('Cierra.Sesion');
 
 //------------------USUARIOS----------------------------
