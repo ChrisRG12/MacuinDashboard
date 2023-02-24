@@ -18,10 +18,10 @@ return new class extends Migration
             $table->engine="InnoDB";
             $table->string('name');
             $table->string('email')->unique();
+            $table->String('TipoUsu');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
-            $table->String('TipoUsu');
             $table->timestamps();
         });
     }

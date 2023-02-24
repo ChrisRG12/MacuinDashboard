@@ -40,11 +40,6 @@ Route::view('adusu', 'vistaUsuu')-> name('jeadusu');
 //Route::view('adtic', 'jefeadtic')-> name('jeadti');
 
 
-//------------------Login----------------------------
-Route::get('/', [controladorVistas::class, 'showLoginForm'])->name('login');
-Route::post('/login', [controladorVistas::class, 'login']);
-
-
 Route::get('JefeSoporte', [controladorVistas::class, 'showJefe'])->name('homejefe');
 Route::get('Auxiliar', [controladorVistas::class, 'showAuxiliar'])->name('homeaux');
 Route::get('Cliente', [controladorVistas::class, 'showCliente'])->name('homecliente');

@@ -7,7 +7,7 @@
   
     <div class="card text-center mb-2">
   
-        <form action="{{route('Usuario.update', $consultaId->idusuario)}}" method="post">
+        <form action="{{route('Usuario.update', $consultaId->id)}}" method="post">
             @csrf
   
             @method('PUT')
@@ -39,8 +39,8 @@
                     <label class="form-label"> Tipo Usuario</label> <i class="bi bi-person-bounding-box"></i>
                     <select class="form-select" aria-label="Default select example"  name="txttip" value="{{ $consultaId->TipoUsu }}">
                     <option selected ></option>
-                    <option >Jefe Soporte</option>
-                    <option >Auxiliar Jefe</option>
+                    <option >Jefe-Soporte</option>
+                    <option >Auxiliar-Jefe</option>
                     <option >Cliente</option>
                     <p class="text-primary fst-Italic">
                     {{ $errors->first('txttip') }} </p>

@@ -65,13 +65,13 @@
         <tbody>
             @foreach ($ConsultaUsuario as $consulta)
           <tr>
-            <th scope="row">{{ $consulta->idusuario }}</th>
+            <th scope="row">{{ $consulta->id }}</th>
             <td>{{ $consulta->name }}</td>
             <td>{{ $consulta->email }}</td>
             <td>{{ $consulta->TipoUsu }}</td>
             <td>
-                <a href="{{route('Usuario.edit' , $consulta->idusuario)}}" class="btn btn-outline-success"> Editar  <i class="bi bi-people"></i></a>
-                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#ModalEliminarUsu{{$consulta->idusuario}}">
+                <a href="{{route('Usuario.edit' , $consulta->id)}}" class="btn btn-outline-success"> Editar  <i class="bi bi-people"></i></a>
+                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#ModalEliminarUsu{{$consulta->id}}">
                   Eliminar <i class="bi bi-trash-fill"></i>
                </button>
             </td>

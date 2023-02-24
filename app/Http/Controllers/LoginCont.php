@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Requests\ValidadorLogin;
 
+use DB;
+use Carbon\Carbon;
+
 class LoginCont extends Controller
 {
     public function login(){
@@ -20,16 +23,21 @@ class LoginCont extends Controller
         $Credenciales = $request-> only ('name', 'password');
         if(Auth::attempt($Credenciales)){
             $request->session()->regenerate();
-            if((Auth::user()->tipoUsu)==Jefe){
-                return view('jefehome');
-                }   if((Auth::user()->tipoUsu)==Auxiliar){
-                    return view('menu');
-                 }  if((Auth::user()->tipoUsu)==Cliente){
-                    return view('Vistausuario');
-                    }
             
-        }
+            if((Auth::user()->TipoUsu)==Jefe-Soporte){
+                return view('jefehome');
+                }   
+                    if((Auth::user()->TipoUsu)==Auxiliar-Jefe){
+                    return view('menu');
+                     }  
+                        if((Auth::user()->TipoUsu)==Cliente){
+                        return view('Vistausuario');
+                        }
+            
+        }else{
         return view('login');
+        }
+
     }
     public function logout(Request $request){
        Auth::logout();
