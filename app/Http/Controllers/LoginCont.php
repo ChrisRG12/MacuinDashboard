@@ -3,13 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\User;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
 use App\Http\Requests\ValidadorLogin;
-
-use DB;
-use Carbon\Carbon;
 
 class LoginCont extends Controller
 {
@@ -17,35 +12,37 @@ class LoginCont extends Controller
         return view('login');
     }
 
-    public function loginver(ValidadorLogin $request){
+    public function log(ValidadorLogin $request){
 
         //Validacion de Datos
-        $Credenciales = $request-> only ('name', 'password');
-        if(Auth::attempt($Credenciales)){
+        $credenciales = $request->only('email','password');
+        if(Auth::attempt($credenciales)){
             $request->session()->regenerate();
-            
+
             if((Auth::user()->TipoUsu)==Jefe-Soporte){
-                return view('jefehome');
-                }   
-                    if((Auth::user()->TipoUsu)==Auxiliar-Jefe){
-                    return view('menu');
-                     }  
-                        if((Auth::user()->TipoUsu)==Cliente){
-                        return view('Vistausuario');
-                        }
-            
+              return 'jefe encontrado';
+
+              }if((Auth::user()->TipoUsu)==Auxiliar-Jefe){
+                return 'aux encontrado';
+
+                }if((Auth::user()->TipoUsu)==Cliente){
+                  return 'Bienvenido';
+                }
+          
+           
         }else{
         return view('login');
         }
 
+
     }
     public function logout(Request $request){
-       Auth::logout();
+    //    Auth::logout();
        
-       $request-> session()->invalidate();
-       $request-> session()->regenerateToken();
+    //    $request-> session()->invalidate();
+    //    $request-> session()->regenerateToken();
 
-       return redirect(route('/'));
+    //    return redirect(route('/'));
         
 
     }

@@ -71,6 +71,14 @@
                   </tr>
                 </tbody>
               </table>
+
+              <div class="d-grid gap-2 d-flex justify-content-center ">
+                <button class="btn btn-warning" type="button"> <i class="bi bi-plus"></i> Asignar</button>
+                <button class="btn btn-info" type="button"> <i class="bi bi-pencil-square"></i> Coments</button>
+                <button class="btn btn-light" type="button"> <i class="bi bi-eye"></i> Observacioness</button>
+              </div>
+
+
         </div>
 
       </div>
