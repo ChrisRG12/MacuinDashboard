@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 	<!-- Navigation bar -->
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<div class="container-fluid">
@@ -30,29 +31,31 @@
 		</div>
 	</nav>
 
-<h1 class="text-center mt-4" style="color: floralwhite"> Home Jefe</h1>
-<div class="container mb-3 mt-4 col-md-3">
-
-
 	<!-- Main content -->
-	<div class="container-fluid">
-		<div class="row">
-			<!-- Sidebar -->
-			<div class="col-md-3 bg-dark text-light py-4">
-				<div class="text-center">
-					<img src="https://via.placeholder.com/150" alt="Profile picture" class="rounded-circle img-thumbnail">
-					<h3 class="mt-3">Jelos</h3>
-				</div>
-				<hr class="bg-light">
-				<ul class="nav flex-column">
-					<li class="nav-item">
-						<a class="nav-link" href="#">Perfil</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Configuración</a>
-					</li>
-				</ul>
-			</div>
+	<div class="container">
+        <div class="row">
+          <div class="col-lg-2 bg-dark text-light p-3">
+            <h3>Jefe de Empresa</h3>
+            <hr>
+            <img src="https://via.placeholder.com/150" alt="Foto de perfil" class="rounded-circle">
+            <hr>
+            <p>Jelos es Angel</p>
+            <hr>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#">CEO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#">Administración de Usuarios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#">Registro de Departamento</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#">Administración de Tickets</a>
+              </li>
+            </ul>
+          </div>
 
 			<!-- Main content -->
 			<div class="col-md-9 py-4">
@@ -62,7 +65,7 @@
 							<div class="card-body">
 								<h5 class="card-title">Administración de Usuarios</h5>
 								<p class="card-text">Gestión de usuarios y permisos de acceso en la plataforma.</p>
-								<a href="#" class="btn btn-primary"><i class="fas fa-users"></i> Ir a la administración de usuarios</a>
+								<a href="#" class="btn btn-primary"><i class="fas fa-users"></i> Entrar</a>
 							</div>
 						</div>
 					</div>
@@ -71,42 +74,23 @@
 							<div class="card-body">
 								<h5 class="card-title">Registro de Departamentos</h5>
 								<p class="card-text">Gestión de usuarios y permisos de acceso en la plataforma.</p>
-								<a href="#" class="btn btn-primary"><i class="fas fa-building"></i> Ir al registro de departamentos</a>
+								<a href="#" class="btn btn-primary"><i class="fas fa-building"></i> Entrar</a>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-4">
 						<div class="card">
 							<div class="card-body">
-								<h5 class="card-title">Administración de Tickets de la empresa.</p>
-                  <p class="card-text">Gestión de usuarios y permisos de acceso en la plataforma.</p>
-                  <a href="#" class="btn btn-primary"><i class="fas fa-ticket-alt"></i> Ir a la administración de tickets</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-body">
-            
-            <div class="mb-3">
-            <a type="button"  href="{{route('Usuario.create')}}" class="btn btn-primary">Administración de Usuarios</a>
-            </div>
-
-            <div class="mb-3">
-            <a type="button"  href="{{route('depa.create')}}" class="btn btn-primary">Administración de  Departamentos</a>
-
-            </div>
-
-            <div class="mb-3">
-                <button type="button" class="btn btn-warning">Administración de Tickets</button>
-            </div>
-
-        </div>
-
-
-      </div>
-    </div>
+								<h5 class="card-title">Administración de Tickets<</h5>
+								<p class="card-text">Permite asignar tickets a los miembros del equipo, hacer seguimiento y dar solución a los problemas.</p>
+								<a href="#" class="btn btn-primary"><i class="fas fa-ticket-alt"></i> Entrar</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+			</div>
   
     <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
@@ -115,4 +99,3 @@
   </body>
   </html>
   
-
