@@ -33,21 +33,27 @@
 
             <div class="mb-3">
                 <label class="form-label"> Usuario </label> <i class="bi bi-person-badge-fill"></i>
-                <input type="text" class="form-control" name="txtusu">
+                <input type="email" class="form-control" name="txtusu">
                 <p class="text-primary fst-Italic">
                     {{ $errors->first('txtusu') }} </p>
             </div>
 
             <div class="mb-3">
                 <label class="form-label"> Contraseña </label> <i class="bi bi-person-slash"></i>
-                <input type="text" class="form-control" name="txtcon">
+                <input type="password" class="form-control" name="txtcon">
                 <p class="text-primary fst-Italic">
                     {{ $errors->first('txtcon') }} </p>
             </div>
 
             <div class="mb-3">
-                <label class="form-label"> Tipo </label> <i class="bi bi-person-bounding-box"></i>
-                <input type="text" class="form-control" name="txttip">
+                <label class="form-label"> Tipo Usuario</label> <i class="bi bi-person-bounding-box"></i>
+                    <select class="form-select" aria-label="Default select example" name="txttip">
+                    <option selected placeholder=""></option>
+                    <option >Jefe Soporte</option>
+                    <option >Auxiliar Jefe</option>
+                    <option >Cliente</option>
+                </select>
+
                 <p class="text-primary fst-Italic">
                     {{ $errors->first('txttip') }} </p>
             </div>

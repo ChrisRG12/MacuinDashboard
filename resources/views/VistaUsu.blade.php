@@ -36,6 +36,18 @@
 
 <div class="container w-75 mt-5 rounded shadow">
 
+
+<div class="container mb-3 mt-4 col-md-5">
+                <a type="button"  href="{{route('Usuario.create')}}" class="btn btn-primary">Agregar Usuario +</a>
+                <div class="my-3">
+              </div>
+            </div>
+            <form>
+                <div class="container mb-3 mt-4 col-md-5">
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                  <button class="btn btn-success" type="submit">Buscar</button>
+                </form>
     
     <table class="table table-secondary table-striped mt-5 mb-5 ">
 
@@ -54,8 +66,8 @@
             @foreach ($ConsultaUsuario as $consulta)
           <tr>
             <th scope="row">{{ $consulta->idusuario }}</th>
-            <td>{{ $consulta->Nombre }}</td>
-            <td>{{ $consulta->Usuario }}</td>
+            <td>{{ $consulta->name }}</td>
+            <td>{{ $consulta->email }}</td>
             <td>{{ $consulta->TipoUsu }}</td>
             <td>
                 <a href="{{route('Usuario.edit' , $consulta->idusuario)}}" class="btn btn-outline-success"> Editar  <i class="bi bi-people"></i></a>

@@ -9,6 +9,11 @@ use App\Http\Controllers\ControladorUsuarios;
 use App\Http\Controllers\controladorVistas;
 use App\Http\Controllers\controladorDepartamentos;
 
+use App\Http\Controllers\controladorTickets;
+
+use App\Http\Controllers\LoginCont;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,18 +25,34 @@ use App\Http\Controllers\controladorDepartamentos;
 |
 */
 
-Route::get('Welcome', function () {
-    return view('welcome');
-});
+//      Route::view('plan', 'plantilla')-> name('pla');
+//Route::view('/', 'login')-> name('log');
+//Route::view('menu', 'menu')-> name('men');
+//------------------Menus----------------------------
+
 
 Route::view('plan', 'plantilla')-> name('pla');
-Route::view('/', 'login')-> name('log');
+
 Route::view('menu', 'menu')-> name('men');
 
-Route::view('home', 'jefehome')-> name ('jeho');
-Route::view('adusu', 'jefeadusu')-> name('jeadusu');
-Route::view('rede', 'jeferede')-> name('jeagde');
-Route::view('adtic', 'jefeadtic')-> name('jeadti');
+
+Route::view('adusu', 'vistaUsuu')-> name('jeadusu');
+//Route::view('adtic', 'jefeadtic')-> name('jeadti');
+
+
+//------------------Login----------------------------
+Route::get('/', [controladorVistas::class, 'showLoginForm'])->name('login');
+Route::post('/login', [controladorVistas::class, 'login']);
+
+
+Route::get('JefeSoporte', [controladorVistas::class, 'showJefe'])->name('homejefe');
+Route::get('Auxiliar', [controladorVistas::class, 'showAuxiliar'])->name('homeaux');
+Route::get('Cliente', [controladorVistas::class, 'showCliente'])->name('homecliente');
+
+//------------------LOGIN----------------------------
+Route::get('/', [LoginCont::class, 'login'])->name('login');
+Route::post('Incia/Sesion', [LoginCont::class, 'loginver'])->name('Iniciar.Sesion');
+Route::get('Cierra/Sesion', [LoginCont::class, 'logout'])->name('Cierra.Sesion');
 
 
 //------------------USUARIOS----------------------------
@@ -67,4 +88,24 @@ Route::put('Departamento/{id}', [controladorDepartamentos::class, 'update'])->na
 Route::get('Departamento/{id}/show', [controladorDepartamentos::class, 'show']) -> name('depa.show');
 //destroy
 Route::delete('Departamento/{id}', [controladorDepartamentos::class, 'destroy']) -> name('depa.destroy');
+
+//------------------Ticket----------------------------
+//Create
+Route::get('Ticket/create', [controladorTickets::class, 'create'])->name('ticket.create');
+//store
+Route::post('Ticket', [controladorTickets::class, 'store'])->name('ticket.store');
+
+
+
+
+//index
+Route::get('vistaTickets', [controladorTickets::class, 'index'])->name('ticket.index');
+//edit
+Route::get('Ticket/{id}/edit', [controladorTickets::class, 'edit'])->name('ticket.edit');
+//update
+Route::put('Ticket/{id}', [controladorTickets::class, 'update'])->name('ticket.update');
+//show
+Route::get('Ticket/{id}/show', [controladorTickets::class, 'show']) -> name('ticket.show');
+//destroy
+Route::delete('Ticket/{id}', [controladorTickets::class, 'destroy']) -> name('ticket.destroy');
 

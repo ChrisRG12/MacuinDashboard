@@ -15,7 +15,7 @@
         <div class="modal-body">
 
 
-          <h5 class="text-primary text-center">{{$consulta->Nombre}} </h5>
+          <h5 class="text-primary text-center">{{$consulta->name}} </h5>
           <h5 class="card-title text-center"> {{$consulta->TipoUsu}} </h5>
 
         </div>
