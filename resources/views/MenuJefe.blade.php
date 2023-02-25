@@ -1,6 +1,7 @@
 @extends('plantilla')
 
 @section('contenido')
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +25,8 @@
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav ms-auto">
 					<li class="nav-item">
-						<button class="btn btn-danger">Cerrar sesión</button>
+						<a href="{{route('Cierra.Sesion')}}">
+						<button class="btn btn-danger">Cerrar sesión</button></a>
 					</li>
 				</ul>
 			</div>
@@ -81,6 +83,7 @@
 					<div class="col-md-4">
 						<div class="card">
 							<div class="card-body">
+<<<<<<< HEAD
 								<h5 class="card-title">Administración de Tickets<</h5>
 								<p class="card-text">Permite asignar tickets a los miembros del equipo, hacer seguimiento y dar solución a los problemas.</p>
 								<a href="#" class="btn btn-primary"><i class="fas fa-ticket-alt"></i> Entrar</a>
@@ -91,6 +94,38 @@
 				</div>
 			</div>
 			</div>
+=======
+								<h5 class="card-title">Administración de Tickets de la empresa.</p>
+                  <p class="card-text">Gestión de usuarios y permisos de acceso en la plataforma.</p>
+                  <a href="#" class="btn btn-primary"><i class="fas fa-ticket-alt"></i> Ir a la administración de tickets</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-body">
+            
+            <div class="mb-3">
+            <a type="button"  href="{{route('Usuario.index')}}" class="btn btn-primary">Administración de Usuarios</a>
+            </div>
+
+            <div class="mb-3">
+            <a type="button"  href="{{route('depa.index')}}" class="btn btn-primary">Administración de  Departamentos</a>
+
+            </div>
+
+            <div class="mb-3">
+            <a type="button"  href="{{route('ticket.index')}}" class="btn btn-primary">Administración de  Tickets</a>
+
+            </div>
+
+        </div>
+
+
+      </div>
+    </div>
+>>>>>>> main
   
     <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>

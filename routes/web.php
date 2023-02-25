@@ -32,7 +32,7 @@ use App\Http\Controllers\LoginCont;
 
 
 Route::view('plan', 'plantilla')-> name('pla');
-
+Route::view('welcome', 'welcome')-> name('we');
 Route::view('menu', 'menu')-> name('men');
 
 
