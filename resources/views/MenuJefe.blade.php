@@ -15,16 +15,17 @@
         <div class="card-body">
             
             <div class="mb-3">
-            <a type="button"  href="{{route('Usuario.create')}}" class="btn btn-primary">Administración de Usuarios</a>
+            <a type="button"  href="{{route('Usuario.index')}}" class="btn btn-primary">Administración de Usuarios</a>
             </div>
 
             <div class="mb-3">
-            <a type="button"  href="{{route('depa.create')}}" class="btn btn-primary">Administración de  Departamentos</a>
+            <a type="button"  href="{{route('depa.index')}}" class="btn btn-primary">Administración de  Departamentos</a>
 
             </div>
 
             <div class="mb-3">
-                <button type="button" class="btn btn-warning">Administración de Tickets</button>
+            <a type="button"  href="{{route('ticket.index')}}" class="btn btn-primary">Administración de  Tickets</a>
+
             </div>
 
         </div>
