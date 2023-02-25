@@ -31,13 +31,13 @@ use App\Http\Controllers\LoginCont;
 //------------------Menus----------------------------
 
 
+Route::view('plan', 'plantilla')-> name('pla');
+Route::view('welcome', 'welcome')-> name('we');
+Route::view('menu', 'menu')-> name('men');
+
+
 Route::view('adusu', 'vistaUsuu')-> name('jeadusu');
 //Route::view('adtic', 'jefeadtic')-> name('jeadti');
-
-
-//------------------Login----------------------------
-Route::get('/', [controladorVistas::class, 'showLoginForm'])->name('login');
-Route::post('/login', [controladorVistas::class, 'login']);
 
 
 Route::get('JefeSoporte', [controladorVistas::class, 'showJefe'])->name('homejefe');
@@ -45,8 +45,8 @@ Route::get('Auxiliar', [controladorVistas::class, 'showAuxiliar'])->name('homeau
 Route::get('Cliente', [controladorVistas::class, 'showCliente'])->name('homecliente');
 
 //------------------LOGIN----------------------------
-
-Route::post('Incia/Sesion', [LoginCont::class, 'login'])->name('Iniciar.Sesion');
+Route::get('/', [LoginCont::class, 'login'])->name('login');
+Route::post('Incia/Sesion', [LoginCont::class, 'log'])->name('Iniciar.Sesion');
 Route::get('Cierra/Sesion', [LoginCont::class, 'logout'])->name('Cierra.Sesion');
 
 

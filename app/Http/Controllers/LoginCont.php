@@ -4,40 +4,39 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
 use App\Http\Requests\ValidadorLogin;
 
 class LoginCont extends Controller
 {
-    public function login(ValidadorLogin $request){
-        //Validacion de Datos
-        $Credenciales =[
-            "email" => $request->txtuser,
-            "password" => $request->txtcontra,
-            
-        ];
+    public function login(){
+        return view('login');
+    }
 
-        if(Auth::attempt($Credenciales)){
+    public function log(ValidadorLogin $request){
 
-            $request->session()->regenerate();
+        if(Auth::attempt(['email'=>$request->txtuser, 'password'=>$request->txtcontra])){
 
-            return redirect()->intended(route('menu'));
+                
+             if((Auth::user()->TipoUsu)=='Jefe-Soporte'){
+               return view('MenuJefe');}
+
+                          if((Auth::user()->TipoUsu)=='Auxiliar-Jefe'){
+                             return view('MenuAuxiliar');}
+                            
+                                    if((Auth::user()->TipoUsu)=='Cliente'){
+                                        return view('pueba');}
+
 
         }else{
-            return redirect('/');
+            return 'artur';
         }
-
-
     }
+           
 
-    public function logout(Request $request){
-       Auth::logout();
+public function logout(){
+    Auth::logout();
+    return redirect('/');
+}
 
-       $request-> session()->invalidate();
-       $request-> session()->regenerateToken();
 
-       return redirect(route('/'));
-        
-
-    }
 }

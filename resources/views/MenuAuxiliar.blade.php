@@ -23,6 +23,9 @@
 
             </div>
 
+            <a href="{{route('Cierra.Sesion')}}">
+              <button class="btn btn-danger">Cerrar sesión</button></a>
+
 
 
         </div>

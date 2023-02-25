@@ -32,7 +32,7 @@
             </div>
 
             <div class="mb-3">
-                <label class="form-label"> Usuario </label> <i class="bi bi-person-badge-fill"></i>
+                <label class="form-label"> Email </label> <i class="bi bi-person-badge-fill"></i>
                 <input type="email" class="form-control" name="txtusu">
                 <p class="text-primary fst-Italic">
                     {{ $errors->first('txtusu') }} </p>
@@ -49,8 +49,8 @@
                 <label class="form-label"> Tipo Usuario</label> <i class="bi bi-person-bounding-box"></i>
                     <select class="form-select" aria-label="Default select example" name="txttip">
                     <option selected placeholder=""></option>
-                    <option >Jefe Soporte</option>
-                    <option >Auxiliar Jefe</option>
+                    <option >Jefe-Soporte</option>
+                    <option >Auxiliar-Jefe</option>
                     <option >Cliente</option>
                 </select>
 

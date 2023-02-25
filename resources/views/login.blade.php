@@ -18,17 +18,17 @@
 
           <!--Form-->
   
-          <form class="form-signin" action="{{route('Iniciar.Sesion')}}" method="post">
+          <form method="post" action="Incia/Sesion" >
             @csrf
 
               <div class="mb-4">
-                <label for="text" class="form-label">Usuario</label>
-                <input type="text" class="form-control" name="txtuser" required>
+                <label for="text" class="form-label">Nombre de Usuario</label>
+                <input type="text" class="form-control" name="txtuser">
               </div>
 
               <div class="mb-4">
                 <label for="password" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" name="txtcontra" required>
+                <input type="password" class="form-control" name="txtcontra">
               </div>
 
               <div class="d-grid">
@@ -36,7 +36,7 @@
               </div>
 
               <div class="my-3">
-                <span>¿No tienes cuenta?<a href="{{route('Usuario.create')}}" class="nav-link"> <p style="color: blue">Registrate </p></a></span>
+                {{-- <span>¿No tienes cuenta?<a href="{{route('Usuario.create')}}" class="nav-link"> <p style="color: blue">Registrate </p></a></span> --}}
               </div>
   
           </form>
