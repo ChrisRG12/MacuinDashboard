@@ -43,7 +43,7 @@
 			<div class="col-md-3 bg-dark text-light py-4">
 				<div class="text-center">
 					<img src="https://via.placeholder.com/150" alt="Profile picture" class="rounded-circle img-thumbnail">
-					<h3 class="mt-3">Jelos</h3>
+					<h3 class="mt-3">{{Auth::user()->name}}</h3>
 				</div>
 				<hr class="bg-light">
 				<ul class="nav flex-column">

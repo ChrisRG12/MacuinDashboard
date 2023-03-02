@@ -2,6 +2,16 @@
 
 @section('contenido')
 
+@if(session()->has('Error'))
+{!! 
+" <script> 
+      icon: 'error',
+      'Error de Usuario!',
+      'Revise sus Credenciales',
+      'success'  
+ </script> "!!}
+@endif
+
 <div class="container w-75 mt-5 rounded shadow">
     <div class="row align-items-stretch">
       <!--md mediano, lg largo, xl extralargo-->
