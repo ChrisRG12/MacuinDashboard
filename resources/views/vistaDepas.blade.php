@@ -35,7 +35,7 @@
 
 
 <div class="container w-75 mt-5 rounded shadow">
-
+  <a type="button"  href="{{route('depa.create')}}" class="btn btn-primary">Agregar Departamento +</a>
     
     <table class="table table-secondary table-striped mt-5 mb-5 ">
 

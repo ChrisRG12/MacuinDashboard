@@ -28,7 +28,7 @@ class LoginCont extends Controller
 
 
         }else{
-            return redirect('/')->with('Error', 'Revise las Credenciales');
+            return 'artur';
         }
     }
            
