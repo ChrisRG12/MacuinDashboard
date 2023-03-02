@@ -28,7 +28,7 @@ class LoginCont extends Controller
 
 
         }else{
-            return 'artur';
+            return 'Datos Incorrectos';
         }
     }
            
