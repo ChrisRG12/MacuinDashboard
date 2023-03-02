@@ -67,7 +67,11 @@
 							<div class="card-body">
 								<h5 class="card-title">Administración de Usuarios</h5>
 								<p class="card-text">Gestión de usuarios y permisos de acceso en la plataforma.</p>
+<<<<<<< Updated upstream:resources/views/MenuJefe.blade.php
 								<a href="{{route('Usuario.index')}}" class="btn btn-primary"><i class="fas fa-users"></i> Entrar</a>
+=======
+								<a href="#" class="btn btn-primary"><i class="fas fa-users"></i> Administrar</a>
+>>>>>>> Stashed changes:resources/views/jefehome.blade.php
 							</div>
 						</div>
 					</div>
@@ -76,7 +80,11 @@
 							<div class="card-body">
 								<h5 class="card-title">Registro de Departamentos</h5>
 								<p class="card-text">Gestión de usuarios y permisos de acceso en la plataforma.</p>
+<<<<<<< Updated upstream:resources/views/MenuJefe.blade.php
 								<a href="{{route('depa.index')}}" class="btn btn-primary"><i class="fas fa-building"></i> Entrar</a>
+=======
+								<a href="#" class="btn btn-primary"><i class="fas fa-building"></i> Registrar</a>
+>>>>>>> Stashed changes:resources/views/jefehome.blade.php
 							</div>
 						</div>
 					</div>
@@ -96,7 +104,7 @@
 {{-- 			
 								<h5 class="card-title">Administración de Tickets de la empresa.</p>
                   <p class="card-text">Gestión de usuarios y permisos de acceso en la plataforma.</p>
-                  <a href="#" class="btn btn-primary"><i class="fas fa-ticket-alt"></i> Ir a la administración de tickets</a>
+                  <a href="#" class="btn btn-primary"><i class="fas fa-ticket-alt"></i> Administrar</a>
                 </div>
               </div>
             </div>
