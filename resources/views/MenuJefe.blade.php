@@ -15,10 +15,9 @@
 </head>
 <body>
 
-	<!-- Navigation bar -->
-
 	<!-- Main content -->
-	<div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px; height: 100vh;">
+	<div class="d-flex"> 
+		<div class="flex-column flex-shrink-0 p-3 text-bg-dark" class="bg-primary"style="width: 280px; height: 100vh;">
 		<a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
 		  <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
 		  <span class="fs-4">Macuin Dashboard</span>
@@ -104,6 +103,7 @@
 
       </div>
     </div>
+	
 >>>>>>> main --}}
     <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
@@ -217,7 +217,7 @@
       </div>
     </div>
 
-    <footer class="pt-3 mt-4 text-muted border-top">
+    <footer class="pt-3 mt-4 text-white border-top">
       © 2022
     </footer>
   </div>
