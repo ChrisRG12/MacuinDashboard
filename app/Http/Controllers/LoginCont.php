@@ -28,7 +28,7 @@ class LoginCont extends Controller
 
 
         }else{
-            return 'artur';
+            return redirect('/')->with('Error', 'Error de Usuario');
         }
     }
            

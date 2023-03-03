@@ -7,7 +7,7 @@
   
     <div class="card text-center mb-2">
   
-        <form action="{{route('Usuario.update', $consultaId->id)}}" method="post">
+        <form action="{{route('Usuario.update', $consultaId->id)}}" method="POST">
             @csrf
   
             @method('PUT')
@@ -29,11 +29,6 @@
                   <label class="form-label"> Usuario </label>
                   <input type="text" class="form-control" name="txtusu" value="{{ $consultaId->email }}">
                  </div>
-  
-                 <div class="mb-1">
-                  <label class="form-label"> Contraseña  </label>
-                  <input type="text" class="form-control" name="txtcon" value="{{ $consultaId->password }}">
-                 </div>
 
                  <div class="mb-1">
                     <label class="form-label"> Tipo Usuario</label> <i class="bi bi-person-bounding-box"></i>
@@ -51,7 +46,7 @@
      
              <div class="card-footer text-center">
                  <button type="submit" class="btn btn-secondary btn-lg"> Actualizar Usuario </button>
-                 <a type="button"  href="{{route('Usuario.create')}}" class="btn btn-primary">Administración de Usuarios</a>
+                 <a type="button"  href="{{route('Usuario.create')}}" class="btn btn-primary btn-lg">Administración de Usuarios</a>
 
                 </div>
              </form>

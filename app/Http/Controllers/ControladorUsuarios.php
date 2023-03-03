@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests\ValidadorUsuario;
+use App\Http\Requests\validadorperfil;
 use Illuminate\Support\Facades\Hash;
 use DB;
 use Carbon\Carbon;
@@ -51,17 +52,28 @@ class ControladorUsuarios extends Controller
         return view('EditarUsu', compact('consultaId'));
     }
 
-    public function update(ValidadorUsuario $request, $id)
+    public function update(validadorperfil $request, $id)
     {
         DB::table('users')->where('id', $id)->update([
             "name"=> $request->input('txtnom'),
             "email"=> $request->input('txtusu'),
-            "password"=> Hash::make($request->input('txtcon')),
             "TipoUsu"=> $request->input('txttip'),
             "updated_at"=> Carbon::now(),
 
         ]);
         return redirect('Vistausuario')->with('Actualizar', 'Usuario Actualizado');
+   
+    }
+
+    public function actualizar(validadorperfil $request, $id)
+    {
+        DB::table('users')->where('id', $id)->update([
+            "name"=> $request->input('txtnom'),
+            "email"=> $request->input('txtusu'),
+            "updated_at"=> Carbon::now(),
+
+        ]);
+        return redirect('JefeSoporte')->with('Actualizarr', 'Usuario Actualizado');
    
     }
 

@@ -2,14 +2,15 @@
 
 @section('contenido')
 
+
 @if(session()->has('Error'))
 {!! 
 " <script> 
-      icon: 'error',
-      'Error de Usuario!',
-      'Revise sus Credenciales',
-      'success'  
- </script> "!!}
+  Swal.fire({
+  icon: 'error',
+  title: 'Usuario Incorrecto',
+  text: 'Revise sus credenciales!',
+}) </script> "!!}
 @endif
 
 <div class="container w-75 mt-5 rounded shadow">

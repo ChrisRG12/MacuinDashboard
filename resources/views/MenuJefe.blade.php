@@ -6,6 +6,7 @@
 <html>
 <head>
 	<title>Macuin Dashboard</title>
+
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
 	<!-- Font Awesome -->
@@ -15,8 +16,9 @@
 </head>
 <body>
 
-	<!-- Main content -->
 
+	<!-- Main content -->
+{{-- 
 	<div class="container-fluid">
 		<div class="row">
 			<!-- Sidebar -->
@@ -34,19 +36,19 @@
 						<a class="nav-link" href="#">Configuración</a>
 					</li>
 				</ul>
-			</div>
+			</div> --}}
 
 
 	<div class="d-flex"> 
 		<div class="flex-column flex-shrink-0 p-3 text-bg-dark" class="bg-primary"style="width: 280px; height: 100vh;">
-		<a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+		<a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
 		  <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
 		  <span class="fs-4">Macuin Dashboard</span>
 		</a>
 		<hr>
 		<ul class="nav nav-pills flex-column mb-auto">
 		  <li class="nav-item">
-			<a href="#" class="nav-link active" aria-current="page">
+			<a href="{{route('homejefe')}}" class="nav-link active" aria-current="page">
 			  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
 			  Home
 			</a>
@@ -80,21 +82,22 @@
 		<div class="dropdown">
 		  <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 			<img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
-			<strong>Jefe</strong>
+			<strong>{{Auth::user()->name}}</strong>
 		  </a>
 		  <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
 			<li><a class="dropdown-item" href="#">Configuraciones</a></li>
-			<li><a class="dropdown-item" href="#">Perfil</a></li>
+			{{-- <li><a class="dropdown-item" href="#">--}}<button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#ModalPerfil"> 
+				Perfil
+			 </button>
 			<li><hr class="dropdown-divider"></li>
 			<li><a class="dropdown-item" href="{{route('Cierra.Sesion')}}">Cerrar sesión</a></li>
 		  </ul>
 		</div>
 	  </div>
 	  
-			<!-- Main content -->
 
-{{-- 			
-								<h5 class="card-title">Administración de Tickets de la empresa.</p>
+			
+								{{-- <h5 class="card-title">Administración de Tickets de la empresa.</p>
                   <p class="card-text">Gestión de usuarios y permisos de acceso en la plataforma.</p>
                   <a href="#" class="btn btn-primary"><i class="fas fa-ticket-alt"></i> Administrar</a>
                 </div>
@@ -124,7 +127,7 @@
 
       </div>
     </div>
-	
+	 --}}
 
     <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
@@ -211,7 +214,21 @@
     </style>
   </head>
   <body>
-<main>
+
+    @include('ModalPerfil')
+
+
+    @if(session()->has('Actualizarr'))
+    {!! 
+    " <script> 
+          Swal.fire(
+          'Muy Bien Very Good!',
+          'Usuario Editado',
+          'success'  
+    ) </script> "!!}
+    @endif
+
+    
   <div class="container py-4">
     <div class="p-5 mb-4 bg-light rounded-3">
       <div class="container-fluid py-5">
@@ -239,7 +256,7 @@
     </div>
 
     <footer class="pt-3 mt-4 text-white border-top">
-      © 2022
+     Macuin Dashboard © 2022 <br> by: Jelos, Agus y Chris
     </footer>
   </div>
 </main>
