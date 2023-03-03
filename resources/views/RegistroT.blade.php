@@ -40,8 +40,8 @@
                 <select class="form-select" name="txtcliente" aria-label="Default select example">
                     <option selected></option>
                     
-                    @foreach ($moreinfou as $tb_usuarios)
-                        <option value="{{$tb_usuarios['idusuario']}}">{{$tb_usuarios['name']}}</option>
+                    @foreach ($moreinfou as $users)
+                        <option value="{{$users['id']}}">{{$users['name']}}</option>
                     @endforeach
 
                   </select>

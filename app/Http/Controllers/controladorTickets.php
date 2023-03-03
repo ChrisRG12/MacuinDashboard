@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\tb__departamentos;
-use App\Models\tb_usuarios;
+use App\Models\users;
 
 use App\Http\Requests\validadorDepartamento;
 use App\Http\Requests\validadorticket;
@@ -34,7 +34,7 @@ class controladorTickets extends Controller
     public function create()
     {
         $moreinfo = tb__departamentos::all();
-        $moreinfou = tb_usuarios::all();
+        $moreinfou = users::all();
         return view('RegistroT', compact('moreinfo','moreinfou'));
     }
 
