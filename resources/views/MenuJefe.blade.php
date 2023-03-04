@@ -86,7 +86,7 @@
 		  </a>
 		  <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
 			<li><a class="dropdown-item" href="#">Configuraciones</a></li>
-			{{-- <li><a class="dropdown-item" href="#">--}}<button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#ModalPerfil"> 
+			<button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#ModalPerfil"> 
 				Perfil
 			 </button>
 			<li><hr class="dropdown-divider"></li>
@@ -224,6 +224,16 @@
           Swal.fire(
           'Muy Bien Very Good!',
           'Usuario Editado',
+          'success'  
+    ) </script> "!!}
+    @endif
+
+    @if(session()->has('Entrar'))
+    {!! 
+    " <script> 
+          Swal.fire(
+          'Muy Bien !',
+          'Welcome to the jungle',
           'success'  
     ) </script> "!!}
     @endif

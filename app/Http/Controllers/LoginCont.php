@@ -18,7 +18,7 @@ class LoginCont extends Controller
 
                 
              if((Auth::user()->TipoUsu)=='Jefe-Soporte'){
-               return view('MenuJefe');}
+               return view('MenuJefe')->with('Entrar', 'Bienvenido');}
 
                           if((Auth::user()->TipoUsu)=='Auxiliar-Jefe'){
                              return view('MenuAuxiliar');}
