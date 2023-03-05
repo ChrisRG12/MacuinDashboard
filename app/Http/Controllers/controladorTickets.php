@@ -83,7 +83,10 @@ class controladorTickets extends Controller
     public function edit($id)
     {
         $consultaId=DB::table('tb_tickets')->where('idtic',$id)->first();
-        return view('editarTicket',compact('consultaId'));
+
+        $moreinfo = tb__departamentos::all();
+        $moreinfou = users::all();
+        return view('editarTicket',compact('consultaId','moreinfou','moreinfo'));
     }
 
     /**
