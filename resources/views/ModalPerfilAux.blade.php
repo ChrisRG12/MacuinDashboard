@@ -9,7 +9,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
 
-        <form action="#" method="POST" >
+        <form action="{{route('Usuario.actualizarA')}}" method="POST" >
           @csrf
           @method('PUT')
   
