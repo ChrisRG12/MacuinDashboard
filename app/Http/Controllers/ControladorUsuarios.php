@@ -88,6 +88,7 @@ class ControladorUsuarios extends Controller
         return redirect('Cliente')->with('Actualizarr', 'Usuario Actualizado');
    
     }
+    
     public function A(validadorperfil $request, $id)
     {
         DB::table('users')->where('id', $id)->update([
