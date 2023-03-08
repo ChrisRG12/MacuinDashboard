@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\ValidadorUsuario;
 use App\Http\Requests\validadorperfil;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 use DB;
 use Carbon\Carbon;
 
@@ -65,21 +66,20 @@ class ControladorUsuarios extends Controller
    
     }
 
-    public function actualizar(validadorperfil $request, $id)
-    {
-        DB::table('users')->where('id', $id)->update([
+     public function actualizar(validadorperfil $request)
+     {
+         DB::table('users')->where('id', Auth::user()->id)->update([
             "name"=> $request->input('txtnom'),
-            "email"=> $request->input('txtusu'),
-            "updated_at"=> Carbon::now(),
-
-        ]);
+         "email"=> $request->input('txtusu'),
+    
+      ]);
         return redirect('JefeSoporte')->with('Actualizarr', 'Usuario Actualizado');
    
-    }
+     }
     
-    public function C(validadorperfil $request, $id)
+    public function C(validadorperfil $request)
     {
-        DB::table('users')->where('id', $id)->update([
+        DB::table('users')->where('id', Auth::user()->id)->update([
             "name"=> $request->input('txtnom'),
             "email"=> $request->input('txtusu'),
             "updated_at"=> Carbon::now(),
@@ -89,9 +89,9 @@ class ControladorUsuarios extends Controller
    
     }
     
-    public function A(validadorperfil $request, $id)
+    public function A(validadorperfil $request)
     {
-        DB::table('users')->where('id', $id)->update([
+        DB::table('users')->where('id', Auth::user()->id)->update([
             "name"=> $request->input('txtnom'),
             "email"=> $request->input('txtusu'),
             "updated_at"=> Carbon::now(),

@@ -50,13 +50,13 @@ Route::get('Usuario/{id}/edit', [ControladorUsuarios::class, 'edit'])->name('Usu
 Route::put('Usuario/{id}', [ControladorUsuarios::class, 'update'])->name('Usuario.update');
 
 //update de modal del perfil del Jefe
-Route::put('Usuario/{id}', [ControladorUsuarios::class, 'actualizar'])->name('Perfil.actualizar');
+Route::put('Jefff', [ControladorUsuarios::class, 'actualizar'])->name('Perfil.actualizar');
 
 //update de modal del perfil del cliente
-Route::put('Usuario/{id}', [ControladorUsuarios::class, 'C'])->name('Perfil.C');
+Route::put('Clien', [ControladorUsuarios::class, 'C'])->name('Perfil.C');
 
 //update de modal del perfil del auxiliar
-Route::put('Usuario/{id}', [ControladorUsuarios::class, 'A'])->name('Perfil.A');
+Route::put('Auxi', [ControladorUsuarios::class, 'A'])->name('Perfil.A');
 
 
 //destroy
