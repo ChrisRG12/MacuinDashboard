@@ -2,33 +2,31 @@
 
 @section('contenido')
 
-<h1 class="text-center mt-4" style="color: floralwhite"> Registro ticket <i class="bi bi-person-add"></i></h1>
 
-<div class="container mb-3 mt-4 col-md-8">
-
-    @if ($errors->any())
+<div class="container mt-4 col-md-5 text-center">
+@if ($errors->any())
     @foreach ($errors->all() as $error) 
     @endforeach  
   @endif
 
-
-    <div class="card text-center">
-
-        <div class="card-header">
-          Nuevo Ticket de Reporte 
-        </div>
-
-        <form action="{{route('ticket.store')}}"  method="post">
+  
+    <div class="card text-center mb-2">
+  
+        <form action="{{route('ticket.update', $consultaId->idtic)}}" method="post">
             @csrf
-
-        <div class="card-body">
-
-
-            <div class="mb-3">
+  
+            @method('PUT')
+  
+            <div class="card-header fw-bolder">
+                Correcciones !!
+             </div>
+     
+             <div class="card-body ">
+             <div class="mb-3">
             <p class="text-primary fst-Italic">
                     {{ $errors->first('txtfecha') }} </p>
                 <label class="form-label"> Fecha </label> <i class="bi bi-person-lines-fill"></i>
-                <input type="date" class="form-control" name="txtfecha">
+                <input type="date" class="form-control" name="txtfecha" value="{{ $consultaId->fecha }}">
                 
             </div>
 
@@ -36,8 +34,8 @@
             <p class="text-secondary fst-Italic">
                     {{$errors->first('txtcliente')}}
                 </p>
-                <label for="text" class="form-label" placeholder="Departamento">Cliente</label>
-                <select class="form-select" name="txtcliente" aria-label="Default select example">
+                <label for="text" class="form-label" placeholder="Ticket">Cliente</label>
+                <select class="form-select" name="txtcliente" aria-label="Default select example" value="{{ $consultaId->autorj_id }}">
                     <option selected></option>
                     
                     @foreach ($moreinfou as $users)
@@ -52,17 +50,15 @@
             <p class="text-primary fst-Italic">
                     {{ $errors->first('txtclasificacion') }} </p>
                 <label class="form-label">Clasificacion</label> <i class="bi bi-person-bounding-box"></i>
-                    <select class="form-select" aria-label="Default select example" name="txtclasificacion">
-                    <option selected placeholder=""></option>
+                    <select class="form-select" aria-label="Default select example" name="txtclasificacion" >
+                    <option ></option>
                     <option >Falla de Office </option>
                     <option >Fallas en la red</option>
                     <option >Errores de Software</option>
                     <option >Errores de Hardware</option>
                     <option >Mantenimientos Preventivo</option>
                 </select>
-            </div>
-
-                        
+            </div>                        
            
 
             <div class="mb-4">
@@ -70,45 +66,50 @@
                     {{$errors->first('txtdepa')}}
                 </p>
                 <label for="text" class="form-label" placeholder="Departamento">Tipo Departamento</label>
-                <select class="form-select" name="txtdepa" aria-label="Default select example">
+                <select class="form-select" name="txtdepa" aria-label="Default select example" value="{{ $consultaId->Depa_id }}">
                     <option selected></option>
                     
                     @foreach ($moreinfo as $tb__departamentos)
                         <option value="{{$tb__departamentos['idDepa']}}">{{$tb__departamentos['Nombre']}}</option>
                     @endforeach
 
-                  </select>
-                
+                  </select>                
             </div>
 
             <div class="mb-3">
             <p class="text-primary fst-Italic">
                     {{ $errors->first('txtdetalles') }} </p>
                 <label class="form-label"> Detalles </label> <i class="bi bi-person-badge-fill"></i>
-                <input type="text" class="form-control" name="txtdetalles">
+                <input type="text" class="form-control" name="txtdetalles" value="{{ $consultaId->detalles }}">
                 
             </div>
 
-            <input type="hidden" class="form-control" name="txtstatus"  value="Solicitado" readonly onmousedown="return false">
+            <div class="mb-3">
+            <p class="text-primary fst-Italic">
+                    {{ $errors->first('txtstatus') }} </p>
+                <label class="form-label">Status</label> <i class="bi bi-person-bounding-box"></i>
+                    <select class="form-select" aria-label="Default select example" name="txtstatus" value="{{ $consultaId->status }}">
+                    <option ></option>
+                    <option >Solicitado </option>
+                    <option >Cancelado</option>
+                    <option >Asignado</option>
+                    <option >En Proceso</option>
+                    <option >Nunca Solucionado</option>
+                    <option >Completado</option>
+                </select>
+            </div>
 
             
-
-            
-
-
-
-        </div>
-
-        <div class="card-footer">
-            <button type="submit"  class="btn btn-secondary btn-lg"> Registrar Ticket <i class="bi bi-plus-circle-fill"> </i></button>
-        </form>
-
-        </div>
+     
+             <div class="card-footer text-center">
+                 <button type="submit" class="btn btn-secondary btn-lg"> Actualizar Departamento </button>
+                </div>
+             </form>
+            </div>
     
+              
+        </div>
 
-      </div>
 
-
-</div>
-
+    
 @stop
