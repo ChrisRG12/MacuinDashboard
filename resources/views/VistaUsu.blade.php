@@ -34,7 +34,7 @@
 @endif
 
 
-<div class="container w-75 mt-5 rounded shadow">
+<div class="container mt-5 rounded shadow">
 
 
 <div class="container mb-3 mt-4 col-md-5">
@@ -49,7 +49,7 @@
                   <button class="btn btn-success" type="submit">Buscar</button>
                 </form>
     
-    <table class="table table-secondary table-striped mt-5 mb-5 ">
+    <table class="table table-secondary table-striped mt-5 mb-5 col-md-8">
 
         <thead>
             

@@ -76,13 +76,32 @@ class ControladorUsuarios extends Controller
         return redirect('JefeSoporte')->with('Actualizarr', 'Usuario Actualizado');
    
     }
+    
+    public function actualizarC(validadorperfil $request, $id)
+    {
+        DB::table('users')->where('id', $id)->update([
+            "name"=> $request->input('txtnom'),
+            "email"=> $request->input('txtusu'),
+            "updated_at"=> Carbon::now(),
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+        ]);
+        return redirect('Cliente')->with('Actualizarr', 'Usuario Actualizado');
+   
+    }
+    public function actualizarA(validadorperfil $request, $id)
+    {
+        DB::table('users')->where('id', $id)->update([
+            "name"=> $request->input('txtnom'),
+            "email"=> $request->input('txtusu'),
+            "updated_at"=> Carbon::now(),
+
+        ]);
+        return redirect('Auxiliar')->with('Actualizarr', 'Usuario Actualizado');
+   
+    }
+
+
+
     public function destroy($id)
     {
         DB::table('users')->where('id', $id)->delete();

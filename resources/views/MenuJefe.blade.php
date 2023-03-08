@@ -18,25 +18,6 @@
 
 
 	<!-- Main content -->
-{{-- 
-	<div class="container-fluid">
-		<div class="row">
-			<!-- Sidebar -->
-			<div class="col-md-3 bg-dark text-light py-4">
-				<div class="text-center">
-					<img src="https://via.placeholder.com/150" alt="Profile picture" class="rounded-circle img-thumbnail">
-					<h3 class="mt-3">{{Auth::user()->name}}</h3>
-				</div>
-				<hr class="bg-light">
-				<ul class="nav flex-column">
-					<li class="nav-item">
-						<a class="nav-link" href="#">Perfil</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Configuración</a>
-					</li>
-				</ul>
-			</div> --}}
 
 
 	<div class="d-flex"> 
@@ -96,45 +77,15 @@
 	  </div>
 	  
 
-			
-								{{-- <h5 class="card-title">Administración de Tickets de la empresa.</p>
-                  <p class="card-text">Gestión de usuarios y permisos de acceso en la plataforma.</p>
-                  <a href="#" class="btn btn-primary"><i class="fas fa-ticket-alt"></i> Administrar</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-body">
-            
-            <div class="mb-3">
-            <a type="button"  href="{{route('Usuario.index')}}" class="btn btn-primary">Administración de Usuarios</a>
-            </div>
-
-            <div class="mb-3">
-            <a type="button"  href="{{route('depa.index')}}" class="btn btn-primary">Administración de  Departamentos</a>
-
-            </div>
-
-            <div class="mb-3">
-            <a type="button"  href="{{route('ticket.index')}}" class="btn btn-primary">Administración de  Tickets</a>
-
-            </div>
-
-        </div>
-
-
-      </div>
-    </div>
-	 --}}
-
+		
     <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
     <!-- Font Awesome JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
  
 </body>
+
+
   </html>
   <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 	<div class="container">
