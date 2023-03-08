@@ -45,6 +45,7 @@ Route::post('Usuario', [ControladorUsuarios::class, 'store'])->name('Usuario.sto
 Route::get('Vistausuario', [ControladorUsuarios::class, 'index'])->name('Usuario.index');
 //edit
 Route::get('Usuario/{id}/edit', [ControladorUsuarios::class, 'edit'])->name('Usuario.edit');
+
 //update
 Route::put('Usuario/{id}', [ControladorUsuarios::class, 'update'])->name('Usuario.update');
 
@@ -52,10 +53,10 @@ Route::put('Usuario/{id}', [ControladorUsuarios::class, 'update'])->name('Usuari
 Route::put('Usuario/{id}', [ControladorUsuarios::class, 'actualizar'])->name('Perfil.actualizar');
 
 //update de modal del perfil del cliente
-Route::put('Usuario/{id}', [ControladorUsuarios::class, 'actualizarC'])->name('Perfil.actualizarC');
+Route::put('Usuario/{id}', [ControladorUsuarios::class, 'C'])->name('Perfil.C');
 
 //update de modal del perfil del auxiliar
-Route::put('Usuario/{id}', [ControladorUsuarios::class, 'actualizarA'])->name('Perfil.actualizarA');
+Route::put('Usuario/{id}', [ControladorUsuarios::class, 'A'])->name('Perfil.A');
 
 
 //destroy

@@ -77,7 +77,7 @@ class ControladorUsuarios extends Controller
    
     }
     
-    public function actualizarC(validadorperfil $request, $id)
+    public function C(validadorperfil $request, $id)
     {
         DB::table('users')->where('id', $id)->update([
             "name"=> $request->input('txtnom'),
@@ -88,7 +88,7 @@ class ControladorUsuarios extends Controller
         return redirect('Cliente')->with('Actualizarr', 'Usuario Actualizado');
    
     }
-    public function actualizarA(validadorperfil $request, $id)
+    public function A(validadorperfil $request, $id)
     {
         DB::table('users')->where('id', $id)->update([
             "name"=> $request->input('txtnom'),
