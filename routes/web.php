@@ -12,8 +12,6 @@ use App\Http\Controllers\controladorTicketsA;
 use App\Http\Controllers\LoginCont;
 
 //------------------Menus----------------------------
-
-
 Route::view('plan', 'plantilla')-> name('pla');
 Route::view('welcome', 'welcome')-> name('we');
 Route::view('menu', 'menu')-> name('men')->middleware('auth');
