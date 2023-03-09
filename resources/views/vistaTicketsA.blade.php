@@ -71,11 +71,7 @@
             <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#ModalEliminarDepa{{$consulta->idtic}}">
                   Eliminar <i class="bi bi-trash-fill"></i>
                </button>
-               <a type="button"  href="{{route('ticketC.create')}}" class="btn btn-primary">Asignar Ticket +</a>
-
           </tr>
-                   <!-- include('ModalTicket') AQUI INSERTAS EL MODAL WE PARA QUE TE LEA ELID Y TE MANDE LOS TICKET QUE QUIERAS :)-->
-
 
           @endforeach
         </tbody>
