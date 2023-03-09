@@ -9,7 +9,6 @@
   
         <form action="{{route('Usuario.update', $consultaId->id)}}" method="POST">
             @csrf
-  
             @method('PUT')
   
             <div class="card-header fw-bolder">

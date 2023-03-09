@@ -18,14 +18,14 @@ class LoginCont extends Controller
 
                 
              if((Auth::user()->TipoUsu)=='Jefe-Soporte'){
-               return view('MenuJefe')->with('Entrar', 'Bienvenido');}
+               return redirect('JefeSoporte')->with('Entrar', 'Bienvenido');}
 
                           if((Auth::user()->TipoUsu)=='Auxiliar-Jefe'){
-                             return view('MenuAuxiliar');}
+                            return redirect('Auxiliar')->with('Entrar', 'Bienvenido');}
                             
                                     if((Auth::user()->TipoUsu)=='Cliente'){
-                                        return view('pueba');}
-
+                                        return redirect('Cliente')->with('Entrar', 'Bienvenido');}
+                                        
 
         }else{
             return redirect('/')->with('Error', 'Error de Usuario');

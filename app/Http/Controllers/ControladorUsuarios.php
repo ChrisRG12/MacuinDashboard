@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\ValidadorUsuario;
 use App\Http\Requests\validadorperfil;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 use DB;
 use Carbon\Carbon;
 
@@ -65,24 +66,43 @@ class ControladorUsuarios extends Controller
    
     }
 
-    public function actualizar(validadorperfil $request, $id)
+     public function actualizar(validadorperfil $request)
+     {
+         DB::table('users')->where('id', Auth::user()->id)->update([
+            "name"=> $request->input('txtnom'),
+         "email"=> $request->input('txtusu'),
+    
+      ]);
+        return redirect('JefeSoporte')->with('Actualizarr', 'Usuario Actualizado');
+   
+     }
+    
+    public function C(validadorperfil $request)
     {
-        DB::table('users')->where('id', $id)->update([
+        DB::table('users')->where('id', Auth::user()->id)->update([
             "name"=> $request->input('txtnom'),
             "email"=> $request->input('txtusu'),
             "updated_at"=> Carbon::now(),
 
         ]);
-        return redirect('JefeSoporte')->with('Actualizarr', 'Usuario Actualizado');
+        return redirect('Cliente')->with('Actualizarr', 'Usuario Actualizado');
+   
+    }
+    
+    public function A(validadorperfil $request)
+    {
+        DB::table('users')->where('id', Auth::user()->id)->update([
+            "name"=> $request->input('txtnom'),
+            "email"=> $request->input('txtusu'),
+            "updated_at"=> Carbon::now(),
+
+        ]);
+        return redirect('Auxiliar')->with('Actualizarr', 'Usuario Actualizado');
    
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
+
     public function destroy($id)
     {
         DB::table('users')->where('id', $id)->delete();
