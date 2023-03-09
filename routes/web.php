@@ -8,12 +8,9 @@ use App\Http\Controllers\ControladorUsuarios;
 use App\Http\Controllers\controladorVistas;
 use App\Http\Controllers\controladorDepartamentos;
 use App\Http\Controllers\controladorTickets;
+use App\Http\Controllers\controladorTicketsA;
 use App\Http\Controllers\LoginCont;
 
-
-//      Route::view('plan', 'plantilla')-> name('pla');
-//Route::view('/', 'login')-> name('log');
-//Route::view('menu', 'menu')-> name('men');
 //------------------Menus----------------------------
 
 
@@ -86,10 +83,6 @@ Route::delete('Departamento/{id}', [controladorDepartamentos::class, 'destroy'])
 Route::get('Ticket/create', [controladorTickets::class, 'create'])->name('ticket.create')->middleware('auth');
 //store
 Route::post('Ticket', [controladorTickets::class, 'store'])->name('ticket.store');
-
-
-
-
 //index
 Route::get('vistaTickets', [controladorTickets::class, 'index'])->name('ticket.index')->middleware('auth');
 //edit
@@ -100,4 +93,16 @@ Route::put('Ticket/{id}', [controladorTickets::class, 'update'])->name('ticket.u
 Route::get('Ticket/{id}/show', [controladorTickets::class, 'show']) -> name('ticket.show')->middleware('auth');
 //destroy
 Route::delete('Ticket/{id}', [controladorTickets::class, 'destroy']) -> name('ticket.destroy');
+
+//------------------Asignar Ticket----------------------------
+//Create
+Route::get('TicketC/create', [controladorTicketsA::class, 'create'])->name('ticketC.create')->middleware('auth');
+//store
+Route::post('TicketC', [controladorTicketsA::class, 'store'])->name('ticketC.store');
+//index
+Route::get('vistaTicketsC', [controladorTicketsA::class, 'index'])->name('ticketC.index')->middleware('auth');
+//edit
+Route::get('TicketC/{id}/edit', [controladorTicketsA::class, 'edit'])->name('ticketC.edit')->middleware('auth');
+//update
+Route::put('TicketC/{id}', [controladorTicketsA::class, 'update'])->name('ticketC.update');
 
