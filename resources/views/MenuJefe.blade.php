@@ -35,28 +35,24 @@
 			</a>
 		  </li>
 		  <li>
-			<a href="#" class="nav-link text-white">
+			<a href="{{route('Usuario.index')}}" class="nav-link text-white">
 			  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
-			  Dashboard
+			  Administración Usuarios
 			</a>
 		  </li>
 		  <li>
-			<a href="#" class="nav-link text-white">
+			<a href="{{route('depa.index')}}" class="nav-link text-white">
 			  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
-			  Orders
+			  Registro Departamentos
 			</a>
 		  </li>
 		  <li>
 			<a href="#" class="nav-link text-white">
 			  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
-			  Products
+			  Administración de Tickets
 			</a>
 		  </li>
 		  <li>
-			<a href="#" class="nav-link text-white">
-			  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
-			  Customers
-			</a>
 		  </li>
 		</ul>
 		<hr>
@@ -70,14 +66,13 @@
 			<button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#ModalPerfil"> 
 				Perfil
 			 </button>
-			<li><hr class="dropdown-divider"></li>
-			<li><a class="dropdown-item" href="{{route('Cierra.Sesion')}}">Cerrar sesión</a></li>
 		  </ul>
+      <div class="fixed-bottom">
+        <button class="btn btn-danger ms-3 mb-3" href="{{route('Cierra.Sesion')}}" type="button">Cerrar sesión</button>
+      </div>
 		</div>
 	  </div>
 	  
-
-		
     <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
     <!-- Font Awesome JS -->
@@ -110,6 +105,53 @@
 <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
 <meta name="theme-color" content="#712cf9">
 
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item">
+      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+      <div class="container">
+        <div class="carousel-caption text-start">
+          <h1>Example headline.</h1>
+          <p>Some representative placeholder content for the first slide of the carousel.</p>
+          <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item active">
+      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Another example headline.</h1>
+          <p>Some representative placeholder content for the second slide of the carousel.</p>
+          <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+      <div class="container">
+        <div class="carousel-caption text-end">
+          <h1>One more for good measure.</h1>
+          <p>Some representative placeholder content for the third slide of this carousel.</p>
+          <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
     <style>
       .bd-placeholder-img {
