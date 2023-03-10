@@ -62,7 +62,8 @@
 }
 
 .sidebar a:hover{
-    background: #A2E0EB;
+    background: #5b7f86;
+    background: #910707;
 }
 
 .sidebar ion-icon{
@@ -115,15 +116,15 @@ button:active{
     <h5 class="mt-2">{{ Auth::user()->email }}</h5>
 
     <br>
-    <a href="" data-bs-toggle="modal" data-bs-target="#ModalPerfilCliente"><i class="bi bi-person-fill-gear"> Editar Perfil</i></a>
-    
+    <a href="" data-bs-toggle="modal" data-bs-target="#ModalPerfilCliente"><i class="bi bi-person-fill-gear"> <strong>Editar Perfil</strong> </i></a>
+    <br> 
     <a href="{{route('Cierra.Sesion')}}"><i class="bi bi-box-arrow-left"><strong> Cerrar Sesion</strong></i></a>
     
 
-                <div class="tablita overflow-auto" style="max-height: 230px; overflow-y: scroll;">
 
-                </div>
-            </div>
+    </div>
+
+</div>
 
 
 @yield('contenido')
