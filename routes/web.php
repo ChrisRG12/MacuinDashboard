@@ -37,9 +37,9 @@ Route::get('Usuario/create', [ControladorUsuarios::class, 'create'])->name('Usua
 //store
 Route::post('Usuario', [ControladorUsuarios::class, 'store'])->name('Usuario.store');
 //index
-Route::get('Vistausuario', [ControladorUsuarios::class, 'index'])->name('Usuario.index');
+Route::get('Vistausuario', [ControladorUsuarios::class, 'index'])->name('Usuario.index')->middleware('auth');
 //edit
-Route::get('Usuario/{id}/edit', [ControladorUsuarios::class, 'edit'])->name('Usuario.edit');
+Route::get('Usuario/{id}/edit', [ControladorUsuarios::class, 'edit'])->name('Usuario.edit')->middleware('auth');
 
 //update
 Route::put('Usuario/{id}', [ControladorUsuarios::class, 'update'])->name('Usuario.update');

@@ -1,4 +1,4 @@
-@extends('plantilla')
+@extends('plantillaA')
 
 @section('contenido')
 
@@ -26,8 +26,7 @@
 
 @include('ModalPerfilAux')
 
-<h1 class="text-center mt-4" style="color: floralwhite"> Home Auxiliar</h1>
-<div class="container mb-3 mt-4 col-md-3">
+{{-- <div class="container mb-3 mt-4 col-md-3">
 
 
     <div class="card text-center">
@@ -59,6 +58,6 @@
 
       </div>
 
-</div>
+</div> --}}
 
 @stop

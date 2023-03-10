@@ -1,4 +1,4 @@
-@extends('plantilla')
+@extends('plantillaC')
 
 @section('contenido')
 
@@ -23,12 +23,9 @@
 @endif
 
 
-<h1 class="text-center mt-4" style="color: floralwhite"> Home Cliente</h1>
-
-
 @include('ModalPerfilCliente')
 
-<div class="container mb-3 mt-4 col-md-3">
+{{-- <div class="container mb-3 mt-4 col-md-3">
 
 
     <div class="card text-center">
@@ -43,7 +40,7 @@
               <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalPerfilCliente"> 
                 Perfil
                </button>
-            {{-- <a type="button"  href="{{route('Usuario.create')}}" class="btn btn-primary">Configuracion de perfil</a> --}}
+            {{-- <a type="button"  href="{{route('Usuario.create')}}" class="btn btn-primary">Configuracion de perfil</a>
             </div>
 
             <div class="mb-3">
@@ -62,6 +59,6 @@
 
       </div>
 
-</div>
+</div> --}}
 
 @stop

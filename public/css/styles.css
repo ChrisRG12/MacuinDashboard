@@ -16,3 +16,61 @@
 #imagen{
     text-align: center;
 }
+
+/*ESTILOS MENU LATERAL */
+
+.sidebar{
+    position:  fixed;
+    width: 260px;
+    height: 100%;
+    padding-top: 20px;
+    left: 0;
+    background-color: #C19FE2;
+}
+
+.sidebar h3{
+    margin-left: 20px;
+    font-size: 35px;
+    color: white;
+}
+
+.sidebar strong{
+    color: black;
+}
+
+.sidebar h4{
+    margin-left: 20px;
+    font-size: 25px;
+    color: black;
+}
+
+.sidebar h5{
+    margin-left: 20px;
+    font-size: 15px;
+    color: black;
+
+}
+
+.sidebar a{
+    color: black;
+    display: block;
+    width: 100%;
+    line-height: 60px;
+    text-decoration: none;
+    padding-left: 40px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    transition-property:background;
+}
+
+.sidebar a:hover{
+    background: #A2E0EB;
+}
+
+.sidebar ion-icon{
+    padding-right: 10px;
+}
+
+.botonaso{
+    margin-top: 340px;
+}
