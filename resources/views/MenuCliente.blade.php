@@ -26,6 +26,13 @@
 @include('ModalPerfilCliente')
 
 <div class="container py-4" style="margin-left: 20%">
+  <div class="row align-items-md-stretch">
+    <section>
+      <img src="" alt="">
+      <img src="" alt="">
+      <img src="" alt="">
+    </section>
+  </div>
 
   <div class="row align-items-md-stretch">
     <div class="p-5 mb-4 bg-light rounded-3">
