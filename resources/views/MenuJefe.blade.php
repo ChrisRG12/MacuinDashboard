@@ -47,7 +47,7 @@
 			</a>
 		  </li>
 		  <li>
-			<a href="#" class="nav-link text-white">
+			<a href="{{route('ticket.index')}}" class="nav-link text-white">
 			  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
 			  Administración de Tickets
 			</a>
@@ -117,8 +117,8 @@
       <div class="container">
         <div class="carousel-caption text-start">
           <h1>Example headline.</h1>
-          <p>Some representative placeholder content for the first slide of the carousel.</p>
-          <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+          <p>Algo interesante</p>
+          <p><a class="btn btn-lg btn-primary" href="#">saber mas</a></p>
         </div>
       </div>
     </div>
@@ -127,8 +127,8 @@
       <div class="container">
         <div class="carousel-caption">
           <h1>Another example headline.</h1>
-          <p>Some representative placeholder content for the second slide of the carousel.</p>
-          <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+          <p>Algo mas interesante</p>
+          <p><a class="btn btn-lg btn-primary" href="#">mas info</a></p>
         </div>
       </div>
     </div>
@@ -137,8 +137,8 @@
       <div class="container">
         <div class="carousel-caption text-end">
           <h1>One more for good measure.</h1>
-          <p>Some representative placeholder content for the third slide of this carousel.</p>
-          <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+          <p>Algo mas mas interesante</p>
+          <p><a class="btn btn-lg btn-primary" href="#">aqui</a></p>
         </div>
       </div>
     </div>
