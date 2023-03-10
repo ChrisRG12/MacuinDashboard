@@ -53,11 +53,12 @@ class ControladorUsuarios extends Controller
         return view('EditarUsu', compact('consultaId'));
     }
 
-    public function update(validadorperfil $request, $id)
+    public function update(ValidadorUsuario $request, $id)
     {
         DB::table('users')->where('id', $id)->update([
             "name"=> $request->input('txtnom'),
             "email"=> $request->input('txtusu'),
+            "password"=> Hash::make($request->input('txtcon')),
             "TipoUsu"=> $request->input('txttip'),
             "updated_at"=> Carbon::now(),
 
@@ -70,7 +71,7 @@ class ControladorUsuarios extends Controller
      {
          DB::table('users')->where('id', Auth::user()->id)->update([
             "name"=> $request->input('txtnom'),
-         "email"=> $request->input('txtusu'),
+             "email"=> $request->input('txtusu'),
     
       ]);
         return redirect('JefeSoporte')->with('Actualizarr', 'Usuario Actualizado');
