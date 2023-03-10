@@ -23,7 +23,7 @@
     height: 100%;
     padding-top: 20px;
     left: 0;
-    background-color: #C19FE2;
+    background-color: #f0bf92;
 }
 
 .sidebar h3{
