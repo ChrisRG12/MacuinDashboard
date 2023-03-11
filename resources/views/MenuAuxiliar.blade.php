@@ -45,7 +45,7 @@
           </div>
 
             <div class="mb-3">
-            <a type="button"  href="{{route('depa.create')}}" class="btn btn-primary">Soporte a ticktes</a>
+            <a type="button"  href="{{route('ticketC.index')}}" class="btn btn-primary">Soporte a ticktes</a>
 
             </div>
 
