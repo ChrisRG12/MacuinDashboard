@@ -20,7 +20,7 @@
       
       <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 " style="display: flex; aling-items: center; justify-content: center;">
         {{-- <img src="\ima\blac.png" width="690" height="700" alt=""> --}}
-        <video src="\ima\vidd.mp4" width="730" height="600" alt="60" autoplay muted loop></video>
+        <video src="\ima\vidd.mp4" width="100%" autoplay muted loop></video>
       </div>
   
       <div class="col bg-white p-5 rounded-end" style="color: rgb(57, 36, 58)">
