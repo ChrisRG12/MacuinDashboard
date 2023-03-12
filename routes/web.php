@@ -18,7 +18,7 @@ Route::view('menu', 'menu')-> name('men')->middleware('auth');
 
 
 Route::view('adusu', 'vistaUsuu')-> name('jeadusu');
-//Route::view('adtic', 'jefeadtic')-> name('jeadti');
+
 
 
 Route::get('JefeSoporte', [controladorVistas::class, 'showJefe'])->name('homejefe')->middleware('auth');
@@ -46,17 +46,13 @@ Route::put('Usuario/{id}', [ControladorUsuarios::class, 'update'])->name('Usuari
 
 //update de modal del perfil del Jefe
 Route::put('Jefff', [ControladorUsuarios::class, 'actualizar'])->name('Perfil.actualizar');
-
 //update de modal del perfil del cliente
 Route::put('Clien', [ControladorUsuarios::class, 'C'])->name('Perfil.C');
-
 //update de modal del perfil del auxiliar
 Route::put('Auxi', [ControladorUsuarios::class, 'A'])->name('Perfil.A');
 
-
 //destroy
 Route::delete('Usuario/{id}', [ControladorUsuarios::class, 'destroy']) -> name('Usuario.destroy');
-
 
 Route::view('Usua', 'usuarios')-> name('usu')->middleware('auth');
 
