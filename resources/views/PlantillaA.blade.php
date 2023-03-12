@@ -78,9 +78,9 @@
     <h3 class="mt-3 mb-4"><strong>Macuin<br/></strong>Dashboards</h3>
     <h4>{{ Auth::user()->name }}</h4>
 
-    <h5 class="mt-2">{{ Auth::user()->TipoUsu }}</h5>
+    <h5 class="mt-2">Tipo de usuario: {{ Auth::user()->TipoUsu }}</h5>
 
-    <h5 class="mt-2">{{ Auth::user()->email }}</h5>
+    <h5 class="mt-2"> Correo: {{ Auth::user()->email }}</h5>
 
     <br>
     <a href="" data-bs-toggle="modal" data-bs-target="#ModalPerfilAux"><i class="bi bi-person-fill-gear"> Editar Perfil</i></a>

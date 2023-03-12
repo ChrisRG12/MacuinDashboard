@@ -1,7 +1,7 @@
 @extends('plantilla')
 
 @section('contenido')
-
+<a href="{{route('Usuario.index')}}" class="btn btn-primary float-end me-3 mt-3"><svg class="bi me-2" width="16" height="16"><use xlink:href="#arrow-left"></use></svg>Regresar</a>
 <div class="container mt-4 col-md-5 text-center">
 
     @if ($errors->any())

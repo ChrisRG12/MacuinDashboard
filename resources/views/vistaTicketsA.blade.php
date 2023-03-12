@@ -35,7 +35,7 @@
 
 
 <div class="container w-75 mt-5 rounded shadow">
-  <h1>Tickets Almacenados</h1>
+  <h1>ControlTickets Cliente</h1>
 
     
     <table class="table table-secondary table-striped mt-5 mb-5 ">
