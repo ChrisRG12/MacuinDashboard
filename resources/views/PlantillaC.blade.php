@@ -29,7 +29,7 @@
 .sidebar h3{
     margin-left: 20px;
     font-size: 35px;
-    color: white;
+    color: rgb(7, 7, 7);
 }
 
 .sidebar strong{
