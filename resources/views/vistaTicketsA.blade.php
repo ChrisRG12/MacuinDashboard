@@ -1,4 +1,4 @@
-@extends('plantilla')
+@extends('plantillaC')
 
 @section('contenido')
 
@@ -77,12 +77,6 @@
         </tbody>
 
       </table>
-
-
-
-
-
-
 </div>
 
 

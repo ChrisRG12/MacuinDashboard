@@ -15,15 +15,28 @@ use Carbon\Carbon;
 
 class controladorTickets extends Controller
 {
-    /**
+    /**$ConsultaTicket = DB::table('tb_tickets')
+        ->join('tb__asig_tic', 'tb_tickets.idtic', '=', 'tb__asig_tic.idasig')
+        ->select('tb_tickets.*', 'tb__asig_tic.idasig')
+        ->get();
+        return view('vistaTickets', compact('ConsultaTicket'));
      * Display a listing of the resource.
      *
+     * 
+     * 
+     * 
      * @return \Illuminate\Http\Response
      */
     public function index()
+    
     {
         $ConsultaTicket=DB::table('tb_tickets')->get();
-        return view('vistaTickets', compact('ConsultaTicket'));
+        $ConsultaTickets = DB::table('tb_tickets')
+        ->join('tb__asig_tic', 'tb_tickets.idtic', '=', 'tb__asig_tic.idasig')
+        ->select('tb_tickets.*', 'tb__asig_tic.idasig')
+        ->get();
+        return view('vistaTickets', compact('ConsultaTicket','ConsultaTickets'));
+
     }
 
     /**
