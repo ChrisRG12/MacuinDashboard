@@ -2,6 +2,8 @@
 
 @section('contenido')
 <a href="{{route('Usuario.index')}}" class="btn btn-primary float-end me-3 mt-3"><svg class="bi me-2" width="16" height="16"><use xlink:href="#arrow-left"></use></svg>Regresar</a>
+<h1 class="text-center mt-4" style="color: floralwhite"> Editar de Usuarios <i class="bi bi-person-add"></i></h1>
+
 <div class="container mt-4 col-md-5 text-center">
 
     @if ($errors->any())

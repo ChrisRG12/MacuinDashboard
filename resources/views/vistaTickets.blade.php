@@ -67,8 +67,10 @@
 				Perfil
 			 </button>
 		  </ul>
-      <div class="fixed-bottom">
-        <button class="btn btn-danger ms-3 mb-3" href="{{route('Cierra.Sesion')}}" type="button">Cerrar sesión</button>
+        <div class="fixed-bottom">
+			<form method="GET" action="{{ route('Cierra.Sesion') }}">
+			  <button class="btn btn-danger ms-3 mb-3" type="submit">Cerrar sesión</button>
+		  </form>  
       </div>
 		</div>
 	  </div>

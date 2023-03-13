@@ -1,7 +1,7 @@
 @extends('plantilla')
 
 @section('contenido')
-
+<a href="{{route('homecliente')}}" class="btn btn-primary float-end me-3 mt-3"><svg class="bi me-2" width="16" height="16"><use xlink:href="#arrow-left"></use></svg>Regresar</a>
 <h1 class="text-center mt-4" style="color: floralwhite"> Registro ticket <i class="bi bi-person-add"></i></h1>
 
 <div class="container mb-3 mt-4 col-md-8">
@@ -27,7 +27,7 @@
             <div class="mb-3">
             <p class="text-primary fst-Italic">
                     {{ $errors->first('txtfecha') }} </p>
-                <label class="form-label"> Fecha </label> <i class="bi bi-person-lines-fill"></i>
+                <label class="form-label"> Fecha </label> <i class="bi bi-calendar-date"></i>
                 <input type="date" class="form-control" name="txtfecha">
                 
             </div>
@@ -36,7 +36,7 @@
             <p class="text-secondary fst-Italic">
                     {{$errors->first('txtcliente')}}
                 </p>
-                <label for="text" class="form-label" placeholder="Departamento">Cliente</label>
+                <label for="text" class="form-label" placeholder="Departamento">Cliente</label><i class="bi bi-person-circle"></i>
                 <select class="form-select" name="txtcliente" aria-label="Default select example">
                     <option selected></option>
                     
@@ -69,7 +69,7 @@
             <p class="text-secondary fst-Italic">
                     {{$errors->first('txtdepa')}}
                 </p>
-                <label for="text" class="form-label" placeholder="Departamento">Tipo Departamento</label>
+                <label for="text" class="form-label" placeholder="Departamento">Tipo Departamento</label><i class="bi bi-building"></i>
                 <select class="form-select" name="txtdepa" aria-label="Default select example">
                     <option selected></option>
                     
