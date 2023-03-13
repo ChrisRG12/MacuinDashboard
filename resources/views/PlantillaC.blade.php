@@ -29,11 +29,11 @@
 .sidebar h3{
     margin-left: 20px;
     font-size: 35px;
-    color: white;
+    color: rgb(7, 7, 7);
 }
 
 .sidebar strong{
-    color: black;
+    color: rgb(187, 99, 99);
 }
 
 .sidebar h4{

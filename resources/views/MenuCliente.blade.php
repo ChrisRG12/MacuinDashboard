@@ -41,7 +41,7 @@
         <p class="col-md-8 fs-4">Opción para gestionar y resolver problemas y solicitudes de los clientes de la empresa. Permite asignar tickets a los miembros del equipo, hacer seguimiento y dar solución a los problemas.</p>
         <a href="{{route('ticket.create')}}" style="text-decoration: none">
           <button>
-      <span>Añadir Queja</span> 
+      <span>Generar Solitud de Atencion</span> 
     </button></a>
       </div>
     </div>
