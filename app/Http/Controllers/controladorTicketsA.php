@@ -22,7 +22,7 @@ class controladorTicketsA extends Controller
     public function index()
     {
         $ConsultaTicket=DB::table('tb_tickets')->get();
-        return view('vistaTickets', compact('ConsultaTicket'));
+        return view('vistaTicketsA', compact('ConsultaTicket'));
     }
 
     /**

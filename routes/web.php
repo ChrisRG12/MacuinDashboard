@@ -90,13 +90,13 @@ Route::delete('Ticket/{id}', [controladorTickets::class, 'destroy']) -> name('ti
 
 //------------------Asignar Ticket----------------------------
 //Create
-Route::get('TicketC/create', [controladorTicketsA::class, 'create'])->name('ticketC.create')->middleware('auth');
+Route::get('TicketA/create', [controladorTicketsA::class, 'create'])->name('ticketA.create')->middleware('auth');
 //store
-Route::post('TicketC', [controladorTicketsA::class, 'store'])->name('ticketC.store');
+Route::post('TicketA', [controladorTicketsA::class, 'store'])->name('ticketA.store');
 //index
-Route::get('vistaTicketsC', [controladorTicketsA::class, 'index'])->name('ticketC.index')->middleware('auth');
+Route::get('vistaTicketsA', [controladorTicketsA::class, 'index'])->name('ticketA.index')->middleware('auth');
 //edit
-Route::get('TicketC/{id}/edit', [controladorTicketsA::class, 'edit'])->name('ticketC.edit')->middleware('auth');
+Route::get('TicketA/{id}/edit', [controladorTicketsA::class, 'edit'])->name('ticketA.edit')->middleware('auth');
 //update
-Route::put('TicketC/{id}', [controladorTicketsA::class, 'update'])->name('ticketC.update');
+Route::put('TicketA/{id}', [controladorTicketsA::class, 'update'])->name('ticketA.update');
 
