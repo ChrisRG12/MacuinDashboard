@@ -33,7 +33,7 @@
 }
 
 .sidebar strong{
-    color: black;
+    color: rgb(187, 99, 99);
 }
 
 .sidebar h4{
