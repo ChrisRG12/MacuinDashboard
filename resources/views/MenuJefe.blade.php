@@ -54,6 +54,14 @@
 		  </li>
 		  <li>
 		  </li>
+      <li>
+			<a href="{{route('ticketC.create')}}" class="nav-link text-white">
+			  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+			  Asignar ticket
+			</a>
+		  </li>
+		  <li>
+		  </li>
 		</ul>
 		<hr>
 		<div class="dropdown">
