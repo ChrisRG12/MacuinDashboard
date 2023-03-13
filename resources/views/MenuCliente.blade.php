@@ -39,7 +39,7 @@
       <div class="container-fluid py-5">
         <h1 class="display-5 fw-bold">Crear Ticket</h1>
         <p class="col-md-8 fs-4">Opción para gestionar y resolver problemas y solicitudes de los clientes de la empresa. Permite asignar tickets a los miembros del equipo, hacer seguimiento y dar solución a los problemas.</p>
-        <a href="{{route('ticket.index')}}" style="text-decoration: none">
+        <a href="{{route('ticket.create')}}" style="text-decoration: none">
           <button>
       <span>Añadir Queja</span> 
     </button></a>
