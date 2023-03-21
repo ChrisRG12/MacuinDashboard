@@ -8,6 +8,7 @@ use App\Http\Requests\ValidadorUsuario;
 use App\Http\Requests\validadorperfil;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use DB;
 use Carbon\Carbon;
 
@@ -29,8 +30,13 @@ class ControladorUsuarios extends Controller
 
     public function store(ValidadorUsuario $request)
     {
+        $img = $request->file('foto')->store('public/ima');
+        $url = Storage::url($img);
+
+
         DB::table('users')->insert([
             "name"=> $request->input('txtnom'),
+            "url" => $url,
             "email"=> $request->input('txtusu'),
             "password"=> Hash::make($request->input('txtcon')),
             "TipoUsu"=> $request->input('txttip'),

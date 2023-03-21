@@ -33,13 +33,13 @@ Route::get('Cierra/Sesion', [LoginCont::class, 'logout'])->name('Cierra.Sesion')
 
 //------------------USUARIOS----------------------------
 //Create
-Route::get('Usuario/create', [ControladorUsuarios::class, 'create'])->name('Usuario.create')->middleware('auth');
+Route::get('Usuario/create', [ControladorUsuarios::class, 'create'])->name('Usuario.create');
 //store
 Route::post('Usuario', [ControladorUsuarios::class, 'store'])->name('Usuario.store');
 //index
-Route::get('Vistausuario', [ControladorUsuarios::class, 'index'])->name('Usuario.index')->middleware('auth');
+Route::get('Vistausuario', [ControladorUsuarios::class, 'index'])->name('Usuario.index');
 //edit
-Route::get('Usuario/{id}/edit', [ControladorUsuarios::class, 'edit'])->name('Usuario.edit')->middleware('auth');
+Route::get('Usuario/{id}/edit', [ControladorUsuarios::class, 'edit'])->name('Usuario.edit');
 
 //update
 Route::put('Usuario/{id}', [ControladorUsuarios::class, 'update'])->name('Usuario.update');

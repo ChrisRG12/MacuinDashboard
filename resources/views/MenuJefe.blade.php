@@ -66,7 +66,7 @@
 		<hr>
 		<div class="dropdown">
 		  <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-			<img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+        <img src="{{ Auth::user()->url }}"  width="32" height="32" class="rounded-circle me-2">
 			<strong>{{Auth::user()->name}}</strong>
 		  </a>
 		  <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
@@ -76,8 +76,10 @@
 			 </button>
 		  </ul>
       <div class="fixed-bottom">
-        <button class="btn btn-danger ms-3 mb-3" href="{{route('Cierra.Sesion')}}" type="button">Cerrar sesión</button>
-      </div>
+        <a href="{{route('Cierra.Sesion')}}">
+          <button class="btn btn-danger ms-3 mb-3"  type="button">Cerrar sesión</button>
+        </a>
+        </div>
 		</div>
 	  </div>
 	  
