@@ -54,6 +54,14 @@
 		  </li>
 		  <li>
 		  </li>
+		  <li>
+			<a href="{{route('ticketA.create')}}" class="nav-link text-white">
+			  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+			  Asignar ticket
+			</a>
+		  </li>
+		  <li>
+		  </li>
 		</ul>
 		<hr>
 		<div class="dropdown">
@@ -106,8 +114,11 @@
 @endif
 
 
+@include('ModalPerfil')
 <div class="container w-75 mt-5">
   <h1>Tickets Almacenados</h1>
+  <a type="button"  href="{{route('ticket.create')}}" class="btn btn-primary">Agregar Ticket +</a>
+
 
     
     <table class="table table-secondary table-striped mt-5 mb-5 ">
@@ -123,7 +134,7 @@
             <th scope="col">status</th>
 
             <th scope="col">Departamento</th>
-			<th scope="col">Persona Encargada</th>
+
 			
             <th scope="col">Opciones</th>
           </tr>
@@ -144,9 +155,46 @@
             <td>{{ $consulta->Depa_id }}</td>
             <td>
             <a href="{{route('ticket.edit' , $consulta->idtic)}}" class="btn btn-outline-success"> Editar  <i class="bi bi-people"></i></a>
-            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#ModalEliminarDepa{{$consulta->idtic}}">
+            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#ModalEliminarTicket{{$consulta->idtic}}">
                   Eliminar <i class="bi bi-trash-fill"></i>
                </button>
+			   @include('ModalEliminarTicket')
+
+
+          </tr>
+                   <!-- include('ModalTicket') AQUI INSERTAS EL MODAL WE PARA QUE TE LEA ELID Y TE MANDE LOS TICKET QUE QUIERAS :)-->
+
+
+          @endforeach
+        </tbody>
+
+      </table>
+
+
+	  <table class="table table-secondary table-striped mt-5 mb-5 ">
+	  <h1>Tickets Asignados</h1>
+
+
+        <thead>
+            
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">id Auxiliar</th>
+            <th scope="col">Id Ticket</th>
+            <th scope="col">Observaciones</th>
+          </tr>
+         
+        </thead>
+        <tbody>
+            @foreach ($ConsultaTicketAsig as $consulta)
+          <tr>
+            <th scope="row">{{ $consulta->idasig }}</th>
+            <td>{{ $consulta->autora_id }}</td>
+			<td>{{ $consulta-> tick_id}}</td>
+            <td>{{ $consulta->observacion }}</td>
+
+            <td>
+
 
 
           </tr>

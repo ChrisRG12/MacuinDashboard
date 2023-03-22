@@ -88,6 +88,8 @@ Route::get('Ticket/{id}/show', [controladorTickets::class, 'show']) -> name('tic
 //destroy
 Route::delete('Ticket/{id}', [controladorTickets::class, 'destroy']) -> name('ticket.destroy');
 
+Route::get('search',[controladorticket::class, 'search'])->name('search');
+
 //------------------Asignar Ticket----------------------------
 //Create
 Route::get('TicketA/create', [controladorTicketsA::class, 'create'])->name('ticketA.create')->middleware('auth');

@@ -18,7 +18,7 @@
           Asignacion de Ticket
         </div>
 
-        <form action="{{route('ticketC.store')}}"  method="post">
+        <form action="{{route('ticketA.store')}}"  method="post">
             @csrf
 
         <div class="card-body">

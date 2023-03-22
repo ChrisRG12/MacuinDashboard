@@ -55,7 +55,7 @@
 		  <li>
 		  </li>
       <li>
-			<a href="{{route('ticketC.create')}}" class="nav-link text-white">
+			<a href="{{route('ticketA.create')}}" class="nav-link text-white">
 			  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
 			  Asignar ticket
 			</a>
@@ -76,6 +76,12 @@
 			 </button>
 		  </ul>
       <div class="fixed-bottom">
+
+        <a href="{{route('Cierra.Sesion')}}">
+        <button class="btn btn-danger ms-3 mb-3"  type="button">Cerrar sesión</button>
+      </div>
+      </a>
+
         <form method="GET" action="{{ route('Cierra.Sesion') }}">
           <button class="btn btn-danger ms-3 mb-3" type="submit">Cerrar sesión</button>
       </form>      
@@ -84,6 +90,7 @@
           <button class="btn btn-danger ms-3 mb-3"  type="button">Cerrar sesión</button>
         </a>
         </div>
+
 		</div>
 	  </div>
 	  
@@ -93,6 +100,61 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
  
 </body>
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+    </style>
+  </head>
 
 
   </html>
@@ -109,6 +171,7 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/jumbotron/">
 
 <link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
 
   <body>
 

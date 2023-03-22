@@ -72,6 +72,8 @@
 
         <div class="card-footer">
             <button type="submit"  class="btn btn-secondary btn-lg"> Agregar <i class="bi bi-plus-circle-fill"> </i></button>
+            <a href="{{route('depa.index')}}" class="btn btn-primary float-end me-3 mt-3"><svg class="bi me-2" width="16" height="16"><use xlink:href="#arrow-left"></use></svg>Regresar</a>
+
         </form>
 
         </div>

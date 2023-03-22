@@ -15,6 +15,7 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+	
 
 
 	<!-- Main content -->
@@ -50,6 +51,14 @@
 			<a href="{{route('ticket.index')}}" class="nav-link text-white">
 			  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
 			  Administración de Tickets
+			</a>
+		  </li>
+		  <li>
+		  </li>
+		  <li>
+			<a href="{{route('ticketA.create')}}" class="nav-link text-white">
+			  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+			  Asignar ticket
 			</a>
 		  </li>
 		  <li>
@@ -108,10 +117,16 @@
 
 
 <div class="container mt-5">
+
+<h1 class="display-5 fw-bold">Administración de Usuarios</h1>
+	
+
 	<h1 class="text-center mt-4" style="color: rgb(0, 0, 0)"> Administración de Usuarios <i class="fas fa-users"></i></h1>
 
 
+
 <div class="container mb-3 mt-4 col-md-5">
+	
                 <a type="button"  href="{{route('Usuario.create')}}" class="btn btn-primary">Agregar Usuario +</a>
                 <div class="my-3">
               </div>

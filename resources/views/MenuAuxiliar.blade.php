@@ -183,6 +183,24 @@ body{
 </style>
 
 
+ <div class="container mb-3 mt-4 col-md-3">
+
+
+    <div class="card text-center">
+
+        <div class="card-header">
+          {{Auth::user()->name}}
+        </div>
+
+        <div class="card-body">
+
+            <div class="mb-3">
+            <a type="button"  href="{{route('ticketA.index')}}" class="btn btn-primary">Soporte a ticktes</a>
+
+            </div>
+
+        </div>
+
 
 
 @stop
