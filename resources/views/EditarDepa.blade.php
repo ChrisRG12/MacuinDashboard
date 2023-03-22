@@ -2,7 +2,6 @@
 
 @section('contenido')
 
-<a href="{{route('depa.index')}}" class="btn btn-primary float-end me-3 mt-3"><svg class="bi me-2" width="16" height="16"><use xlink:href="#arrow-left"></use></svg>Regresar</a>
 <div class="container mt-4 col-md-5 text-center">
 @if ($errors->any())
     @foreach ($errors->all() as $error) 
@@ -41,6 +40,8 @@
      
              <div class="card-footer text-center">
                  <button type="submit" class="btn btn-secondary btn-lg"> Actualizar Departamento </button>
+                 <a href="{{route('depa.index')}}" class="btn btn-primary float-end me-3 mt-3"><svg class="bi me-2" width="16" height="16"><use xlink:href="#arrow-left"></use></svg>Regresar</a>
+
                 </div>
              </form>
             </div>

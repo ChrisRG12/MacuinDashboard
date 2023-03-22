@@ -38,7 +38,7 @@
         <div class="card-body">
 
             <div class="mb-3">
-            <a type="button"  href="{{route('ticketC.index')}}" class="btn btn-primary">Soporte a ticktes</a>
+            <a type="button"  href="{{route('ticketA.index')}}" class="btn btn-primary">Soporte a ticktes</a>
 
             </div>
 
