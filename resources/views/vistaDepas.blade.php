@@ -75,8 +75,10 @@
 				Perfil
 			 </button>
 		  </ul>
-      <div class="fixed-bottom">
-        <button class="btn btn-danger ms-3 mb-3" href="{{route('Cierra.Sesion')}}" type="button">Cerrar sesión</button>
+        <div class="fixed-bottom">
+			<form method="GET" action="{{ route('Cierra.Sesion') }}">
+			  <button class="btn btn-danger ms-3 mb-3" type="submit">Cerrar sesión</button>
+		  </form>  
       </div>
 		</div>
 	  </div>
@@ -115,7 +117,11 @@
 @include('ModalPerfil')
 
 <div class="container w-75 mt-5">
+
 <h1 class="display-5 fw-bold">Administración de Departamentos</h1>
+
+<h1 class="text-center mt-4" style="color: rgb(0, 0, 0)"> Registro Departamento <i class="fas fa-building"></i></h1>
+
   <a type="button"  href="{{route('depa.create')}}" class="btn btn-primary">Agregar Departamento +</a>
     
     <table class="table table-secondary table-striped mt-5 mb-5 ">
