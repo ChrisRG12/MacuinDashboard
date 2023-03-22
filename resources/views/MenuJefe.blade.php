@@ -81,7 +81,6 @@
           <button class="btn btn-danger ms-3 mb-3"  type="button">Cerrar sesión</button>
         </a>
         </div>
-
 		</div>
 	  </div>
 	  
