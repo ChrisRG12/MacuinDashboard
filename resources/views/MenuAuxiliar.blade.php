@@ -183,7 +183,7 @@ body{
 </style>
 
 
- <div class="container mb-3 mt-4 col-md-3">
+ {{-- <div class="container mb-3 mt-4 col-md-3">
 
 
     <div class="card text-center">
@@ -200,6 +200,9 @@ body{
             </div>
 
         </div>
+
+
+</div>  --}}
 
 
 
