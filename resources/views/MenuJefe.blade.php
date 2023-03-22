@@ -76,11 +76,25 @@
 			 </button>
 		  </ul>
       <div class="fixed-bottom">
+
         <a href="{{route('Cierra.Sesion')}}">
 
           <button class="btn btn-danger ms-3 mb-3"  type="button">Cerrar sesión</button>
         </a>
         </div>
+        <button class="btn btn-danger ms-3 mb-3"  type="button">Cerrar sesión</button>
+      </div>
+      </a>
+
+        <form method="GET" action="{{ route('Cierra.Sesion') }}">
+          <button class="btn btn-danger ms-3 mb-3" type="submit">Cerrar sesión</button>
+      </form>      
+      </div>
+        <a href="{{route('Cierra.Sesion')}}">
+          <button class="btn btn-danger ms-3 mb-3"  type="button">Cerrar sesión</button>
+        </a>
+        </div>
+
 		</div>
 	  </div>
 	  
@@ -90,6 +104,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
  
 </body>
+
 
     <style>
       .bd-placeholder-img {
@@ -144,6 +159,24 @@
       }
     </style>
   </head>
+
+
+  </html>
+  <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+	<div class="container">
+		<div class="row">
+  <html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.108.0">
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/jumbotron/">
+
+<link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+
   <body>
 
     @include('ModalPerfil')
