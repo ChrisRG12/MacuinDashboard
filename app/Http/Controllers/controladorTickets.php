@@ -31,11 +31,12 @@ class controladorTickets extends Controller
     
     {
         $ConsultaTicket=DB::table('tb_tickets')->get();
+        $ConsultaTicketAsig=DB::table('tb__asig_tic')->get();
         $ConsultaTickets = DB::table('tb_tickets')
         ->join('tb__asig_tic', 'tb_tickets.idtic', '=', 'tb__asig_tic.idasig')
         ->select('tb_tickets.*', 'tb__asig_tic.idasig')
         ->get();
-        return view('vistaTickets', compact('ConsultaTicket','ConsultaTickets'));
+        return view('vistaTickets', compact('ConsultaTicket','ConsultaTickets','ConsultaTicketAsig'));
 
     }
 

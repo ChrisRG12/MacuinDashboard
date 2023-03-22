@@ -1,4 +1,4 @@
-@extends('plantillaC')
+@extends('plantillaA')
 
 @section('contenido')
 
@@ -23,6 +23,8 @@
 @endif
 
 
+@include('ModalPerfil')
+
 @if(session()->has('Actualizar'))
 {!! 
 " <script> 
@@ -33,11 +35,9 @@
 ) </script> "!!}
 @endif
 
+@include('ModalPerfilAux')
 
-<div class="container w-75 mt-5 rounded shadow">
-  <h1>ControlTickets Cliente</h1>
-
-    
+<div class="container py-4" style="margin-left: 18%"> 
     <table class="table table-secondary table-striped mt-5 mb-5 ">
 
         <thead>
@@ -56,7 +56,7 @@
          
         </thead>
         <tbody>
-            @foreach ($ConsultaTicket as $consulta)
+            @foreach ($ConsultaTicketA as $consulta)
           <tr>
             <th scope="row">{{ $consulta->idtic }}</th>
             <td>{{ $consulta->autorj_id }}</td>
