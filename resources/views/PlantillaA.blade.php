@@ -82,6 +82,7 @@
     <h5 class="mt-2">Tipo de usuario: {{ Auth::user()->TipoUsu }}</h5>
 
     <h5 class="mt-2"> Correo: {{ Auth::user()->email }}</h5>
+    <img src="{{ Auth::user()->url }}"  width="32" height="32" class="rounded-circle me-2">
 
     <br>
     <a href="" data-bs-toggle="modal" data-bs-target="#ModalPerfilAux"><i class="bi bi-person-fill-gear"> Editar Perfil</i></a>

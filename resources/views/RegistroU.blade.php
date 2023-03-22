@@ -18,7 +18,7 @@
           Agregar Usuario 
         </div>
 
-        <form action="{{route('Usuario.store')}}"  method="post">
+        <form action="{{route('Usuario.store')}}"  method="post" enctype="multipart/form-data">
             @csrf
 
         <div class="card-body">
@@ -30,6 +30,16 @@
                 <p class="text-primary fst-Italic">
                     {{ $errors->first('txtnom') }} </p>
             </div>
+<div class="form-goup">
+    <div class="mb-3">
+        <label class="form-label"> Foto de perfil: </label>
+        <input type="file"  name="foto" accept="image/*">
+        <p class="text-primary fst-Italic">
+            {{ $errors->first('foto') }} </p>
+    </div>
+
+</div>
+
 
             <div class="mb-3">
                 <label class="form-label"> Email </label> <i class="bi bi-person-badge-fill"></i>
