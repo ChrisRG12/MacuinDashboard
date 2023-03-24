@@ -30,13 +30,14 @@
                 <p class="text-primary fst-Italic">
                     {{ $errors->first('txtnom') }} </p>
             </div>
-<div class="form-goup">
+            
     <div class="mb-3">
         <label class="form-label"> Foto de perfil: </label>
-        <input type="file"  name="foto" accept="image/*">
+        <input type="file" class="form-control"  name="foto" accept="image/*">
         <p class="text-primary fst-Italic">
             {{ $errors->first('foto') }} </p>
     </div>
+
 
 </div>
 
@@ -72,8 +73,6 @@
 
         <div class="card-footer">
             <button type="submit"  class="btn btn-secondary btn-lg"> Agregar <i class="bi bi-plus-circle-fill"> </i></button>
-            <a href="{{route('depa.index')}}" class="btn btn-primary float-end me-3 mt-3"><svg class="bi me-2" width="16" height="16"><use xlink:href="#arrow-left"></use></svg>Regresar</a>
-
         </form>
 
         </div>

@@ -21,7 +21,7 @@ return new class extends Migration
             $table->String('TipoUsu');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('url');
+            $table->string('url')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

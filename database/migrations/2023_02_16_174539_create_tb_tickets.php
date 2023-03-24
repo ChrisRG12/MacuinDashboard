@@ -19,6 +19,7 @@ return new class extends Migration
             $table->String('clasificacion');
             $table->String('detalles');
             $table->string('status');
+            $table->string('comentarios');
             $table->unsignedBigInteger('autorj_id');
             $table->unsignedBigInteger('Depa_id');
             $table->timestamps();

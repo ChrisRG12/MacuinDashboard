@@ -145,6 +145,7 @@
           <tr>
             <th scope="col">Id</th>
             <th scope="col">Nombre</th>
+			<th scope="col">Foto</th>
             <th scope="col">Usuario</th>
             <th scope="col">Tipo</th>
             <th scope="col">Opciones</th>
@@ -156,6 +157,8 @@
           <tr>
             <th scope="row">{{ $consulta->id }}</th>
             <td>{{ $consulta->name }}</td>
+			<td> <img src="{{$consulta->url}}" alt="" width="100">
+			</td>
             <td>{{ $consulta->email }}</td>
             <td>{{ $consulta->TipoUsu }}</td>
             <td>

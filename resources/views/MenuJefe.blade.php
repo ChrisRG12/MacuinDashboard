@@ -81,14 +81,6 @@
         <button class="btn btn-danger ms-3 mb-3"  type="button">Cerrar sesión</button>
       </div>
       </a>
-
-        <form method="GET" action="{{ route('Cierra.Sesion') }}">
-          <button class="btn btn-danger ms-3 mb-3" type="submit">Cerrar sesión</button>
-      </form>      
-      </div>
-        <a href="{{route('Cierra.Sesion')}}">
-          <button class="btn btn-danger ms-3 mb-3"  type="button">Cerrar sesión</button>
-        </a>
         </div>
 
 		</div>

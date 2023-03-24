@@ -61,8 +61,12 @@ class ControladorUsuarios extends Controller
 
     public function update(ValidadorUsuario $request, $id)
     {
+        $img = $request->file('foto')->store('public/ima');
+        $url = Storage::url($img);
+
         DB::table('users')->where('id', $id)->update([
             "name"=> $request->input('txtnom'),
+             "url" => $url,
             "email"=> $request->input('txtusu'),
             "password"=> Hash::make($request->input('txtcon')),
             "TipoUsu"=> $request->input('txttip'),
@@ -75,9 +79,14 @@ class ControladorUsuarios extends Controller
 
      public function actualizar(validadorperfil $request)
      {
+         $img = $request->file('foto')->store('public/ima');
+        $url = Storage::url($img);
+
          DB::table('users')->where('id', Auth::user()->id)->update([
             "name"=> $request->input('txtnom'),
+             "url" => $url,
              "email"=> $request->input('txtusu'),
+             "updated_at"=> Carbon::now(),
     
       ]);
         return redirect('JefeSoporte')->with('Actualizarr', 'Usuario Actualizado');
@@ -86,8 +95,12 @@ class ControladorUsuarios extends Controller
     
     public function C(validadorperfil $request)
     {
+        $img = $request->file('foto')->store('public/ima');
+        $url = Storage::url($img);
+
         DB::table('users')->where('id', Auth::user()->id)->update([
             "name"=> $request->input('txtnom'),
+             "url" => $url,
             "email"=> $request->input('txtusu'),
             "updated_at"=> Carbon::now(),
 
@@ -98,8 +111,11 @@ class ControladorUsuarios extends Controller
     
     public function A(validadorperfil $request)
     {
+        $img = $request->file('foto')->store('public/ima');
+        $url = Storage::url($img);
         DB::table('users')->where('id', Auth::user()->id)->update([
             "name"=> $request->input('txtnom'),
+             "url" => $url,
             "email"=> $request->input('txtusu'),
             "updated_at"=> Carbon::now(),
 
