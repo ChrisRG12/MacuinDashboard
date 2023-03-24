@@ -77,15 +77,18 @@
 
 <div class="sidebar">
     <h3 class="mt-3 mb-4"><strong>Macuin<br/></strong>Dashboards</h3>
+
+    <img src="{{ Auth::user()->url }}"  width="200" height="150" style="margin-left: 9%">
+<br> 
     <h4>{{ Auth::user()->name }}</h4>
 
     <h5 class="mt-2">Tipo de usuario: {{ Auth::user()->TipoUsu }}</h5>
 
     <h5 class="mt-2"> Correo: {{ Auth::user()->email }}</h5>
-    <img src="{{ Auth::user()->url }}"  width="32" height="32" class="rounded-circle me-2">
+   
 
     <br>
-    <a href="" data-bs-toggle="modal" data-bs-target="#ModalPerfilAux"><i class="bi bi-person-fill-gear"> Editar Perfil</i></a>
+    <a href="" data-bs-toggle="modal" data-bs-target="#ModalPerfilAux"><i class="bi bi-person-fill-gear"> <strong> Editar Perfil </strong></i></a>
     
     <a href="{{route('Cierra.Sesion')}}"><i class="bi bi-box-arrow-left"><strong> Cerrar Sesion</strong></i></a>
     

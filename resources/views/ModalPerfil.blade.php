@@ -9,7 +9,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
 
-        <form action="{{route('Perfil.actualizar')}}" method="POST">
+        <form action="{{route('Perfil.actualizar')}}" method="POST" enctype="multipart/form-data">
           @csrf
           @method('PUT')
 
@@ -17,11 +17,15 @@
         <div class="modal-body">
 
      
+          <div class="mb-1">
+            <label class="form-label"> Foto </label>
+            <input type="file" class="form-control" name="foto" accept="image/*">
+          </div>
+
             <div class="mb-1">
                 <label class="form-label"> Nombre </label>
                <input type="text" class="form-control" name="txtnom" value="{{Auth::user()->name}}">
               </div>
-  
   
               <div class="mb-1">
                <label class="form-label"> Usuario </label>

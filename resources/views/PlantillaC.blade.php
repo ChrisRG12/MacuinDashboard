@@ -109,6 +109,8 @@ button:active{
 
 <div class="sidebar">
     <h3 class="mt-3 mb-4"><strong>Macuin<br/></strong>Dashboards</h3>
+    <img src="{{ Auth::user()->url }}"  width="200" height="150" style="margin-left: 9%">
+ <br>
     <h4>{{ Auth::user()->name }}</h4>
 
     <h5 class="mt-2">{{ Auth::user()->TipoUsu }}</h5>
