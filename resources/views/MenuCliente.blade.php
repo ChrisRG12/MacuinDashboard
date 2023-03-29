@@ -44,7 +44,7 @@
       <span>Generar Solitud de Atencion</span> 
     </button></a>
 
-    <a href="{{route('ticketsss')}}" style="text-decoration: none">
+    <a href="{{route('Ver')}}" style="text-decoration: none">
       <button>
   <span>Ver mis Quejas</span> 
 </button></a>

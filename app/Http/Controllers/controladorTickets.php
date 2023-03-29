@@ -71,7 +71,7 @@ class controladorTickets extends Controller
         ->where('autorj_id','=',Auth::user()->id)->get();
         
 
-        return view('Mios', compact('Misticktes', 'ConsultaTicket'));
+        return view('Mistickets', compact('Misticktes', 'ConsultaTicket'));
     }
 
     /**
@@ -95,7 +95,7 @@ class controladorTickets extends Controller
 
         ]);
 
-        return redirect('vistaTickets')->with('Confirmacion','abc');
+        return redirect('Mios')->with('Confirmacion','abc');
     }
 
     /**
