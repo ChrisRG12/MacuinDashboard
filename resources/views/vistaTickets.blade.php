@@ -47,9 +47,9 @@
 			</a>
 		  </li>
 		  <li>
-			<a href="{{route('ticket.index')}}" class="nav-link text-white">
+			<a href="{{route('homecliente')}}" class="nav-link text-white">
 			  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
-			  Administración de Tickets
+			  Regresar al menu
 			</a>
 		  </li>
 		  <li>
@@ -117,7 +117,7 @@
 @include('ModalPerfil')
 <div class="container w-75 mt-5">
   <h1>Tickets Almacenados</h1>
-  <a type="button"  href="{{route('ticket.create')}}" class="btn btn-primary">Agregar Ticket +</a>
+  <a type="button"  href="{{route('homecliente')}}" class="btn btn-primary">Menú</a>
 
 
     
@@ -186,11 +186,11 @@
          
         </thead>
         <tbody>
-            @foreach ($ConsultaTicketAsig as $consulta)
+            @foreach ($TicktesAsig as $consulta)
           <tr>
             <th scope="row">{{ $consulta->idasig }}</th>
-            <td>{{ $consulta->autora_id }}</td>
-			<td>{{ $consulta-> tick_id}}</td>
+            <td>{{ $consulta->name }}</td>
+			<td>{{ $consulta->idtic}}</td>
             <td>{{ $consulta->observacion }}</td>
 
             <td>

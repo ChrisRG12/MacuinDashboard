@@ -5,12 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\tb__departamentos;
 use App\Models\users;
-
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
+use DB;
+use Carbon\Carbon;
 use App\Http\Requests\validadorDepartamento;
 use App\Http\Requests\validadorticket;
 
-use DB;
-use Carbon\Carbon;
 
 
 class controladorTickets extends Controller
@@ -31,12 +33,17 @@ class controladorTickets extends Controller
     
     {
         $ConsultaTicket=DB::table('tb_tickets')->get();
-        $ConsultaTicketAsig=DB::table('tb__asig_tic')->get();
+        // $ConsultaTicketAsig=DB::table('tb__asig_tic')->get();
         $ConsultaTickets = DB::table('tb_tickets')
         ->join('tb__asig_tic', 'tb_tickets.idtic', '=', 'tb__asig_tic.idasig')
         ->select('tb_tickets.*', 'tb__asig_tic.idasig')
         ->get();
-        return view('vistaTickets', compact('ConsultaTicket','ConsultaTickets','ConsultaTicketAsig'));
+       $TicktesAsig = DB::table('tb__asig_tic')
+            ->select('tb__asig_tic.idasig','users.name', 'tb_tickets.idtic', 'tb__asig_tic.observacion')
+            ->join('users','tb__asig_tic.autora_id','=','users.id')
+            ->join('tb_tickets','tb__asig_tic.tick_id','=','tb_tickets.idtic')
+            ->get();
+        return view('vistaTickets', compact('ConsultaTicket','ConsultaTickets','TicktesAsig'));
 
     }
 
@@ -49,7 +56,22 @@ class controladorTickets extends Controller
     {
         $moreinfo = tb__departamentos::all();
         $moreinfou = users::all();
-        return view('RegistroT', compact('moreinfo','moreinfou'));
+        $soloClientes = DB::table('users')
+        ->select('*')
+        ->where('TipoUsu','=','Auxiliar-Jefe')
+        ->get();
+        return view('RegistroT', compact('moreinfo','moreinfou', 'soloClientes'));
+    }
+
+    public function Mioss()
+    {
+        $ConsultaTicket=DB::table('tb_tickets')->get();
+        $Misticktes =  DB::table('tb_tickets')
+        ->select('*')
+        ->where('autorj_id','=',Auth::user()->id)->get();
+        
+
+        return view('Mios', compact('Misticktes', 'ConsultaTicket'));
     }
 
     /**
