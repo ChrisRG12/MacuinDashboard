@@ -1,4 +1,4 @@
-@extends('plantilla')
+@extends('plantillaJ')
 
 @section('contenido')
 <header>
