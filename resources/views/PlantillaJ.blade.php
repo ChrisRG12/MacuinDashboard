@@ -13,12 +13,90 @@
 <body >
     <style>
     body{
-        background-color: darkslategray;
+        background-color: #2f4f4f;
     }
+    
+    
+.sidebar{
+    position:  fixed;
+    width: 280px;
+    height: 100%;
+    padding-top: 20px;
+    left: 0;
+    background-color: #f0bf92;
+}
+
+.sidebar h3{
+    margin-left: 20px;
+    font-size: 35px;
+    color: white;
+}
+
+.sidebar strong{
+    color: black;
+}
+
+.sidebar h4{
+    margin-left: 20px;
+    font-size: 25px;
+    color: black;
+}
+
+.sidebar h5{
+    margin-left: 20px;
+    font-size: 15px;
+    color: black;
+
+}
+
+.sidebar a{
+    color: black;
+    display: block;
+    width: 100%;
+    line-height: 60px;
+    text-decoration: none;
+    padding-left: 40px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    transition-property:background;
+}
+
+.sidebar a:hover{
+    background: #2f4f4f;
+}
+
+.sidebar ion-icon{
+    padding-right: 10px;
+}
+
+.botonaso{
+    margin-top: 340px;
+}
     </style>
+
+<div class="sidebar">
+    <h3 class="mt-3 mb-4"><strong>Macuin<br/></strong>Dashboards</h3>
+
+    <img src="{{ Auth::user()->url }}"  width="200" height="150" style="margin-left: 9%">
+<br> 
+    <h4>{{ Auth::user()->name }}</h4>
+
+    <h5 class="mt-2">Tipo de usuario: {{ Auth::user()->TipoUsu }}</h5>
+
+    <h5 class="mt-2"> Correo: {{ Auth::user()->email }}</h5>
+   
+
+    <br>
+    <a href="" data-bs-toggle="modal" data-bs-target="#ModalPerfilAux"><i class="bi bi-person-fill-gear"> <strong> Editar Perfil </strong></i></a>
     
+    <a href="{{route('Cierra.Sesion')}}"><i class="bi bi-box-arrow-left"><strong> Cerrar Sesion</strong></i></a>
     
-    
+
+                <div class="tablita overflow-auto" style="max-height: 230px; overflow-y: scroll;">
+
+                </div>
+            </div>
+
 
 @yield('contenido')
 

@@ -26,7 +26,7 @@ Route::view('adusu', 'vistaUsuu')-> name('jeadusu');
 Route::get('JefeSoporte', [controladorVistas::class, 'showJefe'])->name('homejefe')->middleware('auth');
 Route::get('Auxiliar', [controladorVistas::class, 'showAuxiliar'])->name('homeaux')->middleware('auth');
 Route::get('Cliente', [controladorVistas::class, 'showCliente'])->name('homecliente')->middleware('auth');
-Route::get('Mios', [controladorVistas::class, 'showMistickets'])->name('ticketsss')->middleware('auth');
+// Route::get('Mios', [controladorVistas::class, 'showMistickets'])->name('ticketsss')->middleware('auth');
 
 //------------------LOGIN----------------------------
 Route::get('/', [LoginCont::class, 'login'])->name('login');
@@ -102,7 +102,7 @@ Route::get('search',[controladorticket::class, 'search'])->name('search');
 //Create
 Route::get('TicketA/create', [controladorTicketsA::class, 'create'])->name('ticketA.create')->middleware('auth');
 //Create
-Route::get('MisTickets', [controladorTicketsA::class, 'Mioss'])->name('Ver')->middleware('auth');
+Route::get('Mios', [controladorTickets::class, 'Mioss'])->name('Ver')->middleware('auth');
 
 //store
 Route::post('TicketA', [controladorTicketsA::class, 'store'])->name('ticketA.store');
