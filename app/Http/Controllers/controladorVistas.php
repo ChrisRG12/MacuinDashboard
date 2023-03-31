@@ -28,17 +28,17 @@ class controladorVistas extends Controller
         return view('MenuCliente');
     }
 
-    public function showMistickets()
-    {
-        $ConsultaTicket=DB::table('tb_tickets')->get();
-        $Misticktes =  DB::table('tb_tickets')
-        ->select('*')
-        ->where('autorj_id','=',Auth::user()->id)->get();
+    // public function showMistickets()
+    // {
+    //     $ConsultaTicket=DB::table('tb_tickets')->get();
+    //     $Misticktes =  DB::table('tb_tickets')
+    //     ->select('*')
+    //     ->where('autorj_id','=',Auth::user()->id)->get();
         
 
-        return view('Mistickets', compact('Misticktes', 'ConsultaTicket'));
-        return view('Mistickets');
-    }
+    //     return view('Mistickets', compact('Misticktes', 'ConsultaTicket'));
+    //     return view('Mistickets');
+    // }
 
     
 }
