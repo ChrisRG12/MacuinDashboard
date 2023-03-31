@@ -38,7 +38,9 @@ class controladorTicketsA extends Controller
     public function create()
     {
         $moreinfot = tb_tickets::all();
-        $moreinfou = users::all();
+       // $moreinfou = users::all();
+       $moreinfou = users::where('TipoUsu', '=', 'Auxiliar-Jefe')->get();
+
         return view('RegistroATA', compact('moreinfot','moreinfou'));
     }
 

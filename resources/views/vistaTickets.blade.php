@@ -47,9 +47,9 @@
 			</a>
 		  </li>
 		  <li>
-			<a href="{{route('homecliente')}}" class="nav-link text-white">
+			<a href="{{route('ticket.index')}}" class="nav-link text-white">
 			  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
-			  Regresar al menu
+			  Administración de Tickets
 			</a>
 		  </li>
 		  <li>
@@ -179,8 +179,8 @@
             
           <tr>
             <th scope="col">Id</th>
-            <th scope="col">id Auxiliar</th>
-            <th scope="col">Id Ticket</th>
+            <th scope="col">Nombre Auxiliar</th>
+            <th scope="col">Ticket</th>
             <th scope="col">Observaciones</th>
           </tr>
          
