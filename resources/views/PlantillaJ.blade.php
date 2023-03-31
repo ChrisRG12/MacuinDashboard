@@ -89,9 +89,9 @@
     <br>
     <a href="{{route('Usuario.index')}}"><i class="bi bi-people-fill"><strong> Administración Usuarios</strong></i></a>
 
-    <a href="{{route('depa.index')}}"><i class="bi bi-building-add"><strong> Registro de Departamentos</strong></i></a>
+    <a href="{{route('depa.index')}}"><i class="bi bi-building-add"><strong> Registro Departamentos</strong></i></a>
 
-    <a href="{{route('ticket.index')}}"><i class="bi bi-ticket"><strong> Administración de Tickets</strong></i></a>
+    <a href="{{route('ticket.index')}}"><i class="bi bi-ticket"><strong> Administración Tickets</strong></i></a>
 
     <a href="" data-bs-toggle="modal" data-bs-target="#ModalPerfilJef"><i class="bi bi-person-fill-gear"> <strong> Editar Perfil </strong></i></a>
     
