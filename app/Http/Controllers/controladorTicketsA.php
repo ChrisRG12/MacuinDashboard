@@ -42,6 +42,16 @@ class controladorTicketsA extends Controller
         return view('RegistroATA', compact('moreinfot','moreinfou'));
     }
 
+    public function VermisT() //Falta aclara la tabla para ver los tickets del Aux
+    {
+        $MisTick =  DB::table('tb_tickets')
+        ->select('*')
+        ->where('autorj_id','=',Auth::user()->id)->get();
+
+        return view('#', compact('MisTick'));
+    }
+
+
     /**
      * Store a newly created resource in storage.
      *
