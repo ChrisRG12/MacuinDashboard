@@ -2,9 +2,7 @@
 
 @section('contenido')
 
-@include('ModalPerfilAux')
-<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-	<div class="container">
+
 @if(session()->has('Confirmacion'))
 {!! 
 " <script> 
@@ -38,8 +36,9 @@
 
 
 @include('ModalPerfil')
-<div class="container w-75 mt-5">
-  <h1>Tickets Almacenados</h1>
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+	<div class="container">
+  <h1 class="text-center display-5 fw-bold" style="color: rgb(255, 251, 251)">Tickets Almacenados</h1>
   <a type="button"  href="{{route('homecliente')}}" class="btn btn-primary">Menú</a>
 
 
@@ -95,8 +94,7 @@
 
 
 	  <table class="table table-secondary table-striped mt-5 mb-5 ">
-	  <h1>Tickets Asignados</h1>
-
+    <h1 class="text-center display-5 fw-bold" style="color: rgb(255, 251, 251)">Tickets Asignados</h1>
 
         <thead>
             
@@ -128,11 +126,6 @@
         </tbody>
 
       </table>
-
-
-
-
-
 
 </div>
 
