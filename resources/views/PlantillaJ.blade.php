@@ -93,7 +93,9 @@
 
     <a href="{{route('ticket.index')}}"><i class="bi bi-ticket"><strong> Administración Tickets</strong></i></a>
 
-    <a href="" data-bs-toggle="modal" data-bs-target="#ModalPerfilJef"><i class="bi bi-person-fill-gear"> <strong> Editar Perfil </strong></i></a>
+    <a href="{{route('ticketA.create')}}"><i class="bi bi-ticket"><strong> Asignar Tickets</strong></i></a>
+
+    <a href="" data-bs-toggle="modal" data-bs-target="#ModalPerfil"><i class="bi bi-person-fill-gear"> <strong> Editar Perfil </strong></i></a>
     
     <a href="{{route('Cierra.Sesion')}}"><i class="bi bi-box-arrow-left"><strong> Cerrar Sesion</strong></i></a>
     
