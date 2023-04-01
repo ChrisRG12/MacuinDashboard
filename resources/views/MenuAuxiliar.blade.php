@@ -29,6 +29,7 @@
 	<div class="container">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 
+
 <div class="container py-4">
   <div class="p-5 mb-4 bg-light rounded-3">
     <div class="container-fluid py-5">
@@ -44,6 +45,15 @@
         <h2>Registro de Departamentos</h2>
         <p>Opción que permite registrar nuevos departamentos en la empresa y asignar empleados a ellos. Esta función es útil para mantener un registro organizado de los diferentes departamentos de la empresa y los empleados que trabajan en cada uno de ellos.</p>
     <a href="{{route('depa.index')}}" class="btn btn-outline-light"><i class="fas fa-building"></i> Registrar</a>
+
+<section class="hero-section">
+  <div class="card-grid">
+    <a class="card" href="{{route('ticketA.index')}}">
+      <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557177324-56c542165309?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)"></div>
+      <div class="card__content">
+
+        <h3 class="card__heading">Seguimiento a Tickets</h3>
+
       </div>
     </div>
     <div class="col-md-6">
