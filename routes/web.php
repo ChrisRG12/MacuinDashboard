@@ -11,15 +11,7 @@ use App\Http\Controllers\controladorTickets;
 use App\Http\Controllers\controladorTicketsA;
 use App\Http\Controllers\LoginCont;
 
-//------------------Menus----------------------------
-Route::view('plan', 'plantilla')-> name('pla');
-Route::view('welcome', 'welcome')-> name('we');
-Route::view('menu', 'menu')-> name('men')->middleware('auth');
 
-Route::view('prueba', 'pueba')-> name('pla');
-
-
-Route::view('adusu', 'vistaUsuu')-> name('jeadusu');
 
 
 
@@ -37,6 +29,11 @@ Route::get('Cierra/Sesion', [LoginCont::class, 'logout'])->name('Cierra.Sesion')
 Route::get('/buscar', 'UserController@buscar');
 
 
+
+//------------------------Cancelar Ticket
+Route::get('VistaTicketsC', [controladorTickets::class, 'indexCliente'])->name('ticketC.index')->middleware('auth');
+
+Route::put('TicketC/{id}', [controladorTickets::class, 'updateTC'])->name('ticketC.update');
 
 
 //------------------USUARIOS----------------------------
@@ -102,7 +99,6 @@ Route::get('search',[controladorticket::class, 'search'])->name('search');
 //Create
 Route::get('TicketA/create', [controladorTicketsA::class, 'create'])->name('ticketA.create')->middleware('auth');
 //Create
-Route::get('Mios', [controladorTickets::class, 'Mioss'])->name('Ver')->middleware('auth');
 
 //store
 Route::post('TicketA', [controladorTicketsA::class, 'store'])->name('ticketA.store');
