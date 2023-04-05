@@ -1,10 +1,6 @@
-@extends('PlantillaJ')
+@extends('plantillaJ')
 
 @section('contenido')
-
-@include('ModalPerfilAux')
-<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-	<div class="container">	
 
 @if(session()->has('confirmacion'))
 {!! 
@@ -37,12 +33,10 @@
 ) </script> "!!}
 @endif
 
-
-<h1 class="text-center display-5 fw-bold">.</h1>
-	
-
+@include('ModalPerfilAux')
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+	<div class="container">	
 	<h1 class="text-center mt-4" style="color: rgb(255, 255, 255)"> Administración de Usuarios <i class="fas fa-users"></i></h1>
-
 <div class="container mb-3 mt-4 col-md-19">
 	
                 <a type="button"  href="{{route('Usuario.create')}}" class="btn btn-primary">Agregar Usuario +</a>
@@ -63,7 +57,7 @@
           <tr>
             <th scope="col">Id</th>
             <th scope="col">Nombre</th>
-			<th scope="col">Foto</th>
+			      <th scope="col">Foto</th>
             <th scope="col">Usuario</th>
             <th scope="col">Tipo</th>
             <th scope="col">Opciones</th>

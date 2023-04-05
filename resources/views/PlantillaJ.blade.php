@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet"  href="{{asset('styles.css')}}">
+    <link rel="stylesheet" href="#">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <title>Macuin Dashboard</title>
 </head>
-<body >
-    <style>
+<body>
+<style>
     body{
-        background-color: #2f4f4f;
+        background: darkslategray;
     }
-    
     
 .sidebar{
     position:  fixed;
@@ -72,7 +72,7 @@
 .botonaso{
     margin-top: 340px;
 }
-    </style>
+</style>
 
 <div class="sidebar">
     <h3 class="mt-3 mb-4"><strong>Macuin<br/></strong>Dashboards</h3>
@@ -87,7 +87,15 @@
    
 
     <br>
-    <a href="" data-bs-toggle="modal" data-bs-target="#ModalPerfilAux"><i class="bi bi-person-fill-gear"> <strong> Editar Perfil </strong></i></a>
+    <a href="{{route('Usuario.index')}}"><i class="bi bi-people-fill"><strong> Administración Usuarios</strong></i></a>
+
+    <a href="{{route('depa.index')}}"><i class="bi bi-building-add"><strong> Registro Departamentos</strong></i></a>
+
+    <a href="{{route('ticket.index')}}"><i class="bi bi-ticket"><strong> Administración Tickets</strong></i></a>
+
+    <a href="{{route('ticketA.create')}}"><i class="bi bi-ticket"><strong> Asignar Tickets</strong></i></a>
+
+    <a href="" data-bs-toggle="modal" data-bs-target="#ModalPerfil"><i class="bi bi-person-fill-gear"> <strong> Editar Perfil </strong></i></a>
     
     <a href="{{route('Cierra.Sesion')}}"><i class="bi bi-box-arrow-left"><strong> Cerrar Sesion</strong></i></a>
     
