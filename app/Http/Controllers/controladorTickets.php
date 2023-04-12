@@ -17,18 +17,7 @@ use App\Http\Requests\validadorticket;
 
 class controladorTickets extends Controller
 {
-    /**$ConsultaTicket = DB::table('tb_tickets')
-        ->join('tb__asig_tic', 'tb_tickets.idtic', '=', 'tb__asig_tic.idasig')
-        ->select('tb_tickets.*', 'tb__asig_tic.idasig')
-        ->get();
-        return view('vistaTickets', compact('ConsultaTicket'));
-     * Display a listing of the resource.
-     *
-     * 
-     * 
-     * 
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     
     {
@@ -98,13 +87,7 @@ class controladorTickets extends Controller
         return redirect('VistaTicketsC')->with('Confirmacion','abc');
     }
 
-    public function updateTC(validadorticket $request, $id)
-{
-    DB::table('tb_tickets')->where('idtic',$id)->update([
-        "status"=>$request->input('txtstatus'),
-    ]);
-    return redirect('vistaTicketsC')->with('Actualizar','abc');
-}
+
 
 
     /**
@@ -153,6 +136,35 @@ class controladorTickets extends Controller
             "updated_at"=> Carbon::now(),
         ]);
         return redirect('vistaTickets')->with('Actualizar','abc');
+    }
+
+    public function editarA($id)
+    {
+        $consultaId=DB::table('tb_tickets')->where('idtic',$id)->first();
+
+        $moreinfo = tb__departamentos::all();
+        $moreinfou = users::all();
+        return view('editarTicketA',compact('consultaId','moreinfou','moreinfo'));
+    }
+
+    public function updateA(validadorticket $request, $id)
+    {
+        DB::table('tb_tickets')->where('idtic',$id)->update([
+            "status"=>$request->input('txtstatus'),
+            "comentarioC"=>$request->input('txtcomentarioC'),
+            "updated_at"=> Carbon::now(),
+        ]);
+        return redirect('vistaTickets')->with('Actualizar','abc');
+    }
+
+    public function canceltic(validadorticket $request, $id)
+    {
+        DB::table('tb_tickets')->where('idtic', $id)->update([
+            "status"=>$request->input('txtstatus'),
+            "updated_at"=>Carbon::now()
+        ]);
+        return redirect('/')->with('Actualizar','abc');
+
     }
 
     /**

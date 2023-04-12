@@ -21,9 +21,13 @@ class controladorTicketsA extends Controller
      */
     public function index()
     {
+        $tickets = DB::table('tb__asig_tic')
+            ->join('tb_tickets', 'tb_tickets.idtic', '=', 'tb__asig_tic.tick_id')
+            ->select('tb_tickets.*', 'tb__asig_tic.observacion as comentarioA')
+            ->get();
 
         $ConsultaTicketA=DB::table('tb_tickets')->get();
-        return view('vistaTicketsA', compact('ConsultaTicketA'));
+        return view('vistaTicketsA', compact('ConsultaTicketA','tickets'));
 
         $ConsultaTicket=DB::table('tb_tickets')->get();
         return view('vistaTickets', compact('ConsultaTicket'));
