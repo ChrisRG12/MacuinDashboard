@@ -63,7 +63,7 @@ class controladorTickets extends Controller
         return view('RegistroT', compact('moreinfo','moreinfou', 'soloClientes'));
     }
 
-    public function Mioss()
+    public function indexCliente()
     {
         $ConsultaTicket=DB::table('tb_tickets')->get();
         $Misticktes =  DB::table('tb_tickets')
@@ -71,7 +71,7 @@ class controladorTickets extends Controller
         ->where('autorj_id','=',Auth::user()->id)->get();
         
 
-        return view('Mistickets', compact('Misticktes', 'ConsultaTicket'));
+        return view('vistaTicketsC', compact('Misticktes', 'ConsultaTicket'));
     }
 
     /**
@@ -95,8 +95,17 @@ class controladorTickets extends Controller
 
         ]);
 
-        return redirect('Mios')->with('Confirmacion','abc');
+        return redirect('VistaTicketsC')->with('Confirmacion','abc');
     }
+
+    public function updateTC(validadorticket $request, $id)
+{
+    DB::table('tb_tickets')->where('idtic',$id)->update([
+        "status"=>$request->input('txtstatus'),
+    ]);
+    return redirect('vistaTicketsC')->with('Actualizar','abc');
+}
+
 
     /**
      * Display the specified resource.

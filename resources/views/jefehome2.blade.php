@@ -1,286 +1,367 @@
-@extends('plantilla')
+@extends('PlantillaJ')
 
 @section('contenido')
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Jefe de Empresa</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <style>
-        body {
-            background-color: #f8f9fa;
-        }
-        .sidebar {
-            height: 100%;
-            width: 250px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1;
-            background-color: #343a40;
-            color: white;
-            overflow-x: hidden;
-            padding-top: 50px;
-        }
-        .sidebar a {
-            padding: 8px 8px 8px 32px;
-            text-decoration: none;
-            font-size: 16px;
-            color: #bbb;
-            display: block;
-            transition: 0.3s;
-        }
-        .sidebar a:hover {
-            color: #fff;
-        }
-        .sidebar .active {
-            background-color: #4CAF50;
-            color: white;
-        }
-        .sidebar .profile {
-            margin-bottom: 20px;
-        }
-        .sidebar .profile img {
-            display: block;
-            margin: auto;
-            border-radius: 50%;
-            width: 80%;
-        }
-        .content {
-            margin-left: 250px;
-            padding: 20px;
-        }
-        .option {
-            height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: transparent;
-            border: 3px solid #343a40;
-            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-            transition: 0.3s;
-            cursor: pointer;
-        }
-        .option:hover {
-            background-color: #343a40;
-            color: white;
-        }
-        .option img {
-            max-width: 100%;
-            max-height: 100%;
-        }
-        .option h3 {
-            font-size: 30px;
-            color: #343a40;
-        }
-    </style>
+	<title>Macuin Dashboard</title>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="sidebar">
-        <div class="profile">
-            <img src="https://via.placeholder.com/150" alt="Profile Picture" class="img-fluid">
-            <h4 class="text-center mt-2">Jefe de Empresa</h4>
+
+	<!-- Main content -->
+
+	<div class="d-flex"> 
+		<div class="flex-column flex-shrink-0 p-3 text-bg-dark" class="bg-primary"style="width: 280px; height: 100vh;">
+		<a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+		  <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+		  <span class="fs-4">Macuin Dashboard</span>
+		</a>
+		<hr>
+		<ul class="nav nav-pills flex-column mb-auto">
+		  <li class="nav-item">
+			<a href="{{route('homejefe')}}" class="nav-link active" aria-current="page">
+			  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+			  Home
+			</a>
+		  </li>
+		  <li>
+			<a href="{{route('Usuario.index')}}" class="nav-link text-white">
+			  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
+			  Administración Usuarios
+			</a>
+		  </li>
+		  <li>
+			<a href="{{route('depa.index')}}" class="nav-link text-white">
+			  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
+			  Registro Departamentos
+			</a>
+		  </li>
+		  <li>
+			<a href="{{route('ticket.index')}}" class="nav-link text-white">
+			  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+			  Administración de Tickets
+			</a>
+		  </li>
+		  <li>
+		  </li>
+      <li>
+			<a href="{{route('ticketA.create')}}" class="nav-link text-white">
+			  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+			  Asignar ticket
+			</a>
+		  </li>
+		  <li>
+		  </li>
+		</ul>
+		<hr>
+		<div class="dropdown">
+		  <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="{{ Auth::user()->url }}"  width="32" height="32" class="rounded-circle me-2">
+			<strong>{{Auth::user()->name}}</strong>
+		  </a>
+		  <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+			<li><a class="dropdown-item" href="#">Configuraciones</a></li>
+			<button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#ModalPerfil"> 
+				Perfil
+			 </button>
+		  </ul>
+      <div class="fixed-bottom">
+
+        <a href="{{route('Cierra.Sesion')}}">
+        <button class="btn btn-danger ms-3 mb-3"  type="button">Cerrar sesión</button>
+      </div>
+      </a>
         </div>
-        <a href="#" class="active">Dashboard</a>
-        <a href="#">Administración de Usuarios</a>
-        <a href="#">Registro de Departamento</a>
-        <a href="#">Administración de Tickets</a>
-    </div>
 
-    <div class="content">
-        <div class="row">
-            <div class="col-md-4">
-                <a href="#" class="option">
-                    <img src="https://via.placeholder.com/200x200" alt="Administración de Usuarios">
-                    <h3>Administración de Usuarios</h3>
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a href="#" class="option">
-                    <img src="https://via.placeholder.com/200x200" alt="Administración de Usuarios">
-                    <h3>Administración de Usuarios</h3>
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a href="#" class="option">
-                    <img src="https://via.placeholder.com/200x200" alt="Administración de Usuarios">
-                    <h3>Administración de Usuarios</h3>
-                </a>
-            </div>
-        </div>
+		</div>
+	  </div>
+	  
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <!-- Font Awesome JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
 
-@stop
-
-////////////////////////////////////////////
+</body>
 
 
-@extends('plantilla')
-
-@section('contenido')
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jefe de Empresa</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
-    <!-- Custom CSS -->
     <style>
-        body {
-            background-color: #f8f9fa;
-        }
-        .nav-link {
-            color: #000;
-            font-weight: bold;
-        }
-        .nav-link:hover {
-            color: #007bff;
-        }
-        .profile-pic {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-        }
-        .centered {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 80vh;
-        }
-        .option {
-            margin: 20px;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            transition: box-shadow 0.3s ease-in-out;
-        }
-        .option:hover {
-            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-        }
-    </style>
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Macuin Dashboart</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            <div class="ml-auto">
-                <button class="btn btn-danger">Cerrar sesión</button>
-              </div>
-    </nav>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
 
-    <div class="container">
-        <div class="row">
-          <div class="col-lg-2 bg-dark text-light p-3">
-            <h3>Jefe de Empresa</h3>
-            <hr>
-            <img src="https://via.placeholder.com/150" alt="Foto de perfil" class="rounded-circle">
-            <hr>
-            <p>Jelos es Angel</p>
-            <hr>
-            <ul class="nav flex-column">
-              <li class="nav-item">
-                <a class="nav-link text-light" href="#">CEO</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-light" href="#">Administración de Usuarios</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-light" href="#">Registro de Departamento</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-light" href="#">Administración de Tickets</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-9 p-5">
-            <h1>Home</h1>
-            <hr>
-            <div class="row">
-              <div class="col-md-4 mb-3">
-                <div class="card">
-                  <img class="card-img-top" src="https://cdn.pixabay.com/photo/2017/11/10/05/48/user-2935527_640.png" alt="Administración de Usuarios">
-                  <div class="card-body">
-                    <h5 class="card-title">Administración de Usuarios</h5>
-                    <p class="card-text">Gestión de usuarios y permisos de acceso en la plataforma.</p>
-                    <a href="#" class="btn btn-primary">Entrar</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 mb-3">
-                <div class="card">
-                  <img class="card-img-top" src="https://us.123rf.com/450wm/vectorplus/vectorplus1512/vectorplus151200749/49766243-icono-de-lista-de-verificaci%C3%B3n-sobre-fondo-verde-ilustraci%C3%B3n-vectorial.jpg?ver=6" alt="Registro de Departamento">
-                  <div class="card-body">
-                    <h5 class="card-title">Registro de Departamento</h5>
-                    <p class="card-text">Permite agregar, editar y eliminar departamentos en la empresa.</p>
-                    <a href="#" class="btn btn-primary">Entrar</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 mb-3">
-                <div class="card">
-                  <img class="card-img-top" src="https://img.freepik.com/vector-premium/trabajador-oficina-tomando-carpeta-archivo-administracion-gestion-gestion-archivos-icono-base-datos-catalogo-documentos-diseno-plano-ilustracion-vectorial-aislado-sobre-fondo-blanco_153097-1171.jpg?w=2000" alt="Administración de Tickets">
-                  <div class="card-body">
-                    <h5 class="card-title">Administración de Tickets</h5>
-                    <p class="card-text">Permite asignar tickets a los miembros del equipo, hacer seguimiento y dar solución a los problemas.</p>
-                    <a href="#" class="btn btn-primary">Entrar</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      //////////////////////////////////////////
-      <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
-        <div class="container">
-          <div class="carousel-caption text-start">
-            <h1>Example headline.</h1>
-            <p>Some representative placeholder content for the first slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item active">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>Another example headline.</h1>
-            <p>Some representative placeholder content for the second slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
-        <div class="container">
-          <div class="carousel-caption text-end">
-            <h1>One more for good measure.</h1>
-            <p>Some representative placeholder content for the third slide of this carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
-          </div>
-        </div>
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+    </style>
+  </head>
+
+
+  </html>
+  <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+	<div class="container">
+		<div class="row">
+  <html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.108.0">
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/jumbotron/">
+
+<link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+
+  <body>
+
+    @include('ModalPerfil')
+
+
+    @if(session()->has('Actualizarr'))
+    {!! 
+    " <script> 
+          Swal.fire(
+          'Muy Bien Very Good!',
+          'Usuario Editado',
+          'success'  
+    ) </script> "!!}
+    @endif
+
+    @if(session()->has('Entrar'))
+    {!! 
+    " <script> 
+          Swal.fire(
+          'Muy Bien !',
+          'Welcome to the jungle',
+          'success'  
+    ) </script> "!!}
+    @endif
+
+    
+  <div class="container py-4">
+    <div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Administración de Usuarios</h1>
+        <p class="col-md-8 fs-4">Gestión de los usuarios de un sistema o aplicación. En esta área, se pueden realizar tareas como crear nuevas cuentas de usuario, editar información de usuario existente, asignar permisos y roles, y eliminar cuentas de usuario. La administración de usuarios es importante para garantizar la seguridad y el control de acceso adecuados en un sistema o aplicación.</p>
+		<a href="{{route('Usuario.index')}}" class="btn btn-primary btn-lg"><i class="fas fa-users"></i> Administrar</a>
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+
+    <div class="row align-items-md-stretch">
+      <div class="col-md-6">
+        <div class="h-100 p-5 text-bg-dark rounded-3">
+          <h2>Registro de Departamentos</h2>
+          <p>Opción que permite registrar nuevos departamentos en la empresa y asignar empleados a ellos. Esta función es útil para mantener un registro organizado de los diferentes departamentos de la empresa y los empleados que trabajan en cada uno de ellos.</p>
+		  <a href="{{route('depa.index')}}" class="btn btn-outline-light"><i class="fas fa-building"></i> Registrar</a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="h-100 p-5 bg-light border rounded-3">
+          <h2>Administración de Tickets</h2>
+          <p>Opción para gestionar y resolver problemas y solicitudes de los clientes de la empresa. Permite asignar tickets a los miembros del equipo, hacer seguimiento y dar solución a los problemas.</p>
+		  <a href="{{route('ticket.index')}}" class="btn btn-outline-secondary"><i class="fas fa-ticket-alt"></i> Administrar</a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="pt-3 mt-4 text-white border-top">
+     Macuin Dashboard © 2022 <br> by: Jelos, Agus y Chris
+    </footer>
   </div>
+</main>
+</body>
+</html>
+
+
+
+<div class="container">
+  <!--Hey! This is the original version
+of Simple CSS Waves-->
+
+<div class="header">
+
+   <!--Content before waves-->
+   <div class="inner-header flex">
+   </div>
+   
+   <!--Waves Container-->
+   <div>
+   <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+   viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+   <defs>
+   <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+   </defs>
+   <g class="parallax">
+   <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+   <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+   <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+   <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+   </g>
+   </svg>
+   </div>
+   <!--Waves end-->    
+   </div>
+   <!--Content starts-->
+   <div class="content flex">
+     <p></p>
+   </div>
+   <!--Content ends-->
+<body >
+   <style>
+       @import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+body {
+ margin:0;
+}
+
+h1 {
+ font-family: 'Lato', sans-serif;
+ font-weight:300;
+ letter-spacing: 2px;
+ font-size:48px;
+}
+p {
+ font-family: 'Lato', sans-serif;
+ letter-spacing: 1px;
+ font-size:14px;
+ color: #333333;
+}
+
+.header {
+ position:relative;
+ text-align:center;
+ background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+ color:white;
+}
+.logo {
+ width:50px;
+ fill:white;
+ padding-right:15px;
+ display:inline-block;
+ vertical-align: middle;
+}
+
+.inner-header {
+ height:65vh;
+ width:100%;
+ margin: 0;
+ padding: 0;
+}
+
+.flex { /*Flexbox for containers*/
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+}
+
+.waves {
+ position:relative;
+ width: 100%;
+ height:15vh;
+ margin-bottom:-7px; /*Fix for safari gap*/
+ min-height:100px;
+ max-height:150px;
+}
+
+.content {
+ position:relative;
+ height:20vh;
+ text-align:center;
+ background-color: white;
+}
+
+/* Animation */
+
+.parallax > use {
+ animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+ animation-delay: -2s;
+ animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+ animation-delay: -3s;
+ animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+ animation-delay: -4s;
+ animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+ animation-delay: -5s;
+ animation-duration: 20s;
+}
+@keyframes move-forever {
+ 0% {
+  transform: translate3d(-90px,0,0);
+ }
+ 100% { 
+   transform: translate3d(85px,0,0);
+ }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+ .waves {
+   height:40px;
+   min-height:40px;
+ }
+ .content {
+   height:30vh;
+ }
+ h1 {
+   font-size:24px;
+ }
+}

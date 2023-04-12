@@ -1,21 +1,6 @@
-@extends('plantilla')
+@extends('plantillaJ')
 
 @section('contenido')
-
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Macuin Dashboard</title>
-
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
-	<!-- Font Awesome -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-	<!-- Custom CSS -->
-	<link rel="stylesheet" href="style.css">
-</head>
-<body>
-
 
 	<!-- Main content -->
 
@@ -47,9 +32,9 @@
 			</a>
 		  </li>
 		  <li>
-			<a href="{{route('homecliente')}}" class="nav-link text-white">
+			<a href="{{route('ticket.index')}}" class="nav-link text-white">
 			  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
-			  Regresar al menu
+			  Administración de Tickets
 			</a>
 		  </li>
 		  <li>
@@ -82,6 +67,12 @@
       </div>
 		</div>
 	  </div>
+
+>>>>>>> main
+@include('ModalPerfilAux')
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+	<div class="container">
+
 @if(session()->has('Confirmacion'))
 {!! 
 " <script> 
@@ -115,9 +106,9 @@
 
 
 @include('ModalPerfil')
-<div class="container w-75 mt-5">
-  <h1>Tickets Almacenados</h1>
-  <a type="button"  href="{{route('homecliente')}}" class="btn btn-primary">Menú</a>
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+	<div class="container">
+  <h1 class="text-center display-5 fw-bold" style="color: rgb(255, 251, 251)">Tickets Almacenados</h1>
 
 
     
@@ -172,15 +163,14 @@
 
 
 	  <table class="table table-secondary table-striped mt-5 mb-5 ">
-	  <h1>Tickets Asignados</h1>
-
+    <h1 class="text-center display-5 fw-bold" style="color: rgb(255, 251, 251)">Tickets Asignados</h1>
 
         <thead>
             
           <tr>
             <th scope="col">Id</th>
-            <th scope="col">id Auxiliar</th>
-            <th scope="col">Id Ticket</th>
+            <th scope="col">Nombre Auxiliar</th>
+            <th scope="col">Ticket</th>
             <th scope="col">Observaciones</th>
           </tr>
          
@@ -205,11 +195,6 @@
         </tbody>
 
       </table>
-
-
-
-
-
 
 </div>
 
