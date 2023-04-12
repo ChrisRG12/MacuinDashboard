@@ -42,7 +42,7 @@ class controladorTicketsA extends Controller
         return view('RegistroATA', compact('moreinfot','moreinfou'));
     }
 
-    public function VermisT() //Falta aclara la tabla para ver los tickets del Aux
+    public function VermisT() //Falta aclara la tabla para ver los tickets del Aux y la vista
     {
         $MisTick =  DB::table('tb_tickets')
         ->select('*')
