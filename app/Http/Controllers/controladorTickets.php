@@ -70,7 +70,6 @@ class controladorTickets extends Controller
         ->select('*')
         ->where('autorj_id','=',Auth::user()->id)->get();
         
-
         return view('vistaTicketsC', compact('Misticktes', 'ConsultaTicket'));
     }
 
@@ -98,12 +97,12 @@ class controladorTickets extends Controller
         return redirect('VistaTicketsC')->with('Confirmacion','abc');
     }
 
-    public function updateTC(validadorticket $request, $id)
+    public function updateTC(Request $request, $id)
 {
     DB::table('tb_tickets')->where('idtic',$id)->update([
-        "status"=>$request->input('txtstatus'),
+        "status"=>$request->input('status'),
     ]);
-    return redirect('vistaTicketsC')->with('Actualizar','abc');
+    return redirect('Cliente')->with('Actualizarr','abc');
 }
 
 

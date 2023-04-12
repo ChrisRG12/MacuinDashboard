@@ -1,6 +1,4 @@
-<!DOCTYPE html>
 @extends('plantillaJ')
-
 
 @section('contenido')
 
@@ -25,7 +23,7 @@
 @endif
 
 
-@include('ModalPerfilAux')
+@include('ModalPerfil')
 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 	<div class="container">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
