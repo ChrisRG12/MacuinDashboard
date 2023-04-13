@@ -168,7 +168,7 @@ class controladorTickets extends Controller
         return redirect('vistaTickets')->with('Actualizar','abc');
     }
 
-    public function editarA($id)
+    public function editA($id)
     {
         $consultaId=DB::table('tb_tickets')->where('idtic',$id)->first();
 
@@ -177,14 +177,14 @@ class controladorTickets extends Controller
         return view('editarTicketA',compact('consultaId','moreinfou','moreinfo'));
     }
 
-    public function updateA(request $request, $id)
+    public function updateA(Request $request, $id)
     {
         DB::table('tb_tickets')->where('idtic',$id)->update([
             "status"=>$request->input('txtstatus'),
-            "comentarioC"=>$request->input('txtcomentarioC'),
+            "comentarioC"=>$request->input('txtmensajec'),
             "updated_at"=> Carbon::now(),
         ]);
-        return redirect('vistaTickets')->with('Actualizar','abc');
+        return redirect('vistaTicketsA')->with('Actualizar','abc');
     }
 
     public function canceltic(validadorticket $request, $id)

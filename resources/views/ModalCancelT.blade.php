@@ -4,15 +4,13 @@
       <div class="modal-content">
 
         <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Eliminar Usuario <i class="bi bi-person-x"></i></h5>
+          <h5 class="modal-title" id="staticBackdropLabel">Desea Cancelar Ticket  <i class="bi bi-person-x"></i></h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <form method="post" action="{{route('ticketC.update',$consulta->idtic)}} ">
+        <form method="post" action="{{route('cancel.update',$consulta->idtic)}} ">
           @csrf
           {!!method_field('PUT')!!};
 
-             @endforeach
-        @endif
 
 
           <h5>Ticket: {{ $consulta->idtic }}</h5>

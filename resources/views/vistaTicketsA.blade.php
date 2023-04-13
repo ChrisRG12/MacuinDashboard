@@ -84,7 +84,7 @@
             
             
             <td>
-            <a href="{{route('ticketA.edit' , $consulta->idtic)}}" class="btn btn-outline-success"> Avanzar  <i class="bi bi-people"></i></a>
+            <a href="{{route('ticketAA.edit' , $consulta->idtic)}}" class="btn btn-outline-success"> Avanzar  <i class="bi bi-people"></i></a>
 
           </tr>
 
