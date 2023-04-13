@@ -25,15 +25,22 @@ Route::get('/', [LoginCont::class, 'login'])->name('login');
 Route::post('Incia/Sesion', [LoginCont::class, 'log'])->name('Iniciar.Sesion');
 Route::get('Cierra/Sesion', [LoginCont::class, 'logout'])->name('Cierra.Sesion');
 
-//------------------LOGIN----------------------------
-Route::get('/buscar', 'UserController@buscar');
 
 
 
 //------------------------Cancelar Ticket
 Route::get('VistaTicketsC', [controladorTickets::class, 'indexCliente'])->name('ticketC.index')->middleware('auth');
 
-Route::put('TicketC/{id}', [controladorTickets::class, 'updateTC'])->name('ticketC.update');
+Route::put('cancelarT/{id}', [controladorTickets::class, 'canceltic'])->name('cancel.update');
+
+//Mensajes-------------------------
+//vista del auxiliar con mensajes
+Route::get('vistaTicketsA', [controladorTicketsA::class, 'index'])->name('ticketAA.index')->middleware('auth');
+
+//edit
+Route::get('TicketAA/{id}/edit', [controladorTickets::class, 'editAA'])->name('ticketAA.edit')->middleware('auth');
+//update
+Route::put('TicketAA/{id}', [controladorTickets::class, 'updateAA'])->name('ticketAA.update');
 
 
 //------------------USUARIOS----------------------------
@@ -81,7 +88,7 @@ Route::delete('Departamento/{id}', [controladorDepartamentos::class, 'destroy'])
 //Create
 Route::get('Ticket/create', [controladorTickets::class, 'create'])->name('ticket.create')->middleware('auth');
 //store
-Route::post('Ticket', [controladorTickets::class, 'store'])->name('ticket.store');
+Route::post('Ticket', [controladorTickets::class, 'store'])->name('ticket.store')->middleware('auth');
 //index
 Route::get('vistaTickets', [controladorTickets::class, 'index'])->name('ticket.index')->middleware('auth');
 //edit
@@ -108,4 +115,5 @@ Route::get('vistaTicketsA', [controladorTicketsA::class, 'index'])->name('ticket
 Route::get('TicketA/{id}/edit', [controladorTicketsA::class, 'edit'])->name('ticketA.edit')->middleware('auth');
 //update
 Route::put('TicketA/{id}', [controladorTicketsA::class, 'update'])->name('ticketA.update');
+
 

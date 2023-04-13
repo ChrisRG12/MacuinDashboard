@@ -17,19 +17,32 @@ use App\Http\Requests\validadorticket;
 
 class controladorTickets extends Controller
 {
-    /**$ConsultaTicket = DB::table('tb_tickets')
+
+    public function index(Request $request)
+    
+    {
+        $buscarxs=$request->get('buscarxs');
+        $buscarxd=$request->get('buscarxd');
+        
+        $ConsultaTicket=DB::table('tb_tickets')
+        ->where('tb_tickets.status', 'LIKE', '%'.$buscarxs.'%')
+        ->orwhere('tb_tickets.Depa_id', 'LIKE', '%' . $buscarxs . '%')
+        ->get();
+        // $ConsultaTicketAsig=DB::table('tb__asig_tic')->get();
+        $ConsultaTickets = DB::table('tb_tickets')
         ->join('tb__asig_tic', 'tb_tickets.idtic', '=', 'tb__asig_tic.idasig')
         ->select('tb_tickets.*', 'tb__asig_tic.idasig')
         ->get();
-        return view('vistaTickets', compact('ConsultaTicket'));
-     * Display a listing of the resource.
-     *
-     * 
-     * 
-     * 
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+       $TicktesAsig = DB::table('tb__asig_tic')
+            ->select('tb__asig_tic.idasig','users.name', 'tb_tickets.idtic', 'tb__asig_tic.observacion')
+            ->join('users','tb__asig_tic.autora_id','=','users.id')
+            ->join('tb_tickets','tb__asig_tic.tick_id','=','tb_tickets.idtic')
+            ->get();
+        return view('vistaTickets', compact('ConsultaTicket','ConsultaTickets','TicktesAsig','buscarxs','buscarxd'));
+
+    }
+
+    public function indexA()
     
     {
         $ConsultaTicket=DB::table('tb_tickets')->get();
@@ -43,7 +56,7 @@ class controladorTickets extends Controller
             ->join('users','tb__asig_tic.autora_id','=','users.id')
             ->join('tb_tickets','tb__asig_tic.tick_id','=','tb_tickets.idtic')
             ->get();
-        return view('vistaTickets', compact('ConsultaTicket','ConsultaTickets','TicktesAsig'));
+        return view('vistaTicketsA', compact('ConsultaTicket','ConsultaTickets','TicktesAsig'));
 
     }
 
@@ -97,6 +110,7 @@ class controladorTickets extends Controller
         return redirect('VistaTicketsC')->with('Confirmacion','abc');
     }
 
+
     public function updateTC(Request $request, $id)
 {
     DB::table('tb_tickets')->where('idtic',$id)->update([
@@ -104,6 +118,7 @@ class controladorTickets extends Controller
     ]);
     return redirect('Cliente')->with('Actualizarr','abc');
 }
+
 
 
     /**
@@ -152,6 +167,35 @@ class controladorTickets extends Controller
             "updated_at"=> Carbon::now(),
         ]);
         return redirect('vistaTickets')->with('Actualizar','abc');
+    }
+
+    public function editarA($id)
+    {
+        $consultaId=DB::table('tb_tickets')->where('idtic',$id)->first();
+
+        $moreinfo = tb__departamentos::all();
+        $moreinfou = users::all();
+        return view('editarTicketA',compact('consultaId','moreinfou','moreinfo'));
+    }
+
+    public function updateA(request $request, $id)
+    {
+        DB::table('tb_tickets')->where('idtic',$id)->update([
+            "status"=>$request->input('txtstatus'),
+            "comentarioC"=>$request->input('txtcomentarioC'),
+            "updated_at"=> Carbon::now(),
+        ]);
+        return redirect('vistaTickets')->with('Actualizar','abc');
+    }
+
+    public function canceltic(validadorticket $request, $id)
+    {
+        DB::table('tb_tickets')->where('idtic', $id)->update([
+            "status"=>$request->input('txtstatus'),
+            "updated_at"=>Carbon::now()
+        ]);
+        return redirect('/')->with('Actualizar','abc');
+
     }
 
     /**

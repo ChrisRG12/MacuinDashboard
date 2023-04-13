@@ -44,11 +44,6 @@
               </div>
             </div>
             <form>
-
-                <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                  <button class="btn btn-success" type="submit">Buscar</button>
-                </form>
     
     <table class="table table-secondary table-striped mt-5 mb-5 col-md-8">
 

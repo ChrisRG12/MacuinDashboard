@@ -39,6 +39,19 @@
 
 <div class="container py-4" style="margin-left: 18%"> 
     <table class="table table-secondary table-striped mt-5 mb-5 ">
+      <h1>Tickets Asignados</h1>
+      <form class="d-flex">
+        <input name="buscarxs"class="form-control me-2" type="search" placeholder="Busqueda Status" aria-label="Search" >
+        <button class="btn btn-outline-success" type="submit">Search</button>
+
+      </form>
+
+      <form class="d-flex">
+        <input name="buscarxs"class="form-control me-2" type="search" placeholder="Busqueda Depa" aria-label="Search" >
+        <button class="btn btn-outline-success" type="submit">Search</button>
+
+        
+      </form>
 
         <thead>
             
@@ -51,12 +64,14 @@
             <th scope="col">status</th>
 
             <th scope="col">Departamento</th>
+            <th scope="col">Comentario</th>
+
             <th scope="col">Opciones</th>
           </tr>
          
         </thead>
         <tbody>
-            @foreach ($ConsultaTicketA as $consulta)
+            @foreach ($tickets as $consulta)
           <tr>
             <th scope="row">{{ $consulta->idtic }}</th>
             <td>{{ $consulta->autorj_id }}</td>
@@ -64,13 +79,13 @@
             <td>{{ $consulta->clasificacion }}</td>
             <td>{{ $consulta->detalles }}</td>
             <td>{{ $consulta->status }}</td>
-            
             <td>{{ $consulta->Depa_id }}</td>
+            <td>{{ $consulta->comentarioA }}</td>
+            
+            
             <td>
-            <a href="{{route('ticket.edit' , $consulta->idtic)}}" class="btn btn-outline-success"> Editar  <i class="bi bi-people"></i></a>
-            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#ModalEliminarDepa{{$consulta->idtic}}">
-                  Eliminar <i class="bi bi-trash-fill"></i>
-               </button>
+            <a href="{{route('ticketA.edit' , $consulta->idtic)}}" class="btn btn-outline-success"> Avanzar  <i class="bi bi-people"></i></a>
+
           </tr>
 
           @endforeach

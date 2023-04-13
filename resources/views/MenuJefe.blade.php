@@ -34,7 +34,7 @@
     <a class="card" href="{{route('Usuario.index')}}" style="--bg-img: url(https://uneg.edu.mx/wp-content/uploads/2021/10/8.-Conceptos-y-definiciones-de-administracio%CC%81n-1-scaled.jpg)">
       <div>
         <h1>Administración de Usuarios</h1>
-        <p>Incluye crear, editar y eliminar cuentas de usuario, y asignar permisos y roles. Es importante realizar estas tareas de manera efectiva para mejorar la eficiencia y la experiencia del usuario.</p>
+        <p>Control de usuarios disponibles</p>
         <div class="date"></div>
         <div class="tags">
           <div class="tag">ENTRAR</div>
@@ -46,8 +46,8 @@
     <div class="num" style="color: rgb(255, 251, 251)">02</div>
     <a class="card" href="{{route('depa.index')}}" style="--bg-img: url('https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/basic-types-of-html-tags/cover.jpg')">
       <div>
-        <h1>Registro de Departamentos</h1>
-        <p>Opción que permite registrar nuevos departamentos en la empresa y asignar empleados a ellos. Esta función es útil para mantener un registro organizado de los diferentes departamentos de la empresa y los empleados que trabajan en cada uno de ellos.</p>
+        <h1>Administración de Departamentos</h1>
+        <p>Registros sobre departamentos disponibles</p>
         <div class="date"></div>
         <div class="tags">
           <div class="tag">ENTRAR</div>
@@ -68,6 +68,20 @@
       </div>
     </a>
   </div>
+  <div class="card-grid-space">
+    <div class="num" style="color: rgb(255, 251, 251)">04</div>
+    <a class="card" href="{{route('ticketAA.index')}}" style="--bg-img: url('https://ubjonline.b-cdn.net/wp-content/uploads/2021/08/0001-2.jpg')">
+      <div>
+        <h1>Administración de Tickets Asignados</h1>
+        <p>Asignacion de tickets a auxiliares.</p>
+        <div class="date"></div>
+        <div class="tags">
+          <div class="tag">ENTRAR</div>
+        </div>
+      </div>
+    </a>
+  </div>
+  
   <!-- https://images.unsplash.com/photo-1520839090488-4a6c211e2f94?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=38951b8650067840307cba514b554ba5&auto=format&fit=crop&w=1350&q=80 -->
 </section>
 
