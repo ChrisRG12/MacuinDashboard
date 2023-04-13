@@ -110,13 +110,17 @@ class controladorTickets extends Controller
         return redirect('VistaTicketsC')->with('Confirmacion','abc');
     }
 
-    public function updateTC(validadorticket $request, $id)
+<<<<<<<<< Temporary merge branch 1
+    public function updateTC(Request $request, $id)
 {
     DB::table('tb_tickets')->where('idtic',$id)->update([
         "status"=>$request->input('txtstatus'),
     ]);
     return redirect('vistaTicketsC')->with('Actualizar','abc');
 }
+=========
+
+>>>>>>>>> Temporary merge branch 2
 
 
     /**
