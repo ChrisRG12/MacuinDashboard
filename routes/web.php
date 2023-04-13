@@ -25,8 +25,6 @@ Route::get('/', [LoginCont::class, 'login'])->name('login');
 Route::post('Incia/Sesion', [LoginCont::class, 'log'])->name('Iniciar.Sesion');
 Route::get('Cierra/Sesion', [LoginCont::class, 'logout'])->name('Cierra.Sesion');
 
-//------------------LOGIN----------------------------
-Route::get('/buscar', 'UserController@buscar');
 
 
 
@@ -36,10 +34,13 @@ Route::get('VistaTicketsC', [controladorTickets::class, 'indexCliente'])->name('
 Route::put('cancelarT/{id}', [controladorTickets::class, 'canceltic'])->name('cancel.update');
 
 //Mensajes-------------------------
+//vista del auxiliar con mensajes
+Route::get('vistaTicketsA', [controladorTicketsA::class, 'index'])->name('ticketAA.index')->middleware('auth');
+
 //edit
-Route::get('TicketA/{id}/edit', [controladorTickets::class, 'editA'])->name('ticketA.edit')->middleware('auth');
+Route::get('TicketAA/{id}/edit', [controladorTickets::class, 'editAA'])->name('ticketAA.edit')->middleware('auth');
 //update
-Route::put('TicketA/{id}', [controladorTickets::class, 'updateA'])->name('ticketA.update');
+Route::put('TicketAA/{id}', [controladorTickets::class, 'updateAA'])->name('ticketAA.update');
 
 
 //------------------USUARIOS----------------------------
@@ -114,4 +115,5 @@ Route::get('vistaTicketsA', [controladorTicketsA::class, 'index'])->name('ticket
 Route::get('TicketA/{id}/edit', [controladorTicketsA::class, 'edit'])->name('ticketA.edit')->middleware('auth');
 //update
 Route::put('TicketA/{id}', [controladorTicketsA::class, 'update'])->name('ticketA.update');
+
 

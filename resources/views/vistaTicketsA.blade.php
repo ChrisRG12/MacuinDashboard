@@ -39,6 +39,18 @@
 
 <div class="container py-4" style="margin-left: 18%"> 
     <table class="table table-secondary table-striped mt-5 mb-5 ">
+      <h1>Tickets Asignados</h1>
+      <form class="d-flex">
+        <input name="buscarxs"class="form-control me-2" type="search" placeholder="Busqueda Status" aria-label="Search" >
+        <button class="btn btn-outline-success" type="submit">Search</button>
+
+      </form>
+
+      <form class="d-flex">
+        <input name="buscarxs"class="form-control me-2" type="search" placeholder="Busqueda Depa" aria-label="Search" >
+        <button class="btn btn-outline-success" type="submit">Search</button>
+
+      </form>
 
         <thead>
             

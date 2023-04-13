@@ -70,6 +70,20 @@
       </div>
     </a>
   </div>
+  <div class="card-grid-space">
+    <div class="num" style="color: rgb(255, 251, 251)">04</div>
+    <a class="card" href="{{route('ticketAA.index')}}" style="--bg-img: url('https://ubjonline.b-cdn.net/wp-content/uploads/2021/08/0001-2.jpg')">
+      <div>
+        <h1>Administración de Tickets Asignados</h1>
+        <p>Asignacion de tickets a auxiliares.</p>
+        <div class="date"></div>
+        <div class="tags">
+          <div class="tag">ENTRAR</div>
+        </div>
+      </div>
+    </a>
+  </div>
+  
   <!-- https://images.unsplash.com/photo-1520839090488-4a6c211e2f94?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=38951b8650067840307cba514b554ba5&auto=format&fit=crop&w=1350&q=80 -->
 </section>
 

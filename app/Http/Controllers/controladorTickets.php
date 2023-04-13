@@ -18,7 +18,31 @@ use App\Http\Requests\validadorticket;
 class controladorTickets extends Controller
 {
 
-    public function index()
+    public function index(Request $request)
+    
+    {
+        $buscarxs=$request->get('buscarxs');
+        $buscarxd=$request->get('buscarxd');
+        
+        $ConsultaTicket=DB::table('tb_tickets')
+        ->where('tb_tickets.status', 'LIKE', '%'.$buscarxs.'%')
+        ->orwhere('tb_tickets.Depa_id', 'LIKE', '%' . $buscarxs . '%')
+        ->get();
+        // $ConsultaTicketAsig=DB::table('tb__asig_tic')->get();
+        $ConsultaTickets = DB::table('tb_tickets')
+        ->join('tb__asig_tic', 'tb_tickets.idtic', '=', 'tb__asig_tic.idasig')
+        ->select('tb_tickets.*', 'tb__asig_tic.idasig')
+        ->get();
+       $TicktesAsig = DB::table('tb__asig_tic')
+            ->select('tb__asig_tic.idasig','users.name', 'tb_tickets.idtic', 'tb__asig_tic.observacion')
+            ->join('users','tb__asig_tic.autora_id','=','users.id')
+            ->join('tb_tickets','tb__asig_tic.tick_id','=','tb_tickets.idtic')
+            ->get();
+        return view('vistaTickets', compact('ConsultaTicket','ConsultaTickets','TicktesAsig','buscarxs','buscarxd'));
+
+    }
+
+    public function indexA()
     
     {
         $ConsultaTicket=DB::table('tb_tickets')->get();
@@ -32,7 +56,7 @@ class controladorTickets extends Controller
             ->join('users','tb__asig_tic.autora_id','=','users.id')
             ->join('tb_tickets','tb__asig_tic.tick_id','=','tb_tickets.idtic')
             ->get();
-        return view('vistaTickets', compact('ConsultaTicket','ConsultaTickets','TicktesAsig'));
+        return view('vistaTicketsA', compact('ConsultaTicket','ConsultaTickets','TicktesAsig'));
 
     }
 
@@ -147,7 +171,7 @@ class controladorTickets extends Controller
         return view('editarTicketA',compact('consultaId','moreinfou','moreinfo'));
     }
 
-    public function updateA(validadorticket $request, $id)
+    public function updateA(request $request, $id)
     {
         DB::table('tb_tickets')->where('idtic',$id)->update([
             "status"=>$request->input('txtstatus'),

@@ -35,7 +35,7 @@
     <div class="container-fluid py-5">
       <h1 class="display-5 fw-bold">Administración de Usuarios</h1>
       <p class="col-md-8 fs-4">Gestión de los usuarios de un sistema o aplicación. En esta área, se pueden realizar tareas como crear nuevas cuentas de usuario, editar información de usuario existente, asignar permisos y roles, y eliminar cuentas de usuario. La administración de usuarios es importante para garantizar la seguridad y el control de acceso adecuados en un sistema o aplicación.</p>
-  <a href="{{route('ticketA.index')}}" class="btn btn-primary btn-lg"><i class="fas fa-users"></i> Administrar</a>
+  <a href="{{route('ticketAA.index')}}" class="btn btn-primary btn-lg"><i class="fas fa-users"></i> Administrar</a>
     </div>
   </div>
 
