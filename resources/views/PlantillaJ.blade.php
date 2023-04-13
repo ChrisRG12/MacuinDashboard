@@ -62,7 +62,7 @@
 }
 
 .sidebar a:hover{
-    background: #2f4f4f;
+    background: #617bb3;
 }
 
 .sidebar ion-icon{
@@ -72,12 +72,19 @@
 .botonaso{
     margin-top: 340px;
 }
+
+img{
+    height: 150px;
+    width: 150px;
+    border-radius: cover;
+    background: #dfdfdf;
+}
 </style>
 
 <div class="sidebar">
     <h3 class="mt-3 mb-4"><strong>Macuin<br/></strong>Dashboards</h3>
 
-    <img src="{{ Auth::user()->url }}"  width="200" height="150" style="margin-left: 9%">
+    <img src="{{ Auth::user()->url }}"  style="margin-left: 9%">
 <br> 
     <h4>{{ Auth::user()->name }}</h4>
 
