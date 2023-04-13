@@ -50,6 +50,7 @@
         <input name="buscarxs"class="form-control me-2" type="search" placeholder="Busqueda Depa" aria-label="Search" >
         <button class="btn btn-outline-success" type="submit">Search</button>
 
+        
       </form>
 
         <thead>
