@@ -35,7 +35,7 @@ Route::put('cancelarT/{id}', [controladorTickets::class, 'canceltic'])->name('ca
 
 //Mensajes-------------------------
 //vista del auxiliar con mensajes
-Route::get('vistaTicketsA', [controladorTicketsA::class, 'index'])->name('ticketAA.index')->middleware('auth');
+Route::get('vistaTicketsAsig', [controladorTicketsA::class, 'index'])->name('ticketAA.index')->middleware('auth');
 
 //edit
 Route::get('TicketAA/{id}/edit', [controladorTickets::class, 'editAA'])->name('ticketAA.edit')->middleware('auth');

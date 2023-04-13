@@ -56,7 +56,7 @@ class controladorTickets extends Controller
             ->join('users','tb__asig_tic.autora_id','=','users.id')
             ->join('tb_tickets','tb__asig_tic.tick_id','=','tb_tickets.idtic')
             ->get();
-        return view('vistaTicketsA', compact('ConsultaTicket','ConsultaTickets','TicktesAsig'));
+        return view('vistaTicketsAsig', compact('ConsultaTicket','ConsultaTickets','TicktesAsig'));
 
     }
 
@@ -110,7 +110,6 @@ class controladorTickets extends Controller
         return redirect('VistaTicketsC')->with('Confirmacion','abc');
     }
 
-<<<<<<<<< Temporary merge branch 1
     public function updateTC(Request $request, $id)
 {
     DB::table('tb_tickets')->where('idtic',$id)->update([
@@ -118,9 +117,7 @@ class controladorTickets extends Controller
     ]);
     return redirect('vistaTicketsC')->with('Actualizar','abc');
 }
-=========
 
->>>>>>>>> Temporary merge branch 2
 
 
     /**

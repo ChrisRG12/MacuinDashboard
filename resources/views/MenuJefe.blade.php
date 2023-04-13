@@ -55,19 +55,7 @@
       </div>
     </a>
   </div>
-  <div class="card-grid-space">
-    <div class="num" style="color: rgb(255, 251, 251)">03</div>
-    <a class="card" href="{{route('ticket.index')}}" style="--bg-img: url('https://ubjonline.b-cdn.net/wp-content/uploads/2021/08/0001-2.jpg')">
-      <div>
-        <h1>Administración de Tickets</h1>
-        <p>Opción para gestionar y resolver problemas y solicitudes de los clientes de la empresa. Permite asignar tickets a los miembros del equipo, hacer seguimiento y dar solución a los problemas.</p>
-        <div class="date"></div>
-        <div class="tags">
-          <div class="tag">ENTRAR</div>
-        </div>
-      </div>
-    </a>
-  </div>
+
   <div class="card-grid-space">
     <div class="num" style="color: rgb(255, 251, 251)">04</div>
     <a class="card" href="{{route('ticketAA.index')}}" style="--bg-img: url('https://ubjonline.b-cdn.net/wp-content/uploads/2021/08/0001-2.jpg')">
