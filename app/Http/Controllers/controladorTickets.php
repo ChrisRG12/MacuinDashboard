@@ -56,7 +56,7 @@ class controladorTickets extends Controller
             ->join('users','tb__asig_tic.autora_id','=','users.id')
             ->join('tb_tickets','tb__asig_tic.tick_id','=','tb_tickets.idtic')
             ->get();
-        return view('vistaTicketsA', compact('ConsultaTicket','ConsultaTickets','TicktesAsig'));
+        return view('vistaTicketsAsig', compact('ConsultaTicket','ConsultaTickets','TicktesAsig'));
 
     }
 
@@ -110,7 +110,6 @@ class controladorTickets extends Controller
         return redirect('VistaTicketsC')->with('Confirmacion','abc');
     }
 
-<<<<<<<<< Temporary merge branch 1
     public function updateTC(Request $request, $id)
 {
     DB::table('tb_tickets')->where('idtic',$id)->update([
@@ -118,9 +117,7 @@ class controladorTickets extends Controller
     ]);
     return redirect('vistaTicketsC')->with('Actualizar','abc');
 }
-=========
 
->>>>>>>>> Temporary merge branch 2
 
 
     /**
@@ -171,7 +168,7 @@ class controladorTickets extends Controller
         return redirect('vistaTickets')->with('Actualizar','abc');
     }
 
-    public function editarA($id)
+    public function editA($id)
     {
         $consultaId=DB::table('tb_tickets')->where('idtic',$id)->first();
 
@@ -180,14 +177,14 @@ class controladorTickets extends Controller
         return view('editarTicketA',compact('consultaId','moreinfou','moreinfo'));
     }
 
-    public function updateA(request $request, $id)
+    public function updateA(Request $request, $id)
     {
         DB::table('tb_tickets')->where('idtic',$id)->update([
             "status"=>$request->input('txtstatus'),
-            "comentarioC"=>$request->input('txtcomentarioC'),
+            "comentarioC"=>$request->input('txtmensajec'),
             "updated_at"=> Carbon::now(),
         ]);
-        return redirect('vistaTickets')->with('Actualizar','abc');
+        return redirect('vistaTicketsA')->with('Actualizar','abc');
     }
 
     public function canceltic(validadorticket $request, $id)

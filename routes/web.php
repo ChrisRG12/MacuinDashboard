@@ -35,12 +35,11 @@ Route::put('cancelarT/{id}', [controladorTickets::class, 'canceltic'])->name('ca
 
 //Mensajes-------------------------
 //vista del auxiliar con mensajes
-Route::get('vistaTicketsA', [controladorTicketsA::class, 'index'])->name('ticketAA.index')->middleware('auth');
 
 //edit
-Route::get('TicketAA/{id}/edit', [controladorTickets::class, 'editAA'])->name('ticketAA.edit')->middleware('auth');
+Route::get('TicketAA/{id}/edit', [controladorTickets::class, 'editA'])->name('ticketAA.edit')->middleware('auth');
 //update
-Route::put('TicketAA/{id}', [controladorTickets::class, 'updateAA'])->name('ticketAA.update');
+Route::put('TicketAA/{id}', [controladorTickets::class, 'updateA'])->name('ticketAA.update');
 
 
 //------------------USUARIOS----------------------------
@@ -103,6 +102,8 @@ Route::delete('Ticket/{id}', [controladorTickets::class, 'destroy']) -> name('ti
 Route::get('search',[controladorticket::class, 'search'])->name('search');
 
 //------------------Asignar Ticket----------------------------
+Route::get('vistaTicketsAsig', [controladorTickets::class, 'indexA'])->name('ticketAA.index')->middleware('auth');
+
 //Create
 Route::get('TicketA/create', [controladorTicketsA::class, 'create'])->name('ticketA.create')->middleware('auth');
 //Create
