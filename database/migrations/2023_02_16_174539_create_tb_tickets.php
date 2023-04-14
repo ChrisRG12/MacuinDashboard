@@ -19,7 +19,8 @@ return new class extends Migration
             $table->String('clasificacion');
             $table->String('detalles');
             $table->string('status');
-            $table->string('comentarios')->nullable();
+            $table->string('comentarioA')->nullable();
+            $table->string('comentarioC')->nullable();
             $table->unsignedBigInteger('autorj_id');
             $table->unsignedBigInteger('Depa_id');
             $table->timestamps();
