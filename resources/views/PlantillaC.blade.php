@@ -109,14 +109,16 @@ button:active{
 img{
     height: 150px;
     width: 150px;
-    border-radius: cover;
+    border-radius: 50%;
+    object-fit: cover;
     background: #dfdfdf;
+    margin-left: 9%;
 }
     </style>
 
 <div class="sidebar">
     <h3 class="mt-3 mb-4"><strong>Macuin<br/></strong>Dashboards</h3>
-    <img src="{{ Auth::user()->url }}" style="margin-left: 9%">
+    <img src="{{ Auth::user()->url }}">
  <br>
     <h4>{{ Auth::user()->name }}</h4>
 
