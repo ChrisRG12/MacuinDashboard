@@ -11,7 +11,7 @@
     @endforeach  
   @endif
 
-  
+
     <div class="card text-center mb-2">
   
         <form action="{{route('depa.update', $consultaId->idDepa)}}" method="post">
