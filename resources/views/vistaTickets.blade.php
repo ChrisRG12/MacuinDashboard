@@ -107,6 +107,9 @@
         </tbody>
 
       </table>
+      <a href="{{route('descargarPDF')}}" class="btn btn-sm btn-primary"> Imprimir PDF</a>
+
+      
 
 
 	  

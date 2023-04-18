@@ -58,7 +58,7 @@
 
   <div class="card-grid-space">
     <div class="num" style="color: rgb(255, 251, 251)">04</div>
-    <a class="card" href="{{route('ticketAA.index')}}" style="--bg-img: url('https://ubjonline.b-cdn.net/wp-content/uploads/2021/08/0001-2.jpg')">
+    <a class="card" href="{{route('ticket.index')}}" style="--bg-img: url('https://ubjonline.b-cdn.net/wp-content/uploads/2021/08/0001-2.jpg')">
       <div>
         <h1>Administración de Tickets Asignados</h1>
         <p>Asignacion de tickets a auxiliares.</p>

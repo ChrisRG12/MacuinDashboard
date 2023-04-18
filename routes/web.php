@@ -117,4 +117,5 @@ Route::get('TicketA/{id}/edit', [controladorTicketsA::class, 'edit'])->name('tic
 //update
 Route::put('TicketA/{id}', [controladorTicketsA::class, 'update'])->name('ticketA.update');
 
-
+//------------------PDF----------------------------
+Route::get('/pdf','PDFController@PDF')->name('descargarPDF');
