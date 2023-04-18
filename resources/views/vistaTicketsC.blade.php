@@ -10,13 +10,15 @@
 " <script> 
       Swal.fire(
         'Proceso Exitoso',
-      'Ticket Cancelado',
+       'Ticket Cancelado',
       'success'  
 ) </script> "!!}
 @endif
 
 
 @include('ModalPerfil')
+
+
 
 <div class="container py-4" style="margin-left: 20%">
   <h1> Tickets Personales</h1>

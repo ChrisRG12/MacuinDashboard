@@ -32,7 +32,7 @@ Route::get('Cierra/Sesion', [LoginCont::class, 'logout'])->name('Cierra.Sesion')
 //------------------------Cancelar Ticket
 Route::get('VistaTicketsC', [controladorTickets::class, 'indexCliente'])->name('ticketC.index')->middleware('auth');
 
-Route::put('cancelarT/{id}', [controladorTickets::class, 'canceltic'])->name('cancel.update');
+Route::put('cancelarT/{id}', [controladorTickets::class, 'updateTC'])->name('cancel.update');
 
 //Mensajes-------------------------
 //vista del auxiliar con mensajes
