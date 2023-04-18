@@ -116,7 +116,7 @@ class controladorTickets extends Controller
         "status"=>$request->input('txtstatus'),
         "updated_at"=>Carbon::now()
     ]);
-    return redirect('Cliente')->with('Actualizar','abc');
+    return redirect('VistaTicketsC')->with('Actualizar','abc');
 }
 
 

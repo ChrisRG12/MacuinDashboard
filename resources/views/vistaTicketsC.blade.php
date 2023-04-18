@@ -2,9 +2,6 @@
 
 @section('contenido')
 
-
-
-
 @if(session()->has('Actualizar'))
 {!! 
 " <script> 
@@ -15,9 +12,17 @@
 ) </script> "!!}
 @endif
 
+@if(session()->has('Confirmacion'))
+{!! 
+" <script> 
+      Swal.fire(
+        'Proceso Exitoso',
+       'Ticket Agregado',
+      'success'  
+) </script> "!!}
+@endif
 
 @include('ModalPerfil')
-
 
 
 <div class="container py-4" style="margin-left: 20%">
