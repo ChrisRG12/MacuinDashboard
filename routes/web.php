@@ -10,6 +10,7 @@ use App\Http\Controllers\controladorDepartamentos;
 use App\Http\Controllers\controladorTickets;
 use App\Http\Controllers\controladorTicketsA;
 use App\Http\Controllers\LoginCont;
+use App\Http\Controllers\PDFController;
 
 
 
