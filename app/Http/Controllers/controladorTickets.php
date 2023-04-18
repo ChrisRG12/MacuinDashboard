@@ -114,8 +114,9 @@ class controladorTickets extends Controller
 {
     DB::table('tb_tickets')->where('idtic',$id)->update([
         "status"=>$request->input('txtstatus'),
+        "updated_at"=>Carbon::now()
     ]);
-    return redirect('vistaTicketsC')->with('Actualizar','abc');
+    return redirect('Cliente')->with('Actualizar','abc');
 }
 
 
