@@ -12,6 +12,8 @@ use DB;
 use Carbon\Carbon;
 use App\Http\Requests\validadorDepartamento;
 use App\Http\Requests\validadorticket;
+use App\Http\Controllers\PDFController;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 
 
@@ -38,9 +40,14 @@ class controladorTickets extends Controller
             ->join('users','tb__asig_tic.autora_id','=','users.id')
             ->join('tb_tickets','tb__asig_tic.tick_id','=','tb_tickets.idtic')
             ->get();
+            if(isset($_GET['PDF'])){
+                $pdf=PDF::loadView('prueba',compact('ConsultaTicket','ConsultaTickets','TicktesAsig'));
+                return $pdf->stream('Reporte.tikets');
+            }else{
         return view('vistaTickets', compact('ConsultaTicket','ConsultaTickets','TicktesAsig','buscarxs','buscarxd'));
 
     }
+}
 
     public function indexA()
     

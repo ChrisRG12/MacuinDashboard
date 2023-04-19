@@ -46,18 +46,11 @@
   <form class="d-flex">
         <input name="buscarxs"class="form-control me-2" type="search" placeholder="Busqueda Status" aria-label="Search" >
         <button class="btn btn-outline-success" type="submit">Search</button>
-
-      </form>
-
-      <form class="d-flex">
         <input name="buscarxs"class="form-control me-2" type="search" placeholder="Busqueda Depa" aria-label="Search" >
         <button class="btn btn-outline-success" type="submit">Search</button>
 
+        <button type="submit" name="PDF" class="btn btn-sm btn-primary"> Imprimir PDF </button>
       </form>
-
-
-
-
     
     <table class="table table-secondary table-striped mt-5 mb-5 ">
 
@@ -69,7 +62,7 @@
             <th scope="col">Fecha</th>
             <th scope="col">Clasificacion</th>
             <th scope="col">Detalles</th>
-            <th scope="col">status</th>
+            <th scope="col">Estatus</th>
 
             <th scope="col">Departamento</th>
 
@@ -107,6 +100,9 @@
         </tbody>
 
       </table>
+
+
+      
 
 
 	  
