@@ -27,7 +27,7 @@
 
 <div class="container py-4" style="margin-left: 20%">
   <h1> Tickets Personales</h1>
-  <a type="button"  href="{{route('homecliente')}}" class="btn btn-primary">Menú</a>
+  <a type="button"  href="{{route('homecliente')}}" class="btn btn-secondary">Menú</a>
 
 
     
