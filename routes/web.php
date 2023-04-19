@@ -10,6 +10,7 @@ use App\Http\Controllers\controladorDepartamentos;
 use App\Http\Controllers\controladorTickets;
 use App\Http\Controllers\controladorTicketsA;
 use App\Http\Controllers\LoginCont;
+use App\Http\Controllers\PDFController;
 
 
 
@@ -117,4 +118,5 @@ Route::get('TicketA/{id}/edit', [controladorTicketsA::class, 'edit'])->name('tic
 //update
 Route::put('TicketA/{id}', [controladorTicketsA::class, 'update'])->name('ticketA.update');
 
-
+//------------------PDF----------------------------
+Route::get('/pdf','PDFController@PDF')->name('descargarPDF');
